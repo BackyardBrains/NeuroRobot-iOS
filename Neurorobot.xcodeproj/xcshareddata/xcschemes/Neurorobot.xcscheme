@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B1618D582436132C00B75A5D"
+               BlueprintIdentifier = "B142148624387DDD000977FD"
                BuildableName = "Neuro RobotUITests.xctest"
                BlueprintName = "Neuro RobotUITests"
                ReferencedContainer = "container:Neurorobot.xcodeproj">
