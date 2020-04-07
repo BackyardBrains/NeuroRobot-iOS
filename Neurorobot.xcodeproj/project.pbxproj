@@ -1,0 +1,1797 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		468CC3943FDC73E9C809D933 /* Pods_Neurorobot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288E6DBFE20A9BBF8982EF09 /* Pods_Neurorobot.framework */; };
+		9D0B5B3C2340CD4D0017BD74 /* AlertBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0B5B3B2340CD4D0017BD74 /* AlertBanner.swift */; };
+		9D0B5B3E234109A30017BD74 /* NeurorobotImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0B5B3D234109A30017BD74 /* NeurorobotImage.swift */; };
+		9D1B77EF231A6C7E00E2258E /* hackForiPhone5.c in Sources */ = {isa = PBXBuildFile; fileRef = 9D1B77EE231A6C7E00E2258E /* hackForiPhone5.c */; };
+		9D1B77F0231A72E300E2258E /* libBrain-Framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98FB04231938D0001AB5B5 /* libBrain-Framework.a */; };
+		9D3EAE61233B4EDA00C29A70 /* BrainPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3EAE60233B4ED900C29A70 /* BrainPickerView.swift */; };
+		9D5BDD9D23191B4000CA51CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDD9C23191B4000CA51CC /* AppDelegate.swift */; };
+		9D5BDDA223191B4000CA51CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D5BDDA023191B4000CA51CC /* Main.storyboard */; };
+		9D5BDDA423191B4200CA51CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D5BDDA323191B4200CA51CC /* Assets.xcassets */; };
+		9D5BDDA723191B4200CA51CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D5BDDA523191B4200CA51CC /* LaunchScreen.storyboard */; };
+		9D5BDDB923191B7900CA51CC /* CGFloat+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDDB523191B7900CA51CC /* CGFloat+Additions.swift */; };
+		9D5BDDBA23191B7900CA51CC /* UIViewController+XIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDDB623191B7900CA51CC /* UIViewController+XIB.swift */; };
+		9D5BDDBB23191B7900CA51CC /* URL+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDDB723191B7900CA51CC /* URL+Additions.swift */; };
+		9D5BDDBE23191B8200CA51CC /* NeuroRobot-Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDDBC23191B8100CA51CC /* NeuroRobot-Wrapper.swift */; };
+		9D5BDDBF23191B8200CA51CC /* Brain_Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDDBD23191B8100CA51CC /* Brain_Wrapper.swift */; };
+		9D5BDDF423191BEC00CA51CC /* ConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDDF323191BEC00CA51CC /* ConnectViewController.swift */; };
+		9D5BDDF623191BF000CA51CC /* ConnectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D5BDDF523191BF000CA51CC /* ConnectViewController.xib */; };
+		9D5BDDFA23191BFB00CA51CC /* LedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D5BDDF823191BFB00CA51CC /* LedViewController.xib */; };
+		9D5BDDFB23191BFB00CA51CC /* LedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDDF923191BFB00CA51CC /* LedViewController.swift */; };
+		9D5BDDFE23191C0800CA51CC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDDFD23191C0800CA51CC /* MainTabBarController.swift */; };
+		9D5BDE0323191C2700CA51CC /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDE0123191C2700CA51CC /* BaseNavigationViewController.swift */; };
+		9D5BDE0423191C2700CA51CC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDE0223191C2700CA51CC /* BaseViewController.swift */; };
+		9D5BDE0923191C3300CA51CC /* VideoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDE0623191C3300CA51CC /* VideoStreamViewController.swift */; };
+		9D5BDE0A23191C3300CA51CC /* VideoStreamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D5BDE0723191C3300CA51CC /* VideoStreamViewController.xib */; };
+		9D5BDE0E23191C4300CA51CC /* FingerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDE0D23191C4200CA51CC /* FingerView.swift */; };
+		9D834DEF2345289E00BBBD62 /* BrainActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D834DEE2345289E00BBBD62 /* BrainActivityView.swift */; };
+		9D834DF3234620FC00BBBD62 /* BrainActivityRasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D834DF2234620FC00BBBD62 /* BrainActivityRasterView.swift */; };
+		9D98FAEF23193816001AB5B5 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98FAEE23193816001AB5B5 /* libiconv.tbd */; };
+		9D98FAF12319381B001AB5B5 /* liblzma.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98FAF02319381B001AB5B5 /* liblzma.tbd */; };
+		9D98FAF523193825001AB5B5 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98FAF423193824001AB5B5 /* libbz2.tbd */; };
+		9D98FAF723193829001AB5B5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98FAF623193829001AB5B5 /* Security.framework */; };
+		9D98FAF92319382F001AB5B5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98FAF82319382F001AB5B5 /* AudioToolbox.framework */; };
+		9D98FAFB23193834001AB5B5 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98FAFA23193834001AB5B5 /* VideoToolbox.framework */; };
+		9D98FAFD23193837001AB5B5 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98FAFC23193837001AB5B5 /* CoreFoundation.framework */; };
+		9D98FAFF2319383C001AB5B5 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98FAFE2319383C001AB5B5 /* CoreVideo.framework */; };
+		9D98FB0123193842001AB5B5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98FB0023193842001AB5B5 /* CoreMedia.framework */; };
+		9F06D75B235DEA450052A437 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98FAF22319381F001AB5B5 /* libz.tbd */; };
+		9F2D2E042370624000C0FFF4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F2D2E032370624000C0FFF4 /* GoogleService-Info.plist */; };
+		9FA5A2BA236D8E38000A23EA /* libNeuroRobot-Framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA5A2B9236D8E38000A23EA /* libNeuroRobot-Framework.a */; };
+		B11A9862243C74E0005C8AB2 /* Accretion.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CC22435D1FE00B75A5D /* Accretion.mat */; };
+		B11A9863243C74E0005C8AB2 /* Adan.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CC12435D1FE00B75A5D /* Adan.mat */; };
+		B11A9864243C74E0005C8AB2 /* Archimedes.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CCD2435D20700B75A5D /* Archimedes.mat */; };
+		B11A9865243C74E0005C8AB2 /* Armitage.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CD32435D20B00B75A5D /* Armitage.mat */; };
+		B11A9866243C74E0005C8AB2 /* Betsy.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CB12435D1F200B75A5D /* Betsy.mat */; };
+		B11A9867243C74E0005C8AB2 /* Bao.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1254ABD2438A0AD00220DE1 /* Bao.mat */; };
+		B11A9868243C74E0005C8AB2 /* Birk.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CCA2435D20400B75A5D /* Birk.mat */; };
+		B11A9869243C74E0005C8AB2 /* Bob.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CBC2435D1FA00B75A5D /* Bob.mat */; };
+		B11A986A243C74E0005C8AB2 /* Borneo.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CBE2435D1FB00B75A5D /* Borneo.mat */; };
+		B11A986B243C74E0005C8AB2 /* Cern.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CCC2435D20600B75A5D /* Cern.mat */; };
+		B11A986C243C74E0005C8AB2 /* Chaotic neutral.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CAC2435D1EF00B75A5D /* Chaotic neutral.mat */; };
+		B11A986D243C74E0005C8AB2 /* Chopin.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CDD2435D21300B75A5D /* Chopin.mat */; };
+		B11A986E243C74E0005C8AB2 /* Edelman.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CD22435D20B00B75A5D /* Edelman.mat */; };
+		B11A986F243C74E0005C8AB2 /* Fingers Crossed.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CBB2435D1F900B75A5D /* Fingers Crossed.mat */; };
+		B11A9870243C74E0005C8AB2 /* Flower Force.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CB02435D1F200B75A5D /* Flower Force.mat */; };
+		B11A9871243C74E0005C8AB2 /* Freddie.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CCE2435D20800B75A5D /* Freddie.mat */; };
+		B11A9872243C74E0005C8AB2 /* Gibson.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CB42435D1F500B75A5D /* Gibson.mat */; };
+		B11A9873243C74E0005C8AB2 /* Greeny.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CBD2435D1FB00B75A5D /* Greeny.mat */; };
+		B11A9874243C74E0005C8AB2 /* Jah.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CC32435D1FF00B75A5D /* Jah.mat */; };
+		B11A9875243C74E0005C8AB2 /* Karl.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CAE2435D1F000B75A5D /* Karl.mat */; };
+		B11A9876243C74E0005C8AB2 /* Karl2.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CD62435D20E00B75A5D /* Karl2.mat */; };
+		B11A9877243C74E0005C8AB2 /* Lucy.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CB62435D1F600B75A5D /* Lucy.mat */; };
+		B11A9878243C74E0005C8AB2 /* Massive.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CB92435D1F800B75A5D /* Massive.mat */; };
+		B11A9879243C74E0005C8AB2 /* Mavis.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CB82435D1F700B75A5D /* Mavis.mat */; };
+		B11A987A243C74E0005C8AB2 /* Meg.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CC42435D20000B75A5D /* Meg.mat */; };
+		B11A987B243C74E0005C8AB2 /* Merlin.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CB52435D1F500B75A5D /* Merlin.mat */; };
+		B11A987C243C74E0005C8AB2 /* Mocho.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CDB2435D21100B75A5D /* Mocho.mat */; };
+		B11A987D243C74E0005C8AB2 /* Moinet.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CAD2435D1F000B75A5D /* Moinet.mat */; };
+		B11A987E243C74E0005C8AB2 /* Momo.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CDA2435D21100B75A5D /* Momo.mat */; };
+		B11A987F243C74E0005C8AB2 /* Mos.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CD52435D20D00B75A5D /* Mos.mat */; };
+		B11A9880243C74E0005C8AB2 /* Occasional Spinner.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CB72435D1F700B75A5D /* Occasional Spinner.mat */; };
+		B11A9881243C74E0005C8AB2 /* Opportunity.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CCF2435D20800B75A5D /* Opportunity.mat */; };
+		B11A9882243C74E0005C8AB2 /* Pelle 2.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CAF2435D1F100B75A5D /* Pelle 2.mat */; };
+		B11A9883243C74E0005C8AB2 /* Pelle.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CD72435D20E00B75A5D /* Pelle.mat */; };
+		B11A9884243C74E0005C8AB2 /* Pilkington.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CC72435D20200B75A5D /* Pilkington.mat */; };
+		B11A9885243C74E0005C8AB2 /* Quark.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CB32435D1F400B75A5D /* Quark.mat */; };
+		B11A9886243C74E0005C8AB2 /* Quiroga.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CCB2435D20500B75A5D /* Quiroga.mat */; };
+		B11A9887243C74E0005C8AB2 /* Rapid.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CAB2435D1EE00B75A5D /* Rapid.mat */; };
+		B11A9888243C74E0005C8AB2 /* Reservoir.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CC82435D20300B75A5D /* Reservoir.mat */; };
+		B11A9889243C74E0005C8AB2 /* Shouk.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1254AC02438A0C600220DE1 /* Shouk.mat */; };
+		B11A988A243C74E0005C8AB2 /* Signet.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CD02435D20900B75A5D /* Signet.mat */; };
+		B11A988B243C74E0005C8AB2 /* Songbird.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CBA2435D1F900B75A5D /* Songbird.mat */; };
+		B11A988C243C74E1005C8AB2 /* Spud.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CBF2435D1FC00B75A5D /* Spud.mat */; };
+		B11A988D243C74E1005C8AB2 /* Starquake.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CB22435D1F300B75A5D /* Starquake.mat */; };
+		B11A988E243C74E1005C8AB2 /* Step Sound.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CC62435D20100B75A5D /* Step Sound.mat */; };
+		B11A988F243C74E1005C8AB2 /* Tash.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CD82435D20F00B75A5D /* Tash.mat */; };
+		B11A9890243C74E1005C8AB2 /* Tide.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CD42435D20C00B75A5D /* Tide.mat */; };
+		B11A9891243C74E1005C8AB2 /* Vomba.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CD12435D20A00B75A5D /* Vomba.mat */; };
+		B11A9892243C74E1005C8AB2 /* Ypsilon.mat in Copy Brain files */ = {isa = PBXBuildFile; fileRef = B1618CDC2435D21200B75A5D /* Ypsilon.mat */; };
+		B11A9893243C74EB005C8AB2 /* Accretion.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CC22435D1FE00B75A5D /* Accretion.mat */; };
+		B11A9894243C74EB005C8AB2 /* Adan.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CC12435D1FE00B75A5D /* Adan.mat */; };
+		B11A9895243C74EB005C8AB2 /* Archimedes.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CCD2435D20700B75A5D /* Archimedes.mat */; };
+		B11A9896243C74EB005C8AB2 /* Armitage.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CD32435D20B00B75A5D /* Armitage.mat */; };
+		B11A9897243C74EB005C8AB2 /* Betsy.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CB12435D1F200B75A5D /* Betsy.mat */; };
+		B11A9898243C74EB005C8AB2 /* Bao.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1254ABD2438A0AD00220DE1 /* Bao.mat */; };
+		B11A9899243C74EB005C8AB2 /* Birk.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CCA2435D20400B75A5D /* Birk.mat */; };
+		B11A989A243C74EB005C8AB2 /* Bob.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CBC2435D1FA00B75A5D /* Bob.mat */; };
+		B11A989B243C74EB005C8AB2 /* Borneo.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CBE2435D1FB00B75A5D /* Borneo.mat */; };
+		B11A989C243C74EB005C8AB2 /* Cern.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CCC2435D20600B75A5D /* Cern.mat */; };
+		B11A989D243C74EB005C8AB2 /* Chaotic neutral.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CAC2435D1EF00B75A5D /* Chaotic neutral.mat */; };
+		B11A989E243C74EB005C8AB2 /* Chopin.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CDD2435D21300B75A5D /* Chopin.mat */; };
+		B11A989F243C74EB005C8AB2 /* Edelman.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CD22435D20B00B75A5D /* Edelman.mat */; };
+		B11A98A0243C74EB005C8AB2 /* Fingers Crossed.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CBB2435D1F900B75A5D /* Fingers Crossed.mat */; };
+		B11A98A1243C74EB005C8AB2 /* Flower Force.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CB02435D1F200B75A5D /* Flower Force.mat */; };
+		B11A98A2243C74EB005C8AB2 /* Freddie.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CCE2435D20800B75A5D /* Freddie.mat */; };
+		B11A98A3243C74EB005C8AB2 /* Gibson.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CB42435D1F500B75A5D /* Gibson.mat */; };
+		B11A98A4243C74EB005C8AB2 /* Greeny.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CBD2435D1FB00B75A5D /* Greeny.mat */; };
+		B11A98A5243C74EB005C8AB2 /* Jah.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CC32435D1FF00B75A5D /* Jah.mat */; };
+		B11A98A6243C74EB005C8AB2 /* Karl.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CAE2435D1F000B75A5D /* Karl.mat */; };
+		B11A98A7243C74EB005C8AB2 /* Karl2.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CD62435D20E00B75A5D /* Karl2.mat */; };
+		B11A98A8243C74EB005C8AB2 /* Lucy.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CB62435D1F600B75A5D /* Lucy.mat */; };
+		B11A98A9243C74EB005C8AB2 /* Massive.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CB92435D1F800B75A5D /* Massive.mat */; };
+		B11A98AA243C74EB005C8AB2 /* Mavis.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CB82435D1F700B75A5D /* Mavis.mat */; };
+		B11A98AB243C74EB005C8AB2 /* Meg.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CC42435D20000B75A5D /* Meg.mat */; };
+		B11A98AC243C74EB005C8AB2 /* Merlin.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CB52435D1F500B75A5D /* Merlin.mat */; };
+		B11A98AD243C74EB005C8AB2 /* Mocho.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CDB2435D21100B75A5D /* Mocho.mat */; };
+		B11A98AE243C74EB005C8AB2 /* Moinet.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CAD2435D1F000B75A5D /* Moinet.mat */; };
+		B11A98AF243C74EB005C8AB2 /* Momo.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CDA2435D21100B75A5D /* Momo.mat */; };
+		B11A98B0243C74EB005C8AB2 /* Mos.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CD52435D20D00B75A5D /* Mos.mat */; };
+		B11A98B1243C74EB005C8AB2 /* Occasional Spinner.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CB72435D1F700B75A5D /* Occasional Spinner.mat */; };
+		B11A98B2243C74EB005C8AB2 /* Opportunity.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CCF2435D20800B75A5D /* Opportunity.mat */; };
+		B11A98B3243C74EB005C8AB2 /* Pelle 2.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CAF2435D1F100B75A5D /* Pelle 2.mat */; };
+		B11A98B4243C74EB005C8AB2 /* Pelle.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CD72435D20E00B75A5D /* Pelle.mat */; };
+		B11A98B5243C74EB005C8AB2 /* Pilkington.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CC72435D20200B75A5D /* Pilkington.mat */; };
+		B11A98B6243C74EB005C8AB2 /* Quark.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CB32435D1F400B75A5D /* Quark.mat */; };
+		B11A98B7243C74EB005C8AB2 /* Quiroga.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CCB2435D20500B75A5D /* Quiroga.mat */; };
+		B11A98B8243C74EB005C8AB2 /* Rapid.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CAB2435D1EE00B75A5D /* Rapid.mat */; };
+		B11A98B9243C74EB005C8AB2 /* Reservoir.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CC82435D20300B75A5D /* Reservoir.mat */; };
+		B11A98BA243C74EB005C8AB2 /* Shouk.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1254AC02438A0C600220DE1 /* Shouk.mat */; };
+		B11A98BB243C74EB005C8AB2 /* Signet.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CD02435D20900B75A5D /* Signet.mat */; };
+		B11A98BC243C74EB005C8AB2 /* Songbird.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CBA2435D1F900B75A5D /* Songbird.mat */; };
+		B11A98BD243C74EB005C8AB2 /* Spud.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CBF2435D1FC00B75A5D /* Spud.mat */; };
+		B11A98BE243C74EB005C8AB2 /* Starquake.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CB22435D1F300B75A5D /* Starquake.mat */; };
+		B11A98BF243C74EB005C8AB2 /* Step Sound.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CC62435D20100B75A5D /* Step Sound.mat */; };
+		B11A98C0243C74EB005C8AB2 /* Tash.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CD82435D20F00B75A5D /* Tash.mat */; };
+		B11A98C1243C74EB005C8AB2 /* Tide.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CD42435D20C00B75A5D /* Tide.mat */; };
+		B11A98C2243C74EB005C8AB2 /* Vomba.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CD12435D20A00B75A5D /* Vomba.mat */; };
+		B11A98C3243C74EB005C8AB2 /* Ypsilon.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CDC2435D21200B75A5D /* Ypsilon.mat */; };
+		B1254ABE2438A0AD00220DE1 /* Bao.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1254ABD2438A0AD00220DE1 /* Bao.mat */; };
+		B1254ABF2438A0AD00220DE1 /* Bao.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1254ABD2438A0AD00220DE1 /* Bao.mat */; };
+		B1254AC12438A0C600220DE1 /* Shouk.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1254AC02438A0C600220DE1 /* Shouk.mat */; };
+		B1254AC22438A0C600220DE1 /* Shouk.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1254AC02438A0C600220DE1 /* Shouk.mat */; };
+		B12778E72423726D005551E6 /* BrainNetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12778E62423726D005551E6 /* BrainNetworkView.swift */; };
+		B12BB92B23817F4200857538 /* libBrain-Framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98FB04231938D0001AB5B5 /* libBrain-Framework.a */; };
+		B12BB93A2381917100857538 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B133B12B23815D86008B8CEE /* Accelerate.framework */; };
+		B12CA6002433467D006C7606 /* EndPointTypeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CA5FB2433467A006C7606 /* EndPointTypeProtocol.swift */; };
+		B12CA6012433467D006C7606 /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CA5FC2433467B006C7606 /* AlertMessage.swift */; };
+		B12CA6022433467D006C7606 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CA5FD2433467B006C7606 /* APIManager.swift */; };
+		B12CA6032433467D006C7606 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CA5FE2433467C006C7606 /* APIConstants.swift */; };
+		B12CA6042433467D006C7606 /* ErrorObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CA5FF2433467D006C7606 /* ErrorObject.swift */; };
+		B12CA6062433486E006C7606 /* Dictionary+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CA6052433486E006C7606 /* Dictionary+Additions.swift */; };
+		B12CA608243348D5006C7606 /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CA607243348D5006C7606 /* EndpointType.swift */; };
+		B12CA60E24334F4F006C7606 /* CharacterSet+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CA60D24334F4F006C7606 /* CharacterSet+Additions.swift */; };
+		B12CA6112433585A006C7606 /* RobotAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CA6102433585A006C7606 /* RobotAPIManager.swift */; };
+		B12CA61424335970006C7606 /* BaudRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12CA61324335970006C7606 /* BaudRate.swift */; };
+		B133B12C23815D86008B8CEE /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B133B12B23815D86008B8CEE /* Accelerate.framework */; };
+		B133B13523817527008B8CEE /* NeurorobotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B133B13423817527008B8CEE /* NeurorobotTests.swift */; };
+		B1380F06240D13E700364049 /* Data+AVAudioPCMBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1380F05240D13E700364049 /* Data+AVAudioPCMBuffer.swift */; };
+		B1380F08240D189800364049 /* AudioStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1380F07240D189800364049 /* AudioStreamer.swift */; };
+		B1403ED72436298D00C2DCCF /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BEADA024238C2F008B2FCF /* Coordinate.swift */; };
+		B1403ED9243629A300C2DCCF /* Data+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C19885240E965500FDF0BE /* Data+Additions.swift */; };
+		B1403EDB243629B600C2DCCF /* CGFloat+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDDB523191B7900CA51CC /* CGFloat+Additions.swift */; };
+		B142148A24387DDD000977FD /* Neuro_RobotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B142148924387DDD000977FD /* Neuro_RobotUITests.swift */; };
+		B142149124387F18000977FD /* libBrain-Framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98FB04231938D0001AB5B5 /* libBrain-Framework.a */; };
+		B149BACD24322B5600974872 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B149BACB24322B5600974872 /* SplashViewController.xib */; };
+		B149BACE24322B5600974872 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B149BACC24322B5600974872 /* SplashViewController.swift */; };
+		B1618CDE2435D21300B75A5D /* Rapid.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CAB2435D1EE00B75A5D /* Rapid.mat */; };
+		B1618CDF2435D21300B75A5D /* Chaotic neutral.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CAC2435D1EF00B75A5D /* Chaotic neutral.mat */; };
+		B1618CE02435D21300B75A5D /* Moinet.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CAD2435D1F000B75A5D /* Moinet.mat */; };
+		B1618CE12435D21300B75A5D /* Karl.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CAE2435D1F000B75A5D /* Karl.mat */; };
+		B1618CE22435D21300B75A5D /* Pelle 2.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CAF2435D1F100B75A5D /* Pelle 2.mat */; };
+		B1618CE32435D21300B75A5D /* Flower Force.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CB02435D1F200B75A5D /* Flower Force.mat */; };
+		B1618CE42435D21300B75A5D /* Betsy.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CB12435D1F200B75A5D /* Betsy.mat */; };
+		B1618CE52435D21300B75A5D /* Starquake.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CB22435D1F300B75A5D /* Starquake.mat */; };
+		B1618CE62435D21300B75A5D /* Quark.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CB32435D1F400B75A5D /* Quark.mat */; };
+		B1618CE72435D21300B75A5D /* Gibson.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CB42435D1F500B75A5D /* Gibson.mat */; };
+		B1618CE82435D21300B75A5D /* Merlin.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CB52435D1F500B75A5D /* Merlin.mat */; };
+		B1618CE92435D21300B75A5D /* Lucy.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CB62435D1F600B75A5D /* Lucy.mat */; };
+		B1618CEA2435D21300B75A5D /* Occasional Spinner.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CB72435D1F700B75A5D /* Occasional Spinner.mat */; };
+		B1618CEB2435D21300B75A5D /* Mavis.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CB82435D1F700B75A5D /* Mavis.mat */; };
+		B1618CEC2435D21300B75A5D /* Massive.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CB92435D1F800B75A5D /* Massive.mat */; };
+		B1618CED2435D21300B75A5D /* Songbird.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CBA2435D1F900B75A5D /* Songbird.mat */; };
+		B1618CEE2435D21300B75A5D /* Fingers Crossed.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CBB2435D1F900B75A5D /* Fingers Crossed.mat */; };
+		B1618CEF2435D21300B75A5D /* Bob.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CBC2435D1FA00B75A5D /* Bob.mat */; };
+		B1618CF02435D21300B75A5D /* Greeny.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CBD2435D1FB00B75A5D /* Greeny.mat */; };
+		B1618CF12435D21300B75A5D /* Borneo.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CBE2435D1FB00B75A5D /* Borneo.mat */; };
+		B1618CF22435D21300B75A5D /* Spud.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CBF2435D1FC00B75A5D /* Spud.mat */; };
+		B1618CF42435D21300B75A5D /* Adan.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CC12435D1FE00B75A5D /* Adan.mat */; };
+		B1618CF52435D21300B75A5D /* Accretion.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CC22435D1FE00B75A5D /* Accretion.mat */; };
+		B1618CF62435D21300B75A5D /* Jah.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CC32435D1FF00B75A5D /* Jah.mat */; };
+		B1618CF72435D21300B75A5D /* Meg.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CC42435D20000B75A5D /* Meg.mat */; };
+		B1618CF92435D21300B75A5D /* Step Sound.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CC62435D20100B75A5D /* Step Sound.mat */; };
+		B1618CFA2435D21300B75A5D /* Pilkington.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CC72435D20200B75A5D /* Pilkington.mat */; };
+		B1618CFB2435D21300B75A5D /* Reservoir.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CC82435D20300B75A5D /* Reservoir.mat */; };
+		B1618CFD2435D21300B75A5D /* Birk.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CCA2435D20400B75A5D /* Birk.mat */; };
+		B1618CFE2435D21300B75A5D /* Quiroga.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CCB2435D20500B75A5D /* Quiroga.mat */; };
+		B1618CFF2435D21300B75A5D /* Cern.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CCC2435D20600B75A5D /* Cern.mat */; };
+		B1618D002435D21300B75A5D /* Archimedes.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CCD2435D20700B75A5D /* Archimedes.mat */; };
+		B1618D012435D21300B75A5D /* Freddie.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CCE2435D20800B75A5D /* Freddie.mat */; };
+		B1618D022435D21300B75A5D /* Opportunity.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CCF2435D20800B75A5D /* Opportunity.mat */; };
+		B1618D032435D21300B75A5D /* Signet.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CD02435D20900B75A5D /* Signet.mat */; };
+		B1618D042435D21300B75A5D /* Vomba.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CD12435D20A00B75A5D /* Vomba.mat */; };
+		B1618D052435D21300B75A5D /* Edelman.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CD22435D20B00B75A5D /* Edelman.mat */; };
+		B1618D062435D21300B75A5D /* Armitage.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CD32435D20B00B75A5D /* Armitage.mat */; };
+		B1618D072435D21300B75A5D /* Tide.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CD42435D20C00B75A5D /* Tide.mat */; };
+		B1618D082435D21300B75A5D /* Mos.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CD52435D20D00B75A5D /* Mos.mat */; };
+		B1618D092435D21300B75A5D /* Karl2.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CD62435D20E00B75A5D /* Karl2.mat */; };
+		B1618D0A2435D21300B75A5D /* Pelle.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CD72435D20E00B75A5D /* Pelle.mat */; };
+		B1618D0B2435D21300B75A5D /* Tash.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CD82435D20F00B75A5D /* Tash.mat */; };
+		B1618D0D2435D21300B75A5D /* Momo.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CDA2435D21100B75A5D /* Momo.mat */; };
+		B1618D0E2435D21300B75A5D /* Mocho.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CDB2435D21100B75A5D /* Mocho.mat */; };
+		B1618D0F2435D21300B75A5D /* Ypsilon.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CDC2435D21200B75A5D /* Ypsilon.mat */; };
+		B1618D102435D21300B75A5D /* Chopin.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1618CDD2435D21300B75A5D /* Chopin.mat */; };
+		B1618D452435DA1200B75A5D /* SerialData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1618D442435DA1200B75A5D /* SerialData.swift */; };
+		B17D64C12434A9CE0011DD12 /* DictionaryCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17D64C02434A9CE0011DD12 /* DictionaryCodable.swift */; };
+		B18004D1238ADDD900D9AAA1 /* test.csv in Resources */ = {isa = PBXBuildFile; fileRef = B18004CF238ADDD800D9AAA1 /* test.csv */; };
+		B18004D2238ADDD900D9AAA1 /* test_results.csv in Resources */ = {isa = PBXBuildFile; fileRef = B18004D0238ADDD900D9AAA1 /* test_results.csv */; };
+		B18C150C2421344C0095E6C8 /* UIDeviceOrientation+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18C150B2421344C0095E6C8 /* UIDeviceOrientation+Additions.swift */; };
+		B1BE5C3523F723A7008D73BF /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BE5C3423F723A7008D73BF /* String+Additions.swift */; };
+		B1BEAD9C242378F3008B2FCF /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BEAD9B242378F3008B2FCF /* UIView+Constraints.swift */; };
+		B1BEAD9E242385ED008B2FCF /* NeuronView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BEAD9D242385ED008B2FCF /* NeuronView.swift */; };
+		B1BEADA124238C2F008B2FCF /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BEADA024238C2F008B2FCF /* Coordinate.swift */; };
+		B1BEADA42423D1EA008B2FCF /* UIColor+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BEADA32423D1EA008B2FCF /* UIColor+App.swift */; };
+		B1BEADA62423D242008B2FCF /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BEADA52423D242008B2FCF /* UIColor+Additions.swift */; };
+		B1BEADA82423DB30008B2FCF /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BEADA72423DB30008B2FCF /* LineView.swift */; };
+		B1BEADAE2428C5F9008B2FCF /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BEADAD2428C5F9008B2FCF /* ContactView.swift */; };
+		B1BEADB0242A5281008B2FCF /* CGPoint+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BEADAF242A5280008B2FCF /* CGPoint+Additions.swift */; };
+		B1BEADB2242A5790008B2FCF /* NeuronContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BEADB1242A5790008B2FCF /* NeuronContactView.swift */; };
+		B1C19886240E965500FDF0BE /* Data+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C19885240E965500FDF0BE /* Data+Additions.swift */; };
+		B1C48C1A241CDA0F0049A3F1 /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C48C19241CDA0F0049A3F1 /* UIImage+Additions.swift */; };
+		B1C48C1C241CF4620049A3F1 /* UIWindow+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C48C1B241CF4620049A3F1 /* UIWindow+Additions.swift */; };
+		B1C48C1E241CF6A60049A3F1 /* UIApplication+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C48C1D241CF6A60049A3F1 /* UIApplication+Additions.swift */; };
+		B1C48C20241CFA750049A3F1 /* BaseStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C48C1F241CFA750049A3F1 /* BaseStreamViewController.swift */; };
+		B1C48C22241D05D30049A3F1 /* Error+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C48C21241D05D30049A3F1 /* Error+Additions.swift */; };
+		B1CE7D4C23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1CE7D4A23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.xib */; };
+		B1CE7D4D23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE7D4B23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.swift */; };
+		B1CE7D4F23E1B8E5007E45A9 /* VideoStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE7D4E23E1B8E4007E45A9 /* VideoStreamView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B133B13A23817634008B8CEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D5BDD9123191B4000CA51CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D5BDD9823191B4000CA51CC;
+			remoteInfo = Neurorobot;
+		};
+		B142148C24387DDD000977FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D5BDD9123191B4000CA51CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D5BDD9823191B4000CA51CC;
+			remoteInfo = Neurorobot;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9D4EA87C23193F2C00E9008C /* Copy Brain files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Brains;
+			dstSubfolderSpec = 7;
+			files = (
+				B11A9862243C74E0005C8AB2 /* Accretion.mat in Copy Brain files */,
+				B11A9863243C74E0005C8AB2 /* Adan.mat in Copy Brain files */,
+				B11A9864243C74E0005C8AB2 /* Archimedes.mat in Copy Brain files */,
+				B11A9865243C74E0005C8AB2 /* Armitage.mat in Copy Brain files */,
+				B11A9866243C74E0005C8AB2 /* Betsy.mat in Copy Brain files */,
+				B11A9867243C74E0005C8AB2 /* Bao.mat in Copy Brain files */,
+				B11A9868243C74E0005C8AB2 /* Birk.mat in Copy Brain files */,
+				B11A9869243C74E0005C8AB2 /* Bob.mat in Copy Brain files */,
+				B11A986A243C74E0005C8AB2 /* Borneo.mat in Copy Brain files */,
+				B11A986B243C74E0005C8AB2 /* Cern.mat in Copy Brain files */,
+				B11A986C243C74E0005C8AB2 /* Chaotic neutral.mat in Copy Brain files */,
+				B11A986D243C74E0005C8AB2 /* Chopin.mat in Copy Brain files */,
+				B11A986E243C74E0005C8AB2 /* Edelman.mat in Copy Brain files */,
+				B11A986F243C74E0005C8AB2 /* Fingers Crossed.mat in Copy Brain files */,
+				B11A9870243C74E0005C8AB2 /* Flower Force.mat in Copy Brain files */,
+				B11A9871243C74E0005C8AB2 /* Freddie.mat in Copy Brain files */,
+				B11A9872243C74E0005C8AB2 /* Gibson.mat in Copy Brain files */,
+				B11A9873243C74E0005C8AB2 /* Greeny.mat in Copy Brain files */,
+				B11A9874243C74E0005C8AB2 /* Jah.mat in Copy Brain files */,
+				B11A9875243C74E0005C8AB2 /* Karl.mat in Copy Brain files */,
+				B11A9876243C74E0005C8AB2 /* Karl2.mat in Copy Brain files */,
+				B11A9877243C74E0005C8AB2 /* Lucy.mat in Copy Brain files */,
+				B11A9878243C74E0005C8AB2 /* Massive.mat in Copy Brain files */,
+				B11A9879243C74E0005C8AB2 /* Mavis.mat in Copy Brain files */,
+				B11A987A243C74E0005C8AB2 /* Meg.mat in Copy Brain files */,
+				B11A987B243C74E0005C8AB2 /* Merlin.mat in Copy Brain files */,
+				B11A987C243C74E0005C8AB2 /* Mocho.mat in Copy Brain files */,
+				B11A987D243C74E0005C8AB2 /* Moinet.mat in Copy Brain files */,
+				B11A987E243C74E0005C8AB2 /* Momo.mat in Copy Brain files */,
+				B11A987F243C74E0005C8AB2 /* Mos.mat in Copy Brain files */,
+				B11A9880243C74E0005C8AB2 /* Occasional Spinner.mat in Copy Brain files */,
+				B11A9881243C74E0005C8AB2 /* Opportunity.mat in Copy Brain files */,
+				B11A9882243C74E0005C8AB2 /* Pelle 2.mat in Copy Brain files */,
+				B11A9883243C74E0005C8AB2 /* Pelle.mat in Copy Brain files */,
+				B11A9884243C74E0005C8AB2 /* Pilkington.mat in Copy Brain files */,
+				B11A9885243C74E0005C8AB2 /* Quark.mat in Copy Brain files */,
+				B11A9886243C74E0005C8AB2 /* Quiroga.mat in Copy Brain files */,
+				B11A9887243C74E0005C8AB2 /* Rapid.mat in Copy Brain files */,
+				B11A9888243C74E0005C8AB2 /* Reservoir.mat in Copy Brain files */,
+				B11A9889243C74E0005C8AB2 /* Shouk.mat in Copy Brain files */,
+				B11A988A243C74E0005C8AB2 /* Signet.mat in Copy Brain files */,
+				B11A988B243C74E0005C8AB2 /* Songbird.mat in Copy Brain files */,
+				B11A988C243C74E1005C8AB2 /* Spud.mat in Copy Brain files */,
+				B11A988D243C74E1005C8AB2 /* Starquake.mat in Copy Brain files */,
+				B11A988E243C74E1005C8AB2 /* Step Sound.mat in Copy Brain files */,
+				B11A988F243C74E1005C8AB2 /* Tash.mat in Copy Brain files */,
+				B11A9890243C74E1005C8AB2 /* Tide.mat in Copy Brain files */,
+				B11A9891243C74E1005C8AB2 /* Vomba.mat in Copy Brain files */,
+				B11A9892243C74E1005C8AB2 /* Ypsilon.mat in Copy Brain files */,
+			);
+			name = "Copy Brain files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1254A8924389BAB00220DE1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Brains;
+			dstSubfolderSpec = 7;
+			files = (
+				B11A9893243C74EB005C8AB2 /* Accretion.mat in CopyFiles */,
+				B11A9894243C74EB005C8AB2 /* Adan.mat in CopyFiles */,
+				B11A9895243C74EB005C8AB2 /* Archimedes.mat in CopyFiles */,
+				B11A9896243C74EB005C8AB2 /* Armitage.mat in CopyFiles */,
+				B11A9897243C74EB005C8AB2 /* Betsy.mat in CopyFiles */,
+				B11A9898243C74EB005C8AB2 /* Bao.mat in CopyFiles */,
+				B11A9899243C74EB005C8AB2 /* Birk.mat in CopyFiles */,
+				B11A989A243C74EB005C8AB2 /* Bob.mat in CopyFiles */,
+				B11A989B243C74EB005C8AB2 /* Borneo.mat in CopyFiles */,
+				B11A989C243C74EB005C8AB2 /* Cern.mat in CopyFiles */,
+				B11A989D243C74EB005C8AB2 /* Chaotic neutral.mat in CopyFiles */,
+				B11A989E243C74EB005C8AB2 /* Chopin.mat in CopyFiles */,
+				B11A989F243C74EB005C8AB2 /* Edelman.mat in CopyFiles */,
+				B11A98A0243C74EB005C8AB2 /* Fingers Crossed.mat in CopyFiles */,
+				B11A98A1243C74EB005C8AB2 /* Flower Force.mat in CopyFiles */,
+				B11A98A2243C74EB005C8AB2 /* Freddie.mat in CopyFiles */,
+				B11A98A3243C74EB005C8AB2 /* Gibson.mat in CopyFiles */,
+				B11A98A4243C74EB005C8AB2 /* Greeny.mat in CopyFiles */,
+				B11A98A5243C74EB005C8AB2 /* Jah.mat in CopyFiles */,
+				B11A98A6243C74EB005C8AB2 /* Karl.mat in CopyFiles */,
+				B11A98A7243C74EB005C8AB2 /* Karl2.mat in CopyFiles */,
+				B11A98A8243C74EB005C8AB2 /* Lucy.mat in CopyFiles */,
+				B11A98A9243C74EB005C8AB2 /* Massive.mat in CopyFiles */,
+				B11A98AA243C74EB005C8AB2 /* Mavis.mat in CopyFiles */,
+				B11A98AB243C74EB005C8AB2 /* Meg.mat in CopyFiles */,
+				B11A98AC243C74EB005C8AB2 /* Merlin.mat in CopyFiles */,
+				B11A98AD243C74EB005C8AB2 /* Mocho.mat in CopyFiles */,
+				B11A98AE243C74EB005C8AB2 /* Moinet.mat in CopyFiles */,
+				B11A98AF243C74EB005C8AB2 /* Momo.mat in CopyFiles */,
+				B11A98B0243C74EB005C8AB2 /* Mos.mat in CopyFiles */,
+				B11A98B1243C74EB005C8AB2 /* Occasional Spinner.mat in CopyFiles */,
+				B11A98B2243C74EB005C8AB2 /* Opportunity.mat in CopyFiles */,
+				B11A98B3243C74EB005C8AB2 /* Pelle 2.mat in CopyFiles */,
+				B11A98B4243C74EB005C8AB2 /* Pelle.mat in CopyFiles */,
+				B11A98B5243C74EB005C8AB2 /* Pilkington.mat in CopyFiles */,
+				B11A98B6243C74EB005C8AB2 /* Quark.mat in CopyFiles */,
+				B11A98B7243C74EB005C8AB2 /* Quiroga.mat in CopyFiles */,
+				B11A98B8243C74EB005C8AB2 /* Rapid.mat in CopyFiles */,
+				B11A98B9243C74EB005C8AB2 /* Reservoir.mat in CopyFiles */,
+				B11A98BA243C74EB005C8AB2 /* Shouk.mat in CopyFiles */,
+				B11A98BB243C74EB005C8AB2 /* Signet.mat in CopyFiles */,
+				B11A98BC243C74EB005C8AB2 /* Songbird.mat in CopyFiles */,
+				B11A98BD243C74EB005C8AB2 /* Spud.mat in CopyFiles */,
+				B11A98BE243C74EB005C8AB2 /* Starquake.mat in CopyFiles */,
+				B11A98BF243C74EB005C8AB2 /* Step Sound.mat in CopyFiles */,
+				B11A98C0243C74EB005C8AB2 /* Tash.mat in CopyFiles */,
+				B11A98C1243C74EB005C8AB2 /* Tide.mat in CopyFiles */,
+				B11A98C2243C74EB005C8AB2 /* Vomba.mat in CopyFiles */,
+				B11A98C3243C74EB005C8AB2 /* Ypsilon.mat in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		288E6DBFE20A9BBF8982EF09 /* Pods_Neurorobot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neurorobot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6433B82D04BFDFDA2EA881E9 /* Pods-NeurorobotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeurorobotTests.release.xcconfig"; path = "Target Support Files/Pods-NeurorobotTests/Pods-NeurorobotTests.release.xcconfig"; sourceTree = "<group>"; };
+		6D10BE879AE523240DA4364E /* Pods-NeurorobotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeurorobotTests.debug.xcconfig"; path = "Target Support Files/Pods-NeurorobotTests/Pods-NeurorobotTests.debug.xcconfig"; sourceTree = "<group>"; };
+		81FD5EE340082278341C0CF3 /* Pods-Neurorobot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neurorobot.debug.xcconfig"; path = "Target Support Files/Pods-Neurorobot/Pods-Neurorobot.debug.xcconfig"; sourceTree = "<group>"; };
+		8A45043F79EB858AEC2AC913 /* Pods-Neuro RobotUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neuro RobotUITests.debug.xcconfig"; path = "Target Support Files/Pods-Neuro RobotUITests/Pods-Neuro RobotUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D003D77231A749D005603A8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9D0B5B3B2340CD4D0017BD74 /* AlertBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBanner.swift; sourceTree = "<group>"; };
+		9D0B5B3D234109A30017BD74 /* NeurorobotImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeurorobotImage.swift; sourceTree = "<group>"; };
+		9D1B77E2231A6BA300E2258E /* libSystem.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.tbd; path = usr/lib/libSystem.tbd; sourceTree = SDKROOT; };
+		9D1B77E4231A6BB900E2258E /* libSystem_asan.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem_asan.tbd; path = usr/lib/libSystem_asan.tbd; sourceTree = SDKROOT; };
+		9D1B77E5231A6BBA00E2258E /* libSystem.B.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.B.tbd; path = usr/lib/libSystem.B.tbd; sourceTree = SDKROOT; };
+		9D1B77E6231A6BBA00E2258E /* libsystemstats.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsystemstats.tbd; path = usr/lib/libsystemstats.tbd; sourceTree = SDKROOT; };
+		9D1B77E7231A6BBA00E2258E /* libSystem.B_asan.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libSystem.B_asan.tbd; path = usr/lib/libSystem.B_asan.tbd; sourceTree = SDKROOT; };
+		9D1B77EE231A6C7E00E2258E /* hackForiPhone5.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = hackForiPhone5.c; sourceTree = "<group>"; };
+		9D3EAE60233B4ED900C29A70 /* BrainPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainPickerView.swift; sourceTree = "<group>"; };
+		9D5BDD9923191B4000CA51CC /* Neuro Robot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Neuro Robot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D5BDD9C23191B4000CA51CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9D5BDDA123191B4000CA51CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9D5BDDA323191B4200CA51CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D5BDDA623191B4200CA51CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9D5BDDA823191B4200CA51CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D5BDDB523191B7900CA51CC /* CGFloat+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Additions.swift"; sourceTree = "<group>"; };
+		9D5BDDB623191B7900CA51CC /* UIViewController+XIB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+XIB.swift"; sourceTree = "<group>"; };
+		9D5BDDB723191B7900CA51CC /* URL+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Additions.swift"; sourceTree = "<group>"; };
+		9D5BDDBC23191B8100CA51CC /* NeuroRobot-Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NeuroRobot-Wrapper.swift"; sourceTree = "<group>"; };
+		9D5BDDBD23191B8100CA51CC /* Brain_Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brain_Wrapper.swift; sourceTree = "<group>"; };
+		9D5BDDF323191BEC00CA51CC /* ConnectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectViewController.swift; sourceTree = "<group>"; };
+		9D5BDDF523191BF000CA51CC /* ConnectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectViewController.xib; sourceTree = "<group>"; };
+		9D5BDDF823191BFB00CA51CC /* LedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LedViewController.xib; sourceTree = "<group>"; };
+		9D5BDDF923191BFB00CA51CC /* LedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LedViewController.swift; sourceTree = "<group>"; };
+		9D5BDDFD23191C0800CA51CC /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		9D5BDE0123191C2700CA51CC /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
+		9D5BDE0223191C2700CA51CC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9D5BDE0623191C3300CA51CC /* VideoStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoStreamViewController.swift; sourceTree = "<group>"; };
+		9D5BDE0723191C3300CA51CC /* VideoStreamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoStreamViewController.xib; sourceTree = "<group>"; };
+		9D5BDE0D23191C4200CA51CC /* FingerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerView.swift; sourceTree = "<group>"; };
+		9D5BDE1023191C7400CA51CC /* Neurorobot-iOS-BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Neurorobot-iOS-BridgingHeader.h"; sourceTree = "<group>"; };
+		9D834DEE2345289E00BBBD62 /* BrainActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainActivityView.swift; sourceTree = "<group>"; };
+		9D834DF2234620FC00BBBD62 /* BrainActivityRasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainActivityRasterView.swift; sourceTree = "<group>"; };
+		9D98FAEE23193816001AB5B5 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		9D98FAF02319381B001AB5B5 /* liblzma.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = liblzma.tbd; path = usr/lib/liblzma.tbd; sourceTree = SDKROOT; };
+		9D98FAF22319381F001AB5B5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		9D98FAF423193824001AB5B5 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		9D98FAF623193829001AB5B5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9D98FAF82319382F001AB5B5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		9D98FAFA23193834001AB5B5 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		9D98FAFC23193837001AB5B5 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		9D98FAFE2319383C001AB5B5 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		9D98FB0023193842001AB5B5 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		9D98FB04231938D0001AB5B5 /* libBrain-Framework.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libBrain-Framework.a"; path = "Brain-Framework/library/lib/libBrain-Framework.a"; sourceTree = "<group>"; };
+		9F2D2E032370624000C0FFF4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9FA5A2B9236D8E38000A23EA /* libNeuroRobot-Framework.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libNeuroRobot-Framework.a"; path = "NeuroRobot-Framework/library/lib/libNeuroRobot-Framework.a"; sourceTree = "<group>"; };
+		AE6339D9F2A846A2E25278CE /* Pods-Neurorobot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neurorobot.release.xcconfig"; path = "Target Support Files/Pods-Neurorobot/Pods-Neurorobot.release.xcconfig"; sourceTree = "<group>"; };
+		B1254ABD2438A0AD00220DE1 /* Bao.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bao.mat; sourceTree = "<group>"; };
+		B1254AC02438A0C600220DE1 /* Shouk.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Shouk.mat; sourceTree = "<group>"; };
+		B12778E62423726D005551E6 /* BrainNetworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainNetworkView.swift; sourceTree = "<group>"; };
+		B12BB92C2381813C00857538 /* Neurorobot-iOS-BridgingHeader-Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Neurorobot-iOS-BridgingHeader-Tests.h"; sourceTree = "<group>"; };
+		B12CA5FB2433467A006C7606 /* EndPointTypeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointTypeProtocol.swift; sourceTree = "<group>"; };
+		B12CA5FC2433467B006C7606 /* AlertMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
+		B12CA5FD2433467B006C7606 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		B12CA5FE2433467C006C7606 /* APIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		B12CA5FF2433467D006C7606 /* ErrorObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorObject.swift; sourceTree = "<group>"; };
+		B12CA6052433486E006C7606 /* Dictionary+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Additions.swift"; sourceTree = "<group>"; };
+		B12CA607243348D5006C7606 /* EndpointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		B12CA60D24334F4F006C7606 /* CharacterSet+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Additions.swift"; sourceTree = "<group>"; };
+		B12CA6102433585A006C7606 /* RobotAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotAPIManager.swift; sourceTree = "<group>"; };
+		B12CA61324335970006C7606 /* BaudRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaudRate.swift; sourceTree = "<group>"; };
+		B133B12B23815D86008B8CEE /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		B133B13223817527008B8CEE /* NeurorobotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeurorobotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B133B13423817527008B8CEE /* NeurorobotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeurorobotTests.swift; sourceTree = "<group>"; };
+		B133B13623817527008B8CEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1380F05240D13E700364049 /* Data+AVAudioPCMBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+AVAudioPCMBuffer.swift"; sourceTree = "<group>"; };
+		B1380F07240D189800364049 /* AudioStreamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStreamer.swift; sourceTree = "<group>"; };
+		B13E56DA23D9E18B00BD88B7 /* Neurorobot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Neurorobot.entitlements; sourceTree = "<group>"; };
+		B142148724387DDD000977FD /* Neuro RobotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Neuro RobotUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B142148924387DDD000977FD /* Neuro_RobotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neuro_RobotUITests.swift; sourceTree = "<group>"; };
+		B142148B24387DDD000977FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B149BACB24322B5600974872 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		B149BACC24322B5600974872 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		B1618CAB2435D1EE00B75A5D /* Rapid.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rapid.mat; sourceTree = "<group>"; };
+		B1618CAC2435D1EF00B75A5D /* Chaotic neutral.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chaotic neutral.mat"; sourceTree = "<group>"; };
+		B1618CAD2435D1F000B75A5D /* Moinet.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Moinet.mat; sourceTree = "<group>"; };
+		B1618CAE2435D1F000B75A5D /* Karl.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Karl.mat; sourceTree = "<group>"; };
+		B1618CAF2435D1F100B75A5D /* Pelle 2.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pelle 2.mat"; sourceTree = "<group>"; };
+		B1618CB02435D1F200B75A5D /* Flower Force.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Flower Force.mat"; sourceTree = "<group>"; };
+		B1618CB12435D1F200B75A5D /* Betsy.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Betsy.mat; sourceTree = "<group>"; };
+		B1618CB22435D1F300B75A5D /* Starquake.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starquake.mat; sourceTree = "<group>"; };
+		B1618CB32435D1F400B75A5D /* Quark.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Quark.mat; sourceTree = "<group>"; };
+		B1618CB42435D1F500B75A5D /* Gibson.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gibson.mat; sourceTree = "<group>"; };
+		B1618CB52435D1F500B75A5D /* Merlin.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Merlin.mat; sourceTree = "<group>"; };
+		B1618CB62435D1F600B75A5D /* Lucy.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Lucy.mat; sourceTree = "<group>"; };
+		B1618CB72435D1F700B75A5D /* Occasional Spinner.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Occasional Spinner.mat"; sourceTree = "<group>"; };
+		B1618CB82435D1F700B75A5D /* Mavis.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mavis.mat; sourceTree = "<group>"; };
+		B1618CB92435D1F800B75A5D /* Massive.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Massive.mat; sourceTree = "<group>"; };
+		B1618CBA2435D1F900B75A5D /* Songbird.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Songbird.mat; sourceTree = "<group>"; };
+		B1618CBB2435D1F900B75A5D /* Fingers Crossed.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fingers Crossed.mat"; sourceTree = "<group>"; };
+		B1618CBC2435D1FA00B75A5D /* Bob.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bob.mat; sourceTree = "<group>"; };
+		B1618CBD2435D1FB00B75A5D /* Greeny.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Greeny.mat; sourceTree = "<group>"; };
+		B1618CBE2435D1FB00B75A5D /* Borneo.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Borneo.mat; sourceTree = "<group>"; };
+		B1618CBF2435D1FC00B75A5D /* Spud.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Spud.mat; sourceTree = "<group>"; };
+		B1618CC12435D1FE00B75A5D /* Adan.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Adan.mat; sourceTree = "<group>"; };
+		B1618CC22435D1FE00B75A5D /* Accretion.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Accretion.mat; sourceTree = "<group>"; };
+		B1618CC32435D1FF00B75A5D /* Jah.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Jah.mat; sourceTree = "<group>"; };
+		B1618CC42435D20000B75A5D /* Meg.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Meg.mat; sourceTree = "<group>"; };
+		B1618CC62435D20100B75A5D /* Step Sound.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Step Sound.mat"; sourceTree = "<group>"; };
+		B1618CC72435D20200B75A5D /* Pilkington.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pilkington.mat; sourceTree = "<group>"; };
+		B1618CC82435D20300B75A5D /* Reservoir.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reservoir.mat; sourceTree = "<group>"; };
+		B1618CCA2435D20400B75A5D /* Birk.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Birk.mat; sourceTree = "<group>"; };
+		B1618CCB2435D20500B75A5D /* Quiroga.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Quiroga.mat; sourceTree = "<group>"; };
+		B1618CCC2435D20600B75A5D /* Cern.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cern.mat; sourceTree = "<group>"; };
+		B1618CCD2435D20700B75A5D /* Archimedes.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Archimedes.mat; sourceTree = "<group>"; };
+		B1618CCE2435D20800B75A5D /* Freddie.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Freddie.mat; sourceTree = "<group>"; };
+		B1618CCF2435D20800B75A5D /* Opportunity.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Opportunity.mat; sourceTree = "<group>"; };
+		B1618CD02435D20900B75A5D /* Signet.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Signet.mat; sourceTree = "<group>"; };
+		B1618CD12435D20A00B75A5D /* Vomba.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Vomba.mat; sourceTree = "<group>"; };
+		B1618CD22435D20B00B75A5D /* Edelman.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Edelman.mat; sourceTree = "<group>"; };
+		B1618CD32435D20B00B75A5D /* Armitage.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Armitage.mat; sourceTree = "<group>"; };
+		B1618CD42435D20C00B75A5D /* Tide.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tide.mat; sourceTree = "<group>"; };
+		B1618CD52435D20D00B75A5D /* Mos.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mos.mat; sourceTree = "<group>"; };
+		B1618CD62435D20E00B75A5D /* Karl2.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Karl2.mat; sourceTree = "<group>"; };
+		B1618CD72435D20E00B75A5D /* Pelle.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pelle.mat; sourceTree = "<group>"; };
+		B1618CD82435D20F00B75A5D /* Tash.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tash.mat; sourceTree = "<group>"; };
+		B1618CDA2435D21100B75A5D /* Momo.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Momo.mat; sourceTree = "<group>"; };
+		B1618CDB2435D21100B75A5D /* Mocho.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mocho.mat; sourceTree = "<group>"; };
+		B1618CDC2435D21200B75A5D /* Ypsilon.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ypsilon.mat; sourceTree = "<group>"; };
+		B1618CDD2435D21300B75A5D /* Chopin.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chopin.mat; sourceTree = "<group>"; };
+		B1618D442435DA1200B75A5D /* SerialData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialData.swift; sourceTree = "<group>"; };
+		B1618D5B2436132C00B75A5D /* Neuro_RobotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neuro_RobotUITests.swift; sourceTree = "<group>"; };
+		B1618D5D2436132C00B75A5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B17D64C02434A9CE0011DD12 /* DictionaryCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryCodable.swift; sourceTree = "<group>"; };
+		B18004CF238ADDD800D9AAA1 /* test.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.csv; sourceTree = "<group>"; };
+		B18004D0238ADDD900D9AAA1 /* test_results.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test_results.csv; sourceTree = "<group>"; };
+		B18C150B2421344C0095E6C8 /* UIDeviceOrientation+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDeviceOrientation+Additions.swift"; sourceTree = "<group>"; };
+		B1BE5C3423F723A7008D73BF /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
+		B1BEAD9B242378F3008B2FCF /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		B1BEAD9D242385ED008B2FCF /* NeuronView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuronView.swift; sourceTree = "<group>"; };
+		B1BEADA024238C2F008B2FCF /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		B1BEADA32423D1EA008B2FCF /* UIColor+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+App.swift"; sourceTree = "<group>"; };
+		B1BEADA52423D242008B2FCF /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
+		B1BEADA72423DB30008B2FCF /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		B1BEADAD2428C5F9008B2FCF /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
+		B1BEADAF242A5280008B2FCF /* CGPoint+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Additions.swift"; sourceTree = "<group>"; };
+		B1BEADB1242A5790008B2FCF /* NeuronContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuronContactView.swift; sourceTree = "<group>"; };
+		B1C19885240E965500FDF0BE /* Data+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Additions.swift"; sourceTree = "<group>"; };
+		B1C48C19241CDA0F0049A3F1 /* UIImage+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
+		B1C48C1B241CF4620049A3F1 /* UIWindow+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Additions.swift"; sourceTree = "<group>"; };
+		B1C48C1D241CF6A60049A3F1 /* UIApplication+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Additions.swift"; sourceTree = "<group>"; };
+		B1C48C1F241CFA750049A3F1 /* BaseStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStreamViewController.swift; sourceTree = "<group>"; };
+		B1C48C21241D05D30049A3F1 /* Error+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Additions.swift"; sourceTree = "<group>"; };
+		B1CE7D4A23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoStreamWithoutRobotViewController.xib; sourceTree = "<group>"; };
+		B1CE7D4B23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamWithoutRobotViewController.swift; sourceTree = "<group>"; };
+		B1CE7D4E23E1B8E4007E45A9 /* VideoStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamView.swift; sourceTree = "<group>"; };
+		C47C25879CD481284D55F82F /* Pods-Neuro RobotUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neuro RobotUITests.release.xcconfig"; path = "Target Support Files/Pods-Neuro RobotUITests/Pods-Neuro RobotUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9D5BDD9623191B4000CA51CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B133B12C23815D86008B8CEE /* Accelerate.framework in Frameworks */,
+				9D98FB0123193842001AB5B5 /* CoreMedia.framework in Frameworks */,
+				9D98FAFF2319383C001AB5B5 /* CoreVideo.framework in Frameworks */,
+				9D98FAFD23193837001AB5B5 /* CoreFoundation.framework in Frameworks */,
+				9D98FAFB23193834001AB5B5 /* VideoToolbox.framework in Frameworks */,
+				9F06D75B235DEA450052A437 /* libz.tbd in Frameworks */,
+				9D98FAF92319382F001AB5B5 /* AudioToolbox.framework in Frameworks */,
+				9D98FAF723193829001AB5B5 /* Security.framework in Frameworks */,
+				9D98FAF523193825001AB5B5 /* libbz2.tbd in Frameworks */,
+				9D98FAF12319381B001AB5B5 /* liblzma.tbd in Frameworks */,
+				9D98FAEF23193816001AB5B5 /* libiconv.tbd in Frameworks */,
+				9D1B77F0231A72E300E2258E /* libBrain-Framework.a in Frameworks */,
+				9FA5A2BA236D8E38000A23EA /* libNeuroRobot-Framework.a in Frameworks */,
+				468CC3943FDC73E9C809D933 /* Pods_Neurorobot.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B133B12F23817527008B8CEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B12BB92B23817F4200857538 /* libBrain-Framework.a in Frameworks */,
+				B12BB93A2381917100857538 /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B142148424387DDD000977FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B142149124387F18000977FD /* libBrain-Framework.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7CF72A10771F214FB70C2727 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81FD5EE340082278341C0CF3 /* Pods-Neurorobot.debug.xcconfig */,
+				AE6339D9F2A846A2E25278CE /* Pods-Neurorobot.release.xcconfig */,
+				6D10BE879AE523240DA4364E /* Pods-NeurorobotTests.debug.xcconfig */,
+				6433B82D04BFDFDA2EA881E9 /* Pods-NeurorobotTests.release.xcconfig */,
+				8A45043F79EB858AEC2AC913 /* Pods-Neuro RobotUITests.debug.xcconfig */,
+				C47C25879CD481284D55F82F /* Pods-Neuro RobotUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9D0B5B3A2340CD3C0017BD74 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				9D0B5B3B2340CD4D0017BD74 /* AlertBanner.swift */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		9D1B77ED231A6C6600E2258E /* HackForiPhone5 */ = {
+			isa = PBXGroup;
+			children = (
+				9D1B77EE231A6C7E00E2258E /* hackForiPhone5.c */,
+			);
+			path = HackForiPhone5;
+			sourceTree = "<group>";
+		};
+		9D5BDD9023191B4000CA51CC = {
+			isa = PBXGroup;
+			children = (
+				9D003D77231A749D005603A8 /* README.md */,
+				B12CA5F824334561006C7606 /* Core */,
+				9D5BDD9B23191B4000CA51CC /* Neurorobot */,
+				B133B13323817527008B8CEE /* NeurorobotTests */,
+				B1618D5A2436132C00B75A5D /* Neuro RobotUITests */,
+				B142148824387DDD000977FD /* Neuro RobotUITests */,
+				9D5BDD9A23191B4000CA51CC /* Products */,
+				9D98FAED23193815001AB5B5 /* Frameworks */,
+				7CF72A10771F214FB70C2727 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		9D5BDD9A23191B4000CA51CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D5BDD9923191B4000CA51CC /* Neuro Robot.app */,
+				B133B13223817527008B8CEE /* NeurorobotTests.xctest */,
+				B142148724387DDD000977FD /* Neuro RobotUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D5BDD9B23191B4000CA51CC /* Neurorobot */ = {
+			isa = PBXGroup;
+			children = (
+				B12CA60F24335846006C7606 /* API Manager */,
+				9D0B5B3A2340CD3C0017BD74 /* Banner */,
+				9D5BDDB123191B6200CA51CC /* Controllers */,
+				9D5BDDB323191B6C00CA51CC /* Extensions */,
+				9D1B77ED231A6C6600E2258E /* HackForiPhone5 */,
+				B1BEAD9F24238C01008B2FCF /* Models */,
+				9D5BDDAE23191B4F00CA51CC /* Resources */,
+				9D5BDDB223191B6600CA51CC /* Wrappers */,
+				B12CA5FA2433460A006C7606 /* Helpers */,
+				9D5BDD9C23191B4000CA51CC /* AppDelegate.swift */,
+				9D5BDDA323191B4200CA51CC /* Assets.xcassets */,
+				9F2D2E032370624000C0FFF4 /* GoogleService-Info.plist */,
+				9D5BDDA823191B4200CA51CC /* Info.plist */,
+				9D5BDDA523191B4200CA51CC /* LaunchScreen.storyboard */,
+				9D5BDDA023191B4000CA51CC /* Main.storyboard */,
+				B12BB92C2381813C00857538 /* Neurorobot-iOS-BridgingHeader-Tests.h */,
+				9D5BDE1023191C7400CA51CC /* Neurorobot-iOS-BridgingHeader.h */,
+				B13E56DA23D9E18B00BD88B7 /* Neurorobot.entitlements */,
+			);
+			path = Neurorobot;
+			sourceTree = "<group>";
+		};
+		9D5BDDAE23191B4F00CA51CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B18004B5238ACAA600D9AAA1 /* Test files */,
+				9D5BDDC123191B9900CA51CC /* Brains */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9D5BDDB123191B6200CA51CC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9D5BDDFF23191C0D00CA51CC /* Base */,
+				9D5BDDF223191BE200CA51CC /* Connect */,
+				9D5BDDF723191BF300CA51CC /* Leds */,
+				9D5BDDFC23191BFE00CA51CC /* MainTab */,
+				B149BACA24322B3400974872 /* Splash */,
+				9D5BDE0023191C1100CA51CC /* Stream */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9D5BDDB223191B6600CA51CC /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				9D5BDDBD23191B8100CA51CC /* Brain_Wrapper.swift */,
+				9D5BDDBC23191B8100CA51CC /* NeuroRobot-Wrapper.swift */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		9D5BDDB323191B6C00CA51CC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B1BEADA32423D1EA008B2FCF /* UIColor+App.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9D5BDDC123191B9900CA51CC /* Brains */ = {
+			isa = PBXGroup;
+			children = (
+				B1618CC22435D1FE00B75A5D /* Accretion.mat */,
+				B1618CC12435D1FE00B75A5D /* Adan.mat */,
+				B1618CCD2435D20700B75A5D /* Archimedes.mat */,
+				B1618CD32435D20B00B75A5D /* Armitage.mat */,
+				B1618CB12435D1F200B75A5D /* Betsy.mat */,
+				B1254ABD2438A0AD00220DE1 /* Bao.mat */,
+				B1618CCA2435D20400B75A5D /* Birk.mat */,
+				B1618CBC2435D1FA00B75A5D /* Bob.mat */,
+				B1618CBE2435D1FB00B75A5D /* Borneo.mat */,
+				B1618CCC2435D20600B75A5D /* Cern.mat */,
+				B1618CAC2435D1EF00B75A5D /* Chaotic neutral.mat */,
+				B1618CDD2435D21300B75A5D /* Chopin.mat */,
+				B1618CD22435D20B00B75A5D /* Edelman.mat */,
+				B1618CBB2435D1F900B75A5D /* Fingers Crossed.mat */,
+				B1618CB02435D1F200B75A5D /* Flower Force.mat */,
+				B1618CCE2435D20800B75A5D /* Freddie.mat */,
+				B1618CB42435D1F500B75A5D /* Gibson.mat */,
+				B1618CBD2435D1FB00B75A5D /* Greeny.mat */,
+				B1618CC32435D1FF00B75A5D /* Jah.mat */,
+				B1618CAE2435D1F000B75A5D /* Karl.mat */,
+				B1618CD62435D20E00B75A5D /* Karl2.mat */,
+				B1618CB62435D1F600B75A5D /* Lucy.mat */,
+				B1618CB92435D1F800B75A5D /* Massive.mat */,
+				B1618CB82435D1F700B75A5D /* Mavis.mat */,
+				B1618CC42435D20000B75A5D /* Meg.mat */,
+				B1618CB52435D1F500B75A5D /* Merlin.mat */,
+				B1618CDB2435D21100B75A5D /* Mocho.mat */,
+				B1618CAD2435D1F000B75A5D /* Moinet.mat */,
+				B1618CDA2435D21100B75A5D /* Momo.mat */,
+				B1618CD52435D20D00B75A5D /* Mos.mat */,
+				B1618CB72435D1F700B75A5D /* Occasional Spinner.mat */,
+				B1618CCF2435D20800B75A5D /* Opportunity.mat */,
+				B1618CAF2435D1F100B75A5D /* Pelle 2.mat */,
+				B1618CD72435D20E00B75A5D /* Pelle.mat */,
+				B1618CC72435D20200B75A5D /* Pilkington.mat */,
+				B1618CB32435D1F400B75A5D /* Quark.mat */,
+				B1618CCB2435D20500B75A5D /* Quiroga.mat */,
+				B1618CAB2435D1EE00B75A5D /* Rapid.mat */,
+				B1618CC82435D20300B75A5D /* Reservoir.mat */,
+				B1254AC02438A0C600220DE1 /* Shouk.mat */,
+				B1618CD02435D20900B75A5D /* Signet.mat */,
+				B1618CBA2435D1F900B75A5D /* Songbird.mat */,
+				B1618CBF2435D1FC00B75A5D /* Spud.mat */,
+				B1618CB22435D1F300B75A5D /* Starquake.mat */,
+				B1618CC62435D20100B75A5D /* Step Sound.mat */,
+				B1618CD82435D20F00B75A5D /* Tash.mat */,
+				B1618CD42435D20C00B75A5D /* Tide.mat */,
+				B1618CD12435D20A00B75A5D /* Vomba.mat */,
+				B1618CDC2435D21200B75A5D /* Ypsilon.mat */,
+			);
+			path = Brains;
+			sourceTree = "<group>";
+		};
+		9D5BDDF223191BE200CA51CC /* Connect */ = {
+			isa = PBXGroup;
+			children = (
+				9D5BDDF323191BEC00CA51CC /* ConnectViewController.swift */,
+				9D5BDDF523191BF000CA51CC /* ConnectViewController.xib */,
+			);
+			path = Connect;
+			sourceTree = "<group>";
+		};
+		9D5BDDF723191BF300CA51CC /* Leds */ = {
+			isa = PBXGroup;
+			children = (
+				9D5BDDF923191BFB00CA51CC /* LedViewController.swift */,
+				9D5BDDF823191BFB00CA51CC /* LedViewController.xib */,
+			);
+			path = Leds;
+			sourceTree = "<group>";
+		};
+		9D5BDDFC23191BFE00CA51CC /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				9D5BDDFD23191C0800CA51CC /* MainTabBarController.swift */,
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
+		9D5BDDFF23191C0D00CA51CC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9D5BDE0123191C2700CA51CC /* BaseNavigationViewController.swift */,
+				9D5BDE0223191C2700CA51CC /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9D5BDE0023191C1100CA51CC /* Stream */ = {
+			isa = PBXGroup;
+			children = (
+				B12778E52423725A005551E6 /* Brain network */,
+				9D5BDE0F23191C4A00CA51CC /* View */,
+				9D5BDE0623191C3300CA51CC /* VideoStreamViewController.swift */,
+				9D5BDE0723191C3300CA51CC /* VideoStreamViewController.xib */,
+				B1CE7D4B23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.swift */,
+				B1CE7D4A23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.xib */,
+				B1C48C1F241CFA750049A3F1 /* BaseStreamViewController.swift */,
+			);
+			path = Stream;
+			sourceTree = "<group>";
+		};
+		9D5BDE0F23191C4A00CA51CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9D5BDE0D23191C4200CA51CC /* FingerView.swift */,
+				9D3EAE60233B4ED900C29A70 /* BrainPickerView.swift */,
+				9D834DEE2345289E00BBBD62 /* BrainActivityView.swift */,
+				9D834DF2234620FC00BBBD62 /* BrainActivityRasterView.swift */,
+				B1CE7D4E23E1B8E4007E45A9 /* VideoStreamView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9D98FAED23193815001AB5B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B133B12B23815D86008B8CEE /* Accelerate.framework */,
+				9FA5A2B9236D8E38000A23EA /* libNeuroRobot-Framework.a */,
+				9D1B77E4231A6BB900E2258E /* libSystem_asan.tbd */,
+				9D1B77E7231A6BBA00E2258E /* libSystem.B_asan.tbd */,
+				9D1B77E5231A6BBA00E2258E /* libSystem.B.tbd */,
+				9D1B77E6231A6BBA00E2258E /* libsystemstats.tbd */,
+				9D1B77E2231A6BA300E2258E /* libSystem.tbd */,
+				9D98FB04231938D0001AB5B5 /* libBrain-Framework.a */,
+				9D98FB0023193842001AB5B5 /* CoreMedia.framework */,
+				9D98FAFE2319383C001AB5B5 /* CoreVideo.framework */,
+				9D98FAFC23193837001AB5B5 /* CoreFoundation.framework */,
+				9D98FAFA23193834001AB5B5 /* VideoToolbox.framework */,
+				9D98FAF82319382F001AB5B5 /* AudioToolbox.framework */,
+				9D98FAF623193829001AB5B5 /* Security.framework */,
+				9D98FAF423193824001AB5B5 /* libbz2.tbd */,
+				9D98FAF22319381F001AB5B5 /* libz.tbd */,
+				9D98FAF02319381B001AB5B5 /* liblzma.tbd */,
+				9D98FAEE23193816001AB5B5 /* libiconv.tbd */,
+				288E6DBFE20A9BBF8982EF09 /* Pods_Neurorobot.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B12778E52423725A005551E6 /* Brain network */ = {
+			isa = PBXGroup;
+			children = (
+				B12778E62423726D005551E6 /* BrainNetworkView.swift */,
+				B1BEAD9D242385ED008B2FCF /* NeuronView.swift */,
+				B1BEADAD2428C5F9008B2FCF /* ContactView.swift */,
+				B1BEADB1242A5790008B2FCF /* NeuronContactView.swift */,
+				B1BEADA72423DB30008B2FCF /* LineView.swift */,
+			);
+			path = "Brain network";
+			sourceTree = "<group>";
+		};
+		B12CA5F624334541006C7606 /* API Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B12CA607243348D5006C7606 /* EndpointType.swift */,
+				B12CA5F724334555006C7606 /* Base */,
+			);
+			path = "API Manager";
+			sourceTree = "<group>";
+		};
+		B12CA5F724334555006C7606 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B17D64C32434B0040011DD12 /* Models */,
+				B17D64C22434AFFD0011DD12 /* Protocols */,
+				B12CA5FD2433467B006C7606 /* APIManager.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B12CA5F824334561006C7606 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B17D64C02434A9CE0011DD12 /* DictionaryCodable.swift */,
+				B12CA5F624334541006C7606 /* API Manager */,
+				B12CA5F924334572006C7606 /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B12CA5F924334572006C7606 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9D5BDDB523191B7900CA51CC /* CGFloat+Additions.swift */,
+				B1BEADAF242A5280008B2FCF /* CGPoint+Additions.swift */,
+				B12CA60D24334F4F006C7606 /* CharacterSet+Additions.swift */,
+				B1C19885240E965500FDF0BE /* Data+Additions.swift */,
+				B1380F05240D13E700364049 /* Data+AVAudioPCMBuffer.swift */,
+				B12CA6052433486E006C7606 /* Dictionary+Additions.swift */,
+				B1C48C21241D05D30049A3F1 /* Error+Additions.swift */,
+				B1BE5C3423F723A7008D73BF /* String+Additions.swift */,
+				B1C48C1D241CF6A60049A3F1 /* UIApplication+Additions.swift */,
+				B1BEADA52423D242008B2FCF /* UIColor+Additions.swift */,
+				B18C150B2421344C0095E6C8 /* UIDeviceOrientation+Additions.swift */,
+				B1C48C19241CDA0F0049A3F1 /* UIImage+Additions.swift */,
+				B1BEAD9B242378F3008B2FCF /* UIView+Constraints.swift */,
+				9D5BDDB623191B7900CA51CC /* UIViewController+XIB.swift */,
+				B1C48C1B241CF4620049A3F1 /* UIWindow+Additions.swift */,
+				9D5BDDB723191B7900CA51CC /* URL+Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B12CA5FA2433460A006C7606 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9D0B5B3D234109A30017BD74 /* NeurorobotImage.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B12CA60F24335846006C7606 /* API Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B12CA61224335965006C7606 /* Models */,
+				B12CA6102433585A006C7606 /* RobotAPIManager.swift */,
+			);
+			path = "API Manager";
+			sourceTree = "<group>";
+		};
+		B12CA61224335965006C7606 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B12CA61324335970006C7606 /* BaudRate.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B133B13323817527008B8CEE /* NeurorobotTests */ = {
+			isa = PBXGroup;
+			children = (
+				B133B13423817527008B8CEE /* NeurorobotTests.swift */,
+				B133B13623817527008B8CEE /* Info.plist */,
+			);
+			path = NeurorobotTests;
+			sourceTree = "<group>";
+		};
+		B142148824387DDD000977FD /* Neuro RobotUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B142148924387DDD000977FD /* Neuro_RobotUITests.swift */,
+				B142148B24387DDD000977FD /* Info.plist */,
+			);
+			path = "Neuro RobotUITests";
+			sourceTree = "<group>";
+		};
+		B149BACA24322B3400974872 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				B149BACB24322B5600974872 /* SplashViewController.xib */,
+				B149BACC24322B5600974872 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		B1618D5A2436132C00B75A5D /* Neuro RobotUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B1618D5B2436132C00B75A5D /* Neuro_RobotUITests.swift */,
+				B1618D5D2436132C00B75A5D /* Info.plist */,
+			);
+			path = "Neuro RobotUITests";
+			sourceTree = "<group>";
+		};
+		B17D64C22434AFFD0011DD12 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B12CA5FB2433467A006C7606 /* EndPointTypeProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B17D64C32434B0040011DD12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B12CA5FE2433467C006C7606 /* APIConstants.swift */,
+				B12CA5FC2433467B006C7606 /* AlertMessage.swift */,
+				B12CA5FF2433467D006C7606 /* ErrorObject.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B18004B5238ACAA600D9AAA1 /* Test files */ = {
+			isa = PBXGroup;
+			children = (
+				B18004D0238ADDD900D9AAA1 /* test_results.csv */,
+				B18004CF238ADDD800D9AAA1 /* test.csv */,
+			);
+			path = "Test files";
+			sourceTree = "<group>";
+		};
+		B1BEAD9F24238C01008B2FCF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B1380F07240D189800364049 /* AudioStreamer.swift */,
+				B1BEADA024238C2F008B2FCF /* Coordinate.swift */,
+				B1618D442435DA1200B75A5D /* SerialData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9D5BDD9823191B4000CA51CC /* Neurorobot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D5BDDAB23191B4200CA51CC /* Build configuration list for PBXNativeTarget "Neurorobot" */;
+			buildPhases = (
+				A1CDC26DF49D3E80BC611F05 /* [CP] Check Pods Manifest.lock */,
+				9D5BDD9523191B4000CA51CC /* Sources */,
+				9D5BDD9623191B4000CA51CC /* Frameworks */,
+				9D5BDD9723191B4000CA51CC /* Resources */,
+				9D4EA87C23193F2C00E9008C /* Copy Brain files */,
+				BED0A7797063D2C118077CAF /* [CP] Embed Pods Frameworks */,
+				B1618D462435E3B300B75A5D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Neurorobot;
+			productName = Neurorobot;
+			productReference = 9D5BDD9923191B4000CA51CC /* Neuro Robot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B133B13123817527008B8CEE /* NeurorobotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B133B13723817527008B8CEE /* Build configuration list for PBXNativeTarget "NeurorobotTests" */;
+			buildPhases = (
+				B133B12E23817527008B8CEE /* Sources */,
+				B133B12F23817527008B8CEE /* Frameworks */,
+				B133B13023817527008B8CEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B133B13B23817634008B8CEE /* PBXTargetDependency */,
+			);
+			name = NeurorobotTests;
+			productName = NeurorobotTests;
+			productReference = B133B13223817527008B8CEE /* NeurorobotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B142148624387DDD000977FD /* Neuro RobotUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B142148E24387DDD000977FD /* Build configuration list for PBXNativeTarget "Neuro RobotUITests" */;
+			buildPhases = (
+				B142148324387DDD000977FD /* Sources */,
+				B142148424387DDD000977FD /* Frameworks */,
+				B142148524387DDD000977FD /* Resources */,
+				B1254A8924389BAB00220DE1 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B142148D24387DDD000977FD /* PBXTargetDependency */,
+			);
+			name = "Neuro RobotUITests";
+			productName = "Neuro RobotUITests";
+			productReference = B142148724387DDD000977FD /* Neuro RobotUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D5BDD9123191B4000CA51CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Backyard Brains";
+				TargetAttributes = {
+					9D5BDD9823191B4000CA51CC = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					B133B13123817527008B8CEE = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 9D5BDD9823191B4000CA51CC;
+					};
+					B142148624387DDD000977FD = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 9D5BDD9823191B4000CA51CC;
+					};
+				};
+			};
+			buildConfigurationList = 9D5BDD9423191B4000CA51CC /* Build configuration list for PBXProject "Neurorobot" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9D5BDD9023191B4000CA51CC;
+			productRefGroup = 9D5BDD9A23191B4000CA51CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D5BDD9823191B4000CA51CC /* Neurorobot */,
+				B133B13123817527008B8CEE /* NeurorobotTests */,
+				B142148624387DDD000977FD /* Neuro RobotUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9D5BDD9723191B4000CA51CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B18004D2238ADDD900D9AAA1 /* test_results.csv in Resources */,
+				B1618D0B2435D21300B75A5D /* Tash.mat in Resources */,
+				B1618CEA2435D21300B75A5D /* Occasional Spinner.mat in Resources */,
+				B1618D0E2435D21300B75A5D /* Mocho.mat in Resources */,
+				B1618CE52435D21300B75A5D /* Starquake.mat in Resources */,
+				B1618D0A2435D21300B75A5D /* Pelle.mat in Resources */,
+				B149BACD24322B5600974872 /* SplashViewController.xib in Resources */,
+				B1618CEF2435D21300B75A5D /* Bob.mat in Resources */,
+				B1618CFB2435D21300B75A5D /* Reservoir.mat in Resources */,
+				B1618CFA2435D21300B75A5D /* Pilkington.mat in Resources */,
+				B1618D0F2435D21300B75A5D /* Ypsilon.mat in Resources */,
+				B1618CE02435D21300B75A5D /* Moinet.mat in Resources */,
+				B1618D042435D21300B75A5D /* Vomba.mat in Resources */,
+				9D5BDDA723191B4200CA51CC /* LaunchScreen.storyboard in Resources */,
+				B1618D032435D21300B75A5D /* Signet.mat in Resources */,
+				9D5BDDA423191B4200CA51CC /* Assets.xcassets in Resources */,
+				B1618D082435D21300B75A5D /* Mos.mat in Resources */,
+				B1618D012435D21300B75A5D /* Freddie.mat in Resources */,
+				B1618D052435D21300B75A5D /* Edelman.mat in Resources */,
+				B1618CF02435D21300B75A5D /* Greeny.mat in Resources */,
+				B1618CDF2435D21300B75A5D /* Chaotic neutral.mat in Resources */,
+				B1618CE82435D21300B75A5D /* Merlin.mat in Resources */,
+				B1618CE32435D21300B75A5D /* Flower Force.mat in Resources */,
+				B18004D1238ADDD900D9AAA1 /* test.csv in Resources */,
+				B1618CFE2435D21300B75A5D /* Quiroga.mat in Resources */,
+				B1618CEB2435D21300B75A5D /* Mavis.mat in Resources */,
+				B1618CED2435D21300B75A5D /* Songbird.mat in Resources */,
+				B1618CE12435D21300B75A5D /* Karl.mat in Resources */,
+				B1618CFD2435D21300B75A5D /* Birk.mat in Resources */,
+				B1618CDE2435D21300B75A5D /* Rapid.mat in Resources */,
+				B1618CFF2435D21300B75A5D /* Cern.mat in Resources */,
+				9D5BDDA223191B4000CA51CC /* Main.storyboard in Resources */,
+				B1618CE72435D21300B75A5D /* Gibson.mat in Resources */,
+				9D5BDDFA23191BFB00CA51CC /* LedViewController.xib in Resources */,
+				B1618D022435D21300B75A5D /* Opportunity.mat in Resources */,
+				B1618D072435D21300B75A5D /* Tide.mat in Resources */,
+				B1618CF22435D21300B75A5D /* Spud.mat in Resources */,
+				B1618D062435D21300B75A5D /* Armitage.mat in Resources */,
+				B1618D092435D21300B75A5D /* Karl2.mat in Resources */,
+				B1618CEC2435D21300B75A5D /* Massive.mat in Resources */,
+				B1618CE62435D21300B75A5D /* Quark.mat in Resources */,
+				B1618D002435D21300B75A5D /* Archimedes.mat in Resources */,
+				B1618CEE2435D21300B75A5D /* Fingers Crossed.mat in Resources */,
+				B1618CF52435D21300B75A5D /* Accretion.mat in Resources */,
+				9D5BDE0A23191C3300CA51CC /* VideoStreamViewController.xib in Resources */,
+				B1618D102435D21300B75A5D /* Chopin.mat in Resources */,
+				9D5BDDF623191BF000CA51CC /* ConnectViewController.xib in Resources */,
+				B1254AC12438A0C600220DE1 /* Shouk.mat in Resources */,
+				B1618CF72435D21300B75A5D /* Meg.mat in Resources */,
+				B1CE7D4C23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.xib in Resources */,
+				9F2D2E042370624000C0FFF4 /* GoogleService-Info.plist in Resources */,
+				B1618CF62435D21300B75A5D /* Jah.mat in Resources */,
+				B1618CE92435D21300B75A5D /* Lucy.mat in Resources */,
+				B1618CF42435D21300B75A5D /* Adan.mat in Resources */,
+				B1618CE42435D21300B75A5D /* Betsy.mat in Resources */,
+				B1618CF12435D21300B75A5D /* Borneo.mat in Resources */,
+				B1618CF92435D21300B75A5D /* Step Sound.mat in Resources */,
+				B1254ABE2438A0AD00220DE1 /* Bao.mat in Resources */,
+				B1618CE22435D21300B75A5D /* Pelle 2.mat in Resources */,
+				B1618D0D2435D21300B75A5D /* Momo.mat in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B133B13023817527008B8CEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B142148524387DDD000977FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1254ABF2438A0AD00220DE1 /* Bao.mat in Resources */,
+				B1254AC22438A0C600220DE1 /* Shouk.mat in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A1CDC26DF49D3E80BC611F05 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Neurorobot-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1618D462435E3B300B75A5D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		BED0A7797063D2C118077CAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neurorobot/Pods-Neurorobot-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neurorobot/Pods-Neurorobot-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neurorobot/Pods-Neurorobot-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9D5BDD9523191B4000CA51CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1BEADA42423D1EA008B2FCF /* UIColor+App.swift in Sources */,
+				B1BEADB0242A5281008B2FCF /* CGPoint+Additions.swift in Sources */,
+				B12CA6032433467D006C7606 /* APIConstants.swift in Sources */,
+				9D5BDDBA23191B7900CA51CC /* UIViewController+XIB.swift in Sources */,
+				B1C19886240E965500FDF0BE /* Data+Additions.swift in Sources */,
+				B1BEADAE2428C5F9008B2FCF /* ContactView.swift in Sources */,
+				9D5BDDFE23191C0800CA51CC /* MainTabBarController.swift in Sources */,
+				B1BE5C3523F723A7008D73BF /* String+Additions.swift in Sources */,
+				B1BEADA62423D242008B2FCF /* UIColor+Additions.swift in Sources */,
+				B12CA60E24334F4F006C7606 /* CharacterSet+Additions.swift in Sources */,
+				B12CA61424335970006C7606 /* BaudRate.swift in Sources */,
+				9D5BDE0923191C3300CA51CC /* VideoStreamViewController.swift in Sources */,
+				9D5BDE0E23191C4300CA51CC /* FingerView.swift in Sources */,
+				B12778E72423726D005551E6 /* BrainNetworkView.swift in Sources */,
+				B12CA6042433467D006C7606 /* ErrorObject.swift in Sources */,
+				9D5BDDBB23191B7900CA51CC /* URL+Additions.swift in Sources */,
+				B12CA6022433467D006C7606 /* APIManager.swift in Sources */,
+				B1CE7D4F23E1B8E5007E45A9 /* VideoStreamView.swift in Sources */,
+				B1C48C22241D05D30049A3F1 /* Error+Additions.swift in Sources */,
+				B1C48C1A241CDA0F0049A3F1 /* UIImage+Additions.swift in Sources */,
+				B1C48C20241CFA750049A3F1 /* BaseStreamViewController.swift in Sources */,
+				9D5BDE0423191C2700CA51CC /* BaseViewController.swift in Sources */,
+				9D5BDDF423191BEC00CA51CC /* ConnectViewController.swift in Sources */,
+				B12CA6062433486E006C7606 /* Dictionary+Additions.swift in Sources */,
+				B149BACE24322B5600974872 /* SplashViewController.swift in Sources */,
+				B1380F08240D189800364049 /* AudioStreamer.swift in Sources */,
+				B1BEADA82423DB30008B2FCF /* LineView.swift in Sources */,
+				B1BEAD9E242385ED008B2FCF /* NeuronView.swift in Sources */,
+				9D5BDDBF23191B8200CA51CC /* Brain_Wrapper.swift in Sources */,
+				9D5BDDFB23191BFB00CA51CC /* LedViewController.swift in Sources */,
+				B12CA6002433467D006C7606 /* EndPointTypeProtocol.swift in Sources */,
+				B1BEAD9C242378F3008B2FCF /* UIView+Constraints.swift in Sources */,
+				B12CA6012433467D006C7606 /* AlertMessage.swift in Sources */,
+				B1380F06240D13E700364049 /* Data+AVAudioPCMBuffer.swift in Sources */,
+				9D5BDDB923191B7900CA51CC /* CGFloat+Additions.swift in Sources */,
+				B1BEADB2242A5790008B2FCF /* NeuronContactView.swift in Sources */,
+				B18C150C2421344C0095E6C8 /* UIDeviceOrientation+Additions.swift in Sources */,
+				B1CE7D4D23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.swift in Sources */,
+				B1BEADA124238C2F008B2FCF /* Coordinate.swift in Sources */,
+				9D834DF3234620FC00BBBD62 /* BrainActivityRasterView.swift in Sources */,
+				9D5BDE0323191C2700CA51CC /* BaseNavigationViewController.swift in Sources */,
+				B1C48C1E241CF6A60049A3F1 /* UIApplication+Additions.swift in Sources */,
+				B1C48C1C241CF4620049A3F1 /* UIWindow+Additions.swift in Sources */,
+				9D1B77EF231A6C7E00E2258E /* hackForiPhone5.c in Sources */,
+				9D5BDD9D23191B4000CA51CC /* AppDelegate.swift in Sources */,
+				B1618D452435DA1200B75A5D /* SerialData.swift in Sources */,
+				B12CA608243348D5006C7606 /* EndpointType.swift in Sources */,
+				9D0B5B3C2340CD4D0017BD74 /* AlertBanner.swift in Sources */,
+				B17D64C12434A9CE0011DD12 /* DictionaryCodable.swift in Sources */,
+				9D834DEF2345289E00BBBD62 /* BrainActivityView.swift in Sources */,
+				9D0B5B3E234109A30017BD74 /* NeurorobotImage.swift in Sources */,
+				9D5BDDBE23191B8200CA51CC /* NeuroRobot-Wrapper.swift in Sources */,
+				B12CA6112433585A006C7606 /* RobotAPIManager.swift in Sources */,
+				9D3EAE61233B4EDA00C29A70 /* BrainPickerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B133B12E23817527008B8CEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B133B13523817527008B8CEE /* NeurorobotTests.swift in Sources */,
+				B1403EDB243629B600C2DCCF /* CGFloat+Additions.swift in Sources */,
+				B1403ED72436298D00C2DCCF /* Coordinate.swift in Sources */,
+				B1403ED9243629A300C2DCCF /* Data+Additions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B142148324387DDD000977FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B142148A24387DDD000977FD /* Neuro_RobotUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B133B13B23817634008B8CEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D5BDD9823191B4000CA51CC /* Neurorobot */;
+			targetProxy = B133B13A23817634008B8CEE /* PBXContainerItemProxy */;
+		};
+		B142148D24387DDD000977FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D5BDD9823191B4000CA51CC /* Neurorobot */;
+			targetProxy = B142148C24387DDD000977FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9D5BDDA023191B4000CA51CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D5BDDA123191B4000CA51CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9D5BDDA523191B4200CA51CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D5BDDA623191B4200CA51CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9D5BDDA923191B4200CA51CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9D5BDDAA23191B4200CA51CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9D5BDDAC23191B4200CA51CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81FD5EE340082278341C0CF3 /* Pods-Neurorobot.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Neurorobot/Neurorobot.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MLGRKD657P;
+				ENABLE_BITCODE = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"$(inherited)",
+					"PB_FIELD_32BIT=1",
+					"PB_NO_PACKED_STRUCTS=1",
+					"PB_ENABLE_MALLOC=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/NeuroRobot-Framework/library/include",
+					"$(PROJECT_DIR)/Brain-Framework/library/include",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Neurorobot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/NeuroRobot-Framework/library/lib",
+					"$(PROJECT_DIR)/Brain-Framework/library/lib",
+				);
+				MARKETING_VERSION = 1.1;
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.backyardbrains.neurorobot;
+				PRODUCT_NAME = "Neuro Robot";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/${PROJECT_NAME}/Neurorobot-iOS-BridgingHeader.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9D5BDDAD23191B4200CA51CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE6339D9F2A846A2E25278CE /* Pods-Neurorobot.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Neurorobot/Neurorobot.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MLGRKD657P;
+				ENABLE_BITCODE = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"$(inherited)",
+					"PB_FIELD_32BIT=1",
+					"PB_NO_PACKED_STRUCTS=1",
+					"PB_ENABLE_MALLOC=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/NeuroRobot-Framework/library/include",
+					"$(PROJECT_DIR)/Brain-Framework/library/include",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Neurorobot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/NeuroRobot-Framework/library/lib",
+					"$(PROJECT_DIR)/Brain-Framework/library/lib",
+				);
+				MARKETING_VERSION = 1.1;
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.backyardbrains.neurorobot;
+				PRODUCT_NAME = "Neuro Robot";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/${PROJECT_NAME}/Neurorobot-iOS-BridgingHeader.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B133B13823817527008B8CEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = E8C46L5TFQ;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/NeuroRobot-Framework/library/include",
+					"$(PROJECT_DIR)/Brain-Framework/library/include",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NeurorobotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Brain-Framework/library/lib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BB.NeurorobotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/${PROJECT_NAME}/Neurorobot-iOS-BridgingHeader-Tests.h";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Neurorobot.app/Neurorobot";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
+			};
+			name = Debug;
+		};
+		B133B13923817527008B8CEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = E8C46L5TFQ;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/NeuroRobot-Framework/library/include",
+					"$(PROJECT_DIR)/Brain-Framework/library/include",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NeurorobotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Brain-Framework/library/lib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_LDFLAGS = (
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BB.NeurorobotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/${PROJECT_NAME}/Neurorobot-iOS-BridgingHeader-Tests.h";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Neurorobot.app/Neurorobot";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
+			};
+			name = Release;
+		};
+		B142148F24387DDD000977FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8C46L5TFQ;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AsyncTimer/AsyncTimer.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/BRYXBanner/BRYXBanner.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore/FirebaseCore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCrashlytics/FirebaseCrashlytics.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseInstallations/FirebaseInstallations.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleDataTransport/GoogleDataTransport.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities/GoogleUtilities.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromisesObjC/FBLPromises.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb/nanopb.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalyticsInterop\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseCoreDiagnosticsInterop\"",
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
+					"\"${PODS_TARGET_SRCROOT}/Sources/FBLPromises/include\"",
+					"$(PROJECT_DIR)/Brain-Framework/library/include",
+					"$(PROJECT_DIR)/NeuroRobot-Framework/library/include",
+				);
+				INFOPLIST_FILE = "Neuro RobotUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Brain-Framework/library/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "byb.Neuro-RobotUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/${PROJECT_NAME}/Neurorobot-iOS-BridgingHeader-Tests.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Neurorobot;
+			};
+			name = Debug;
+		};
+		B142149024387DDD000977FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8C46L5TFQ;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/AsyncTimer/AsyncTimer.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/BRYXBanner/BRYXBanner.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore/FirebaseCore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCrashlytics/FirebaseCrashlytics.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseInstallations/FirebaseInstallations.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleDataTransport/GoogleDataTransport.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities/GoogleUtilities.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromisesObjC/FBLPromises.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb/nanopb.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAnalyticsInterop\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseCoreDiagnosticsInterop\"",
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
+					"\"${PODS_TARGET_SRCROOT}/Sources/FBLPromises/include\"",
+					"$(PROJECT_DIR)/Brain-Framework/library/include",
+					"$(PROJECT_DIR)/NeuroRobot-Framework/library/include",
+				);
+				INFOPLIST_FILE = "Neuro RobotUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Brain-Framework/library/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "byb.Neuro-RobotUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/${PROJECT_NAME}/Neurorobot-iOS-BridgingHeader-Tests.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Neurorobot;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9D5BDD9423191B4000CA51CC /* Build configuration list for PBXProject "Neurorobot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D5BDDA923191B4200CA51CC /* Debug */,
+				9D5BDDAA23191B4200CA51CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D5BDDAB23191B4200CA51CC /* Build configuration list for PBXNativeTarget "Neurorobot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D5BDDAC23191B4200CA51CC /* Debug */,
+				9D5BDDAD23191B4200CA51CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B133B13723817527008B8CEE /* Build configuration list for PBXNativeTarget "NeurorobotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B133B13823817527008B8CEE /* Debug */,
+				B133B13923817527008B8CEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B142148E24387DDD000977FD /* Build configuration list for PBXNativeTarget "Neuro RobotUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B142148F24387DDD000977FD /* Debug */,
+				B142149024387DDD000977FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D5BDD9123191B4000CA51CC /* Project object */;
+}

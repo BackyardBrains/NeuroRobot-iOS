@@ -1,0 +1,977 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		9DE706F322ACFCA200B1A64D /* fatNeuroRobot-Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9DE706F422ACFCA200B1A64D /* Build configuration list for PBXAggregateTarget "fatNeuroRobot-Framework" */;
+			buildPhases = (
+				9DE706F722ACFCE000B1A64D /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "fatNeuroRobot-Framework";
+			productName = "fatRAK-Framework";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		9F0052EB235DD5AE000A5412 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052E6235DD5AE000A5412 /* libavformat.a */; };
+		9F0052EC235DD5AE000A5412 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052E7235DD5AE000A5412 /* libswscale.a */; };
+		9F0052ED235DD5AE000A5412 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052E8235DD5AE000A5412 /* libavcodec.a */; };
+		9F0052EE235DD5AE000A5412 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052E9235DD5AE000A5412 /* libswresample.a */; };
+		9F0052EF235DD5AE000A5412 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052EA235DD5AE000A5412 /* libavutil.a */; };
+		9F0052F3235DD624000A5412 /* libboost_chrono.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052F0235DD624000A5412 /* libboost_chrono.a */; };
+		9F0052F4235DD624000A5412 /* libboost_thread.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052F1235DD624000A5412 /* libboost_thread.a */; };
+		9F0052F5235DD624000A5412 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052F2235DD624000A5412 /* libboost_system.a */; };
+		9F0052F9235DD68E000A5412 /* libboost_chrono.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052F6235DD68E000A5412 /* libboost_chrono.a */; };
+		9F0052FA235DD68E000A5412 /* libboost_thread.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052F7235DD68E000A5412 /* libboost_thread.a */; };
+		9F0052FB235DD68E000A5412 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052F8235DD68E000A5412 /* libboost_system.a */; };
+		9F005301235DD6F3000A5412 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052FC235DD6F3000A5412 /* libswresample.a */; };
+		9F005302235DD6F3000A5412 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052FD235DD6F3000A5412 /* libavutil.a */; };
+		9F005303235DD6F3000A5412 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052FE235DD6F3000A5412 /* libavcodec.a */; };
+		9F005304235DD6F3000A5412 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052FF235DD6F3000A5412 /* libavformat.a */; };
+		9F005305235DD6F3000A5412 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F005300235DD6F3000A5412 /* libswscale.a */; };
+		9FA5A2B5236D8C66000A23EA /* NeuroRobot-SwiftBridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FA5A2B4236D8C66000A23EA /* NeuroRobot-SwiftBridge.cpp */; };
+		9FA5A2B6236D8C66000A23EA /* NeuroRobot-SwiftBridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FA5A2B4236D8C66000A23EA /* NeuroRobot-SwiftBridge.cpp */; };
+		9FA5A2B8236D8C82000A23EA /* NeuroRobot-SwiftBridge.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9FA5A2B7236D8C82000A23EA /* NeuroRobot-SwiftBridge.hpp */; };
+		9FEDBA37236D80140084F84D /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDBA2B236D80130084F84D /* Log.cpp */; };
+		9FEDBA38236D80140084F84D /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDBA2B236D80130084F84D /* Log.cpp */; };
+		9FEDBA39236D80140084F84D /* Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FEDBA2C236D80130084F84D /* Log.h */; };
+		9FEDBA3A236D80140084F84D /* NeuroRobotManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDBA2D236D80130084F84D /* NeuroRobotManager.cpp */; };
+		9FEDBA3B236D80140084F84D /* NeuroRobotManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDBA2D236D80130084F84D /* NeuroRobotManager.cpp */; };
+		9FEDBA3C236D80140084F84D /* VideoAndAudioObtainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FEDBA2E236D80130084F84D /* VideoAndAudioObtainer.h */; };
+		9FEDBA3D236D80140084F84D /* SharedMemory.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FEDBA2F236D80130084F84D /* SharedMemory.h */; };
+		9FEDBA3E236D80140084F84D /* BackgroundThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FEDBA30236D80140084F84D /* BackgroundThread.h */; };
+		9FEDBA3F236D80140084F84D /* Macros.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FEDBA31236D80140084F84D /* Macros.h */; };
+		9FEDBA40236D80140084F84D /* NeuroRobotManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FEDBA32236D80140084F84D /* NeuroRobotManager.h */; };
+		9FEDBA41236D80140084F84D /* VideoAndAudioObtainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDBA33236D80140084F84D /* VideoAndAudioObtainer.cpp */; };
+		9FEDBA42236D80140084F84D /* VideoAndAudioObtainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDBA33236D80140084F84D /* VideoAndAudioObtainer.cpp */; };
+		9FEDBA43236D80140084F84D /* SharedMemory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDBA34236D80140084F84D /* SharedMemory.cpp */; };
+		9FEDBA44236D80140084F84D /* SharedMemory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDBA34236D80140084F84D /* SharedMemory.cpp */; };
+		9FEDBA45236D80140084F84D /* Socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDBA35236D80140084F84D /* Socket.cpp */; };
+		9FEDBA46236D80140084F84D /* Socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDBA35236D80140084F84D /* Socket.cpp */; };
+		9FEDBA47236D80140084F84D /* Socket.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FEDBA36236D80140084F84D /* Socket.h */; };
+		B156B15423D0554E00FCDCAF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B156B15323D0554E00FCDCAF /* main.cpp */; };
+		B156B15923D055AB00FCDCAF /* NeuroRobotManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDBA2D236D80130084F84D /* NeuroRobotManager.cpp */; };
+		B156B15A23D056CE00FCDCAF /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052FE235DD6F3000A5412 /* libavcodec.a */; };
+		B156B15B23D056CE00FCDCAF /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052FF235DD6F3000A5412 /* libavformat.a */; };
+		B156B15C23D056CE00FCDCAF /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052FD235DD6F3000A5412 /* libavutil.a */; };
+		B156B15D23D056CE00FCDCAF /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052FC235DD6F3000A5412 /* libswresample.a */; };
+		B156B15E23D056CE00FCDCAF /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F005300235DD6F3000A5412 /* libswscale.a */; };
+		B156B16123D0573000FCDCAF /* SharedMemory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDBA34236D80140084F84D /* SharedMemory.cpp */; };
+		B156B16223D0573000FCDCAF /* Socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDBA35236D80140084F84D /* Socket.cpp */; };
+		B156B16323D0573000FCDCAF /* VideoAndAudioObtainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDBA33236D80140084F84D /* VideoAndAudioObtainer.cpp */; };
+		B156B16423D0573400FCDCAF /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FEDBA2B236D80130084F84D /* Log.cpp */; };
+		B156B16523D057BD00FCDCAF /* libboost_chrono.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052F6235DD68E000A5412 /* libboost_chrono.a */; };
+		B156B16623D057BD00FCDCAF /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052F8235DD68E000A5412 /* libboost_system.a */; };
+		B156B16723D057BD00FCDCAF /* libboost_thread.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0052F7235DD68E000A5412 /* libboost_thread.a */; };
+		B156B16D23D0597B00FCDCAF /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B156B16C23D0597B00FCDCAF /* libbz2.tbd */; };
+		B156B16F23D0597B00FCDCAF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B156B16E23D0597B00FCDCAF /* libz.tbd */; };
+		B156B17123D0597B00FCDCAF /* liblzma.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B156B17023D0597B00FCDCAF /* liblzma.tbd */; };
+		B156B17323D0597B00FCDCAF /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B156B17223D0597B00FCDCAF /* libiconv.tbd */; };
+		B156B17B23D059B700FCDCAF /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B156B17A23D059B700FCDCAF /* CoreVideo.framework */; };
+		B156B17D23D059B700FCDCAF /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B156B17C23D059B700FCDCAF /* CoreFoundation.framework */; };
+		B156B17E23D059B700FCDCAF /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B156B16A23D0597400FCDCAF /* CoreMedia.framework */; };
+		B156B17F23D059B700FCDCAF /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B156B17623D059AB00FCDCAF /* VideoToolbox.framework */; };
+		B156B18023D059B700FCDCAF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B156B17823D059AD00FCDCAF /* AudioToolbox.framework */; };
+		B156B18123D059B700FCDCAF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B156B16823D0596D00FCDCAF /* Security.framework */; };
+		B1A6739823D9C94200BF9F97 /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1A6739723D9C94200BF9F97 /* libboost_filesystem.a */; };
+		B1A6739A23D9C95200BF9F97 /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1A6739923D9C95200BF9F97 /* libboost_filesystem.a */; };
+		B1BE5C3023F717B0008D73BF /* AudioHelper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B1BE5C2E23F717B0008D73BF /* AudioHelper.hpp */; };
+		B1BE5C3923F81AA9008D73BF /* StringHelper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B1BE5C3723F81AA9008D73BF /* StringHelper.hpp */; };
+		B1BE5C3E23F81CBF008D73BF /* TypeDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D0B5B38233FF7F90017BD74 /* TypeDefs.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9DE706DA22ACF83300B1A64D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B156B14F23D0554E00FCDCAF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9D0B5B38233FF7F90017BD74 /* TypeDefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeDefs.h; sourceTree = "<group>"; };
+		9D1B26E322B920DE00E0822E /* libmacOS_NeuroRobot-Framework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libmacOS_NeuroRobot-Framework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D8DCBFE2312EDE1003ED320 /* NeuroRobot_MatlabBridge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NeuroRobot_MatlabBridge.cpp; sourceTree = "<group>"; };
+		9DE706DC22ACF83300B1A64D /* libiOS_NeuroRobot-Framework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libiOS_NeuroRobot-Framework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F0052E6235DD5AE000A5412 /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavformat.a; path = ffmpeg/ios/lib/libavformat.a; sourceTree = "<group>"; };
+		9F0052E7235DD5AE000A5412 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = ffmpeg/ios/lib/libswscale.a; sourceTree = "<group>"; };
+		9F0052E8235DD5AE000A5412 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = ffmpeg/ios/lib/libavcodec.a; sourceTree = "<group>"; };
+		9F0052E9235DD5AE000A5412 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswresample.a; path = ffmpeg/ios/lib/libswresample.a; sourceTree = "<group>"; };
+		9F0052EA235DD5AE000A5412 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = ffmpeg/ios/lib/libavutil.a; sourceTree = "<group>"; };
+		9F0052F0235DD624000A5412 /* libboost_chrono.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_chrono.a; path = boost/1.70.0/ios/lib/libboost_chrono.a; sourceTree = "<group>"; };
+		9F0052F1235DD624000A5412 /* libboost_thread.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_thread.a; path = boost/1.70.0/ios/lib/libboost_thread.a; sourceTree = "<group>"; };
+		9F0052F2235DD624000A5412 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = boost/1.70.0/ios/lib/libboost_system.a; sourceTree = "<group>"; };
+		9F0052F6235DD68E000A5412 /* libboost_chrono.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_chrono.a; path = boost/1.70.0/macos/lib/libboost_chrono.a; sourceTree = "<group>"; };
+		9F0052F7235DD68E000A5412 /* libboost_thread.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_thread.a; path = boost/1.70.0/macos/lib/libboost_thread.a; sourceTree = "<group>"; };
+		9F0052F8235DD68E000A5412 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = boost/1.70.0/macos/lib/libboost_system.a; sourceTree = "<group>"; };
+		9F0052FC235DD6F3000A5412 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswresample.a; path = ffmpeg/macos/lib/libswresample.a; sourceTree = "<group>"; };
+		9F0052FD235DD6F3000A5412 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = ffmpeg/macos/lib/libavutil.a; sourceTree = "<group>"; };
+		9F0052FE235DD6F3000A5412 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = ffmpeg/macos/lib/libavcodec.a; sourceTree = "<group>"; };
+		9F0052FF235DD6F3000A5412 /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavformat.a; path = ffmpeg/macos/lib/libavformat.a; sourceTree = "<group>"; };
+		9F005300235DD6F3000A5412 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = ffmpeg/macos/lib/libswscale.a; sourceTree = "<group>"; };
+		9F924908236B26C3009BA74E /* NeuroRobot_matlab.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeuroRobot_matlab.m; sourceTree = "<group>"; };
+		9FA5A2B4236D8C66000A23EA /* NeuroRobot-SwiftBridge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "NeuroRobot-SwiftBridge.cpp"; sourceTree = "<group>"; };
+		9FA5A2B7236D8C82000A23EA /* NeuroRobot-SwiftBridge.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "NeuroRobot-SwiftBridge.hpp"; sourceTree = "<group>"; };
+		9FA5A2BB236DA066000A23EA /* NeuroRobot_framework_testScript.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeuroRobot_framework_testScript.m; sourceTree = "<group>"; };
+		9FEDBA2B236D80130084F84D /* Log.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Log.cpp; sourceTree = "<group>"; };
+		9FEDBA2C236D80130084F84D /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		9FEDBA2D236D80130084F84D /* NeuroRobotManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NeuroRobotManager.cpp; sourceTree = "<group>"; };
+		9FEDBA2E236D80130084F84D /* VideoAndAudioObtainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoAndAudioObtainer.h; sourceTree = "<group>"; };
+		9FEDBA2F236D80130084F84D /* SharedMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedMemory.h; sourceTree = "<group>"; };
+		9FEDBA30236D80140084F84D /* BackgroundThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundThread.h; sourceTree = "<group>"; };
+		9FEDBA31236D80140084F84D /* Macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		9FEDBA32236D80140084F84D /* NeuroRobotManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeuroRobotManager.h; sourceTree = "<group>"; };
+		9FEDBA33236D80140084F84D /* VideoAndAudioObtainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VideoAndAudioObtainer.cpp; sourceTree = "<group>"; };
+		9FEDBA34236D80140084F84D /* SharedMemory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SharedMemory.cpp; sourceTree = "<group>"; };
+		9FEDBA35236D80140084F84D /* Socket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Socket.cpp; sourceTree = "<group>"; };
+		9FEDBA36236D80140084F84D /* Socket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Socket.h; sourceTree = "<group>"; };
+		B156B15123D0554E00FCDCAF /* NeuroRobot */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NeuroRobot; sourceTree = BUILT_PRODUCTS_DIR; };
+		B156B15323D0554E00FCDCAF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B156B16823D0596D00FCDCAF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B156B16A23D0597400FCDCAF /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		B156B16C23D0597B00FCDCAF /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		B156B16E23D0597B00FCDCAF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		B156B17023D0597B00FCDCAF /* liblzma.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = liblzma.tbd; path = usr/lib/liblzma.tbd; sourceTree = SDKROOT; };
+		B156B17223D0597B00FCDCAF /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		B156B17423D0598400FCDCAF /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		B156B17623D059AB00FCDCAF /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		B156B17823D059AD00FCDCAF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B156B17A23D059B700FCDCAF /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		B156B17C23D059B700FCDCAF /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		B16941F5237C38350049A760 /* NeuroRobot_StreamCallback.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeuroRobot_StreamCallback.m; sourceTree = "<group>"; };
+		B1A6739723D9C94200BF9F97 /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = boost/1.70.0/ios/lib/libboost_filesystem.a; sourceTree = "<group>"; };
+		B1A6739923D9C95200BF9F97 /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = boost/1.70.0/macos/lib/libboost_filesystem.a; sourceTree = "<group>"; };
+		B1BE5C2E23F717B0008D73BF /* AudioHelper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AudioHelper.hpp; sourceTree = "<group>"; };
+		B1BE5C3723F81AA9008D73BF /* StringHelper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StringHelper.hpp; sourceTree = "<group>"; };
+		B1C8779D23EAFFFF006D1CFA /* NeuroRobot_MatlabBridge_OutOfProcess.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NeuroRobot_MatlabBridge_OutOfProcess.cpp; sourceTree = "<group>"; };
+		B1C8779F23EB0063006D1CFA /* NeuroRobot_matlab_OutOfProcess.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NeuroRobot_matlab_OutOfProcess.cpp; sourceTree = "<group>"; };
+		B1C877A223EB00A3006D1CFA /* NeuroRobot_framework_testScript_OutOfProcess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeuroRobot_framework_testScript_OutOfProcess.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9D1B26E122B920DE00E0822E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1A6739A23D9C95200BF9F97 /* libboost_filesystem.a in Frameworks */,
+				9F0052F9235DD68E000A5412 /* libboost_chrono.a in Frameworks */,
+				9F0052FA235DD68E000A5412 /* libboost_thread.a in Frameworks */,
+				9F0052FB235DD68E000A5412 /* libboost_system.a in Frameworks */,
+				9F005301235DD6F3000A5412 /* libswresample.a in Frameworks */,
+				9F005302235DD6F3000A5412 /* libavutil.a in Frameworks */,
+				9F005303235DD6F3000A5412 /* libavcodec.a in Frameworks */,
+				9F005304235DD6F3000A5412 /* libavformat.a in Frameworks */,
+				9F005305235DD6F3000A5412 /* libswscale.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DE706D922ACF83300B1A64D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1A6739823D9C94200BF9F97 /* libboost_filesystem.a in Frameworks */,
+				9F0052F3235DD624000A5412 /* libboost_chrono.a in Frameworks */,
+				9F0052F4235DD624000A5412 /* libboost_thread.a in Frameworks */,
+				9F0052F5235DD624000A5412 /* libboost_system.a in Frameworks */,
+				9F0052EB235DD5AE000A5412 /* libavformat.a in Frameworks */,
+				9F0052EC235DD5AE000A5412 /* libswscale.a in Frameworks */,
+				9F0052ED235DD5AE000A5412 /* libavcodec.a in Frameworks */,
+				9F0052EE235DD5AE000A5412 /* libswresample.a in Frameworks */,
+				9F0052EF235DD5AE000A5412 /* libavutil.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B156B14E23D0554E00FCDCAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B156B16523D057BD00FCDCAF /* libboost_chrono.a in Frameworks */,
+				B156B16623D057BD00FCDCAF /* libboost_system.a in Frameworks */,
+				B156B16723D057BD00FCDCAF /* libboost_thread.a in Frameworks */,
+				B156B15A23D056CE00FCDCAF /* libavcodec.a in Frameworks */,
+				B156B15B23D056CE00FCDCAF /* libavformat.a in Frameworks */,
+				B156B16D23D0597B00FCDCAF /* libbz2.tbd in Frameworks */,
+				B156B16F23D0597B00FCDCAF /* libz.tbd in Frameworks */,
+				B156B17123D0597B00FCDCAF /* liblzma.tbd in Frameworks */,
+				B156B17323D0597B00FCDCAF /* libiconv.tbd in Frameworks */,
+				B156B15C23D056CE00FCDCAF /* libavutil.a in Frameworks */,
+				B156B17E23D059B700FCDCAF /* CoreMedia.framework in Frameworks */,
+				B156B17B23D059B700FCDCAF /* CoreVideo.framework in Frameworks */,
+				B156B17D23D059B700FCDCAF /* CoreFoundation.framework in Frameworks */,
+				B156B17F23D059B700FCDCAF /* VideoToolbox.framework in Frameworks */,
+				B156B18023D059B700FCDCAF /* AudioToolbox.framework in Frameworks */,
+				B156B18123D059B700FCDCAF /* Security.framework in Frameworks */,
+				B156B15D23D056CE00FCDCAF /* libswresample.a in Frameworks */,
+				B156B15E23D056CE00FCDCAF /* libswscale.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9D5BDE172319326800CA51CC /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				B1BE5C3F23F81CF3008D73BF /* Helpers */,
+				B1BE5C2B23F71459008D73BF /* Matlab-Bridge */,
+				B1BE5C2C23F7147A008D73BF /* Swift-Bridge */,
+				9D0B5B38233FF7F90017BD74 /* TypeDefs.h */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+		9DE5206822B17EC400F76942 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1A6739723D9C94200BF9F97 /* libboost_filesystem.a */,
+				B1A6739923D9C95200BF9F97 /* libboost_filesystem.a */,
+				9F0052FE235DD6F3000A5412 /* libavcodec.a */,
+				9F0052FF235DD6F3000A5412 /* libavformat.a */,
+				9F0052FD235DD6F3000A5412 /* libavutil.a */,
+				9F0052FC235DD6F3000A5412 /* libswresample.a */,
+				9F005300235DD6F3000A5412 /* libswscale.a */,
+				9F0052F0235DD624000A5412 /* libboost_chrono.a */,
+				9F0052F2235DD624000A5412 /* libboost_system.a */,
+				B156B16A23D0597400FCDCAF /* CoreMedia.framework */,
+				B156B16C23D0597B00FCDCAF /* libbz2.tbd */,
+				B156B16E23D0597B00FCDCAF /* libz.tbd */,
+				B156B17023D0597B00FCDCAF /* liblzma.tbd */,
+				B156B17A23D059B700FCDCAF /* CoreVideo.framework */,
+				B156B17C23D059B700FCDCAF /* CoreFoundation.framework */,
+				B156B17223D0597B00FCDCAF /* libiconv.tbd */,
+				B156B17423D0598400FCDCAF /* Accelerate.framework */,
+				B156B17623D059AB00FCDCAF /* VideoToolbox.framework */,
+				B156B17823D059AD00FCDCAF /* AudioToolbox.framework */,
+				B156B16823D0596D00FCDCAF /* Security.framework */,
+				9F0052F8235DD68E000A5412 /* libboost_system.a */,
+				9F0052F1235DD624000A5412 /* libboost_thread.a */,
+				9F0052F6235DD68E000A5412 /* libboost_chrono.a */,
+				9F0052F7235DD68E000A5412 /* libboost_thread.a */,
+				9F0052E8235DD5AE000A5412 /* libavcodec.a */,
+				9F0052E6235DD5AE000A5412 /* libavformat.a */,
+				9F0052EA235DD5AE000A5412 /* libavutil.a */,
+				9F0052E9235DD5AE000A5412 /* libswresample.a */,
+				9F0052E7235DD5AE000A5412 /* libswscale.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9DE706D322ACF83300B1A64D = {
+			isa = PBXGroup;
+			children = (
+				9DE706DE22ACF83300B1A64D /* NeuroRobot-Framework */,
+				B156B15223D0554E00FCDCAF /* NeuroRobot */,
+				9DE706DD22ACF83300B1A64D /* Products */,
+				9DE5206822B17EC400F76942 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9DE706DD22ACF83300B1A64D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9DE706DC22ACF83300B1A64D /* libiOS_NeuroRobot-Framework.a */,
+				9D1B26E322B920DE00E0822E /* libmacOS_NeuroRobot-Framework.a */,
+				B156B15123D0554E00FCDCAF /* NeuroRobot */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9DE706DE22ACF83300B1A64D /* NeuroRobot-Framework */ = {
+			isa = PBXGroup;
+			children = (
+				9D5BDE172319326800CA51CC /* Bridge */,
+				9FEDBA30236D80140084F84D /* BackgroundThread.h */,
+				9FEDBA2B236D80130084F84D /* Log.cpp */,
+				9FEDBA2C236D80130084F84D /* Log.h */,
+				9FEDBA31236D80140084F84D /* Macros.h */,
+				9FEDBA2D236D80130084F84D /* NeuroRobotManager.cpp */,
+				9FEDBA32236D80140084F84D /* NeuroRobotManager.h */,
+				9FEDBA34236D80140084F84D /* SharedMemory.cpp */,
+				9FEDBA2F236D80130084F84D /* SharedMemory.h */,
+				9FEDBA35236D80140084F84D /* Socket.cpp */,
+				9FEDBA36236D80140084F84D /* Socket.h */,
+				9FEDBA33236D80140084F84D /* VideoAndAudioObtainer.cpp */,
+				9FEDBA2E236D80130084F84D /* VideoAndAudioObtainer.h */,
+			);
+			path = "NeuroRobot-Framework";
+			sourceTree = "<group>";
+		};
+		B156B15223D0554E00FCDCAF /* NeuroRobot */ = {
+			isa = PBXGroup;
+			children = (
+				B156B15323D0554E00FCDCAF /* main.cpp */,
+			);
+			path = NeuroRobot;
+			sourceTree = "<group>";
+		};
+		B1BE5C2B23F71459008D73BF /* Matlab-Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				B1BE5C3623F80F90008D73BF /* OutOfProcess */,
+				9FA5A2BB236DA066000A23EA /* NeuroRobot_framework_testScript.m */,
+				9F924908236B26C3009BA74E /* NeuroRobot_matlab.m */,
+				9D8DCBFE2312EDE1003ED320 /* NeuroRobot_MatlabBridge.cpp */,
+				B16941F5237C38350049A760 /* NeuroRobot_StreamCallback.m */,
+			);
+			path = "Matlab-Bridge";
+			sourceTree = "<group>";
+		};
+		B1BE5C2C23F7147A008D73BF /* Swift-Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				9FA5A2B7236D8C82000A23EA /* NeuroRobot-SwiftBridge.hpp */,
+				9FA5A2B4236D8C66000A23EA /* NeuroRobot-SwiftBridge.cpp */,
+			);
+			path = "Swift-Bridge";
+			sourceTree = "<group>";
+		};
+		B1BE5C3623F80F90008D73BF /* OutOfProcess */ = {
+			isa = PBXGroup;
+			children = (
+				B1C8779F23EB0063006D1CFA /* NeuroRobot_matlab_OutOfProcess.cpp */,
+				B1C8779D23EAFFFF006D1CFA /* NeuroRobot_MatlabBridge_OutOfProcess.cpp */,
+				B1C877A223EB00A3006D1CFA /* NeuroRobot_framework_testScript_OutOfProcess.m */,
+			);
+			path = OutOfProcess;
+			sourceTree = "<group>";
+		};
+		B1BE5C3F23F81CF3008D73BF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B1BE5C2E23F717B0008D73BF /* AudioHelper.hpp */,
+				B1BE5C3723F81AA9008D73BF /* StringHelper.hpp */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9D1B26DF22B920DE00E0822E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1BE5C3023F717B0008D73BF /* AudioHelper.hpp in Headers */,
+				9FA5A2B8236D8C82000A23EA /* NeuroRobot-SwiftBridge.hpp in Headers */,
+				B1BE5C3E23F81CBF008D73BF /* TypeDefs.h in Headers */,
+				9FEDBA3E236D80140084F84D /* BackgroundThread.h in Headers */,
+				9FEDBA40236D80140084F84D /* NeuroRobotManager.h in Headers */,
+				9FEDBA39236D80140084F84D /* Log.h in Headers */,
+				B1BE5C3923F81AA9008D73BF /* StringHelper.hpp in Headers */,
+				9FEDBA3F236D80140084F84D /* Macros.h in Headers */,
+				9FEDBA3C236D80140084F84D /* VideoAndAudioObtainer.h in Headers */,
+				9FEDBA47236D80140084F84D /* Socket.h in Headers */,
+				9FEDBA3D236D80140084F84D /* SharedMemory.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9D1B26E222B920DE00E0822E /* macOS_NeuroRobot-Framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D1B26E422B920DE00E0822E /* Build configuration list for PBXNativeTarget "macOS_NeuroRobot-Framework" */;
+			buildPhases = (
+				9D1B26DF22B920DE00E0822E /* Headers */,
+				9D1B26E022B920DE00E0822E /* Sources */,
+				9D1B26E122B920DE00E0822E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "macOS_NeuroRobot-Framework";
+			productName = "macOS_RAK-Framework";
+			productReference = 9D1B26E322B920DE00E0822E /* libmacOS_NeuroRobot-Framework.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9DE706DB22ACF83300B1A64D /* iOS_NeuroRobot-Framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DE706E322ACF83300B1A64D /* Build configuration list for PBXNativeTarget "iOS_NeuroRobot-Framework" */;
+			buildPhases = (
+				9DE706D822ACF83300B1A64D /* Sources */,
+				9DE706D922ACF83300B1A64D /* Frameworks */,
+				9DE706DA22ACF83300B1A64D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS_NeuroRobot-Framework";
+			productName = "RAK-Framework";
+			productReference = 9DE706DC22ACF83300B1A64D /* libiOS_NeuroRobot-Framework.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B156B15023D0554E00FCDCAF /* NeuroRobot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B156B15523D0554E00FCDCAF /* Build configuration list for PBXNativeTarget "NeuroRobot" */;
+			buildPhases = (
+				B156B14D23D0554E00FCDCAF /* Sources */,
+				B156B14E23D0554E00FCDCAF /* Frameworks */,
+				B156B14F23D0554E00FCDCAF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NeuroRobot;
+			productName = NeuroRobot;
+			productReference = B156B15123D0554E00FCDCAF /* NeuroRobot */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9DE706D422ACF83300B1A64D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Backyard Brains";
+				TargetAttributes = {
+					9D1B26E222B920DE00E0822E = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					9DE706DB22ACF83300B1A64D = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					9DE706F322ACFCA200B1A64D = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					B156B15023D0554E00FCDCAF = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = 9DE706D722ACF83300B1A64D /* Build configuration list for PBXProject "NeuroRobot-Framework" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9DE706D322ACF83300B1A64D;
+			productRefGroup = 9DE706DD22ACF83300B1A64D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9DE706DB22ACF83300B1A64D /* iOS_NeuroRobot-Framework */,
+				9D1B26E222B920DE00E0822E /* macOS_NeuroRobot-Framework */,
+				9DE706F322ACFCA200B1A64D /* fatNeuroRobot-Framework */,
+				B156B15023D0554E00FCDCAF /* NeuroRobot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9DE706F722ACFCE000B1A64D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rm -r ${PROJECT_DIR}/library/\n\nFAT_LIBRARY_PATH=${PROJECT_DIR}/library/lib\nINCLUDE_LIBRARY_PATH=${PROJECT_DIR}/library/include\n\nIOS_TARGET_NAME=iOS_NeuroRobot-Framework\nMACOS_TARGET_NAME=macOS_NeuroRobot-Framework\n\nmkdir -p ${FAT_LIBRARY_PATH}\nmkdir -p ${INCLUDE_LIBRARY_PATH}\n\nxcodebuild -target ${IOS_TARGET_NAME} -configuration ${CONFIGURATION} -sdk iphonesimulator -arch x86_64 BUILD_DIR=${BUILD_DIR} BUILD_ROOT=${BUILD_ROOT}\nxcodebuild -target ${IOS_TARGET_NAME} -configuration ${CONFIGURATION} -sdk iphonesimulator -arch i386 BUILD_DIR=${BUILD_DIR}/i386 BUILD_ROOT=${BUILD_ROOT}\nxcodebuild -target ${IOS_TARGET_NAME} ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos -arch arm64 -arch arm64e -arch armv7s -arch armv7 BUILD_DIR=${BUILD_DIR} BUILD_ROOT=${BUILD_ROOT}\nxcodebuild -target ${MACOS_TARGET_NAME} -configuration ${CONFIGURATION} -sdk macosx BUILD_DIR=${BUILD_DIR} BUILD_ROOT=${BUILD_ROOT}\n\nlipo -create -output ${FAT_LIBRARY_PATH}/lib${PROJECT_NAME}.a ${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${IOS_TARGET_NAME}.a ${BUILD_DIR}/i386/${CONFIGURATION}-iphonesimulator/lib${IOS_TARGET_NAME}.a ${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${IOS_TARGET_NAME}.a\n#${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a  ${BUILD_DIR}/${CONFIGURATION}/lib${PROJECT_NAME}.a\n\nfind ${PROJECT_DIR}/${PROJECT_NAME}/Bridge -name *.h* -exec cp {} ${INCLUDE_LIBRARY_PATH} \\;\n\nrm -r ${PROJECT_DIR}/build\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9D1B26E022B920DE00E0822E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FEDBA38236D80140084F84D /* Log.cpp in Sources */,
+				9FEDBA42236D80140084F84D /* VideoAndAudioObtainer.cpp in Sources */,
+				9FEDBA44236D80140084F84D /* SharedMemory.cpp in Sources */,
+				9FEDBA46236D80140084F84D /* Socket.cpp in Sources */,
+				9FEDBA3B236D80140084F84D /* NeuroRobotManager.cpp in Sources */,
+				9FA5A2B6236D8C66000A23EA /* NeuroRobot-SwiftBridge.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DE706D822ACF83300B1A64D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FEDBA37236D80140084F84D /* Log.cpp in Sources */,
+				9FEDBA41236D80140084F84D /* VideoAndAudioObtainer.cpp in Sources */,
+				9FEDBA43236D80140084F84D /* SharedMemory.cpp in Sources */,
+				9FEDBA45236D80140084F84D /* Socket.cpp in Sources */,
+				9FEDBA3A236D80140084F84D /* NeuroRobotManager.cpp in Sources */,
+				9FA5A2B5236D8C66000A23EA /* NeuroRobot-SwiftBridge.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B156B14D23D0554E00FCDCAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B156B16423D0573400FCDCAF /* Log.cpp in Sources */,
+				B156B16223D0573000FCDCAF /* Socket.cpp in Sources */,
+				B156B15923D055AB00FCDCAF /* NeuroRobotManager.cpp in Sources */,
+				B156B15423D0554E00FCDCAF /* main.cpp in Sources */,
+				B156B16123D0573000FCDCAF /* SharedMemory.cpp in Sources */,
+				B156B16323D0573000FCDCAF /* VideoAndAudioObtainer.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9D1B26E522B920DE00E0822E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8C46L5TFQ;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"XCODE=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ffmpeg/macos/include",
+					"$(PROJECT_DIR)/boost/1.70.0/macos/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/boost/1.70.0/macos/lib",
+					"$(PROJECT_DIR)/ffmpeg/macos/lib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-lavformat",
+					"-lavcodec",
+					"-lswscale",
+					"-lavutil",
+					"-lavfilter",
+					"-lswresample",
+					"-lavdevice",
+					"-lpostproc",
+					"-lao",
+					"-lz",
+					"-lx264",
+					"-llzma",
+					"-lbz2",
+					"-lva",
+					"-lrt",
+					"-framework",
+					VideoToolbox,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9D1B26E622B920DE00E0822E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8C46L5TFQ;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = "XCODE=1";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ffmpeg/macos/include",
+					"$(PROJECT_DIR)/boost/1.70.0/macos/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/boost/1.70.0/macos/lib",
+					"$(PROJECT_DIR)/ffmpeg/macos/lib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-lavformat",
+					"-lavcodec",
+					"-lswscale",
+					"-lavutil",
+					"-lavfilter",
+					"-lswresample",
+					"-lavdevice",
+					"-lpostproc",
+					"-lao",
+					"-lz",
+					"-lx264",
+					"-llzma",
+					"-lbz2",
+					"-lva",
+					"-lrt",
+					"-framework",
+					VideoToolbox,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		9DE706E122ACF83300B1A64D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9DE706E222ACF83300B1A64D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9DE706E422ACF83300B1A64D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BITCODE_GENERATION_MODE = bitcode;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8C46L5TFQ;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"XCODE=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"${PROJECT_DIR}/boost/1.70.0/ios/include",
+					"$(PROJECT_DIR)/ffmpeg/ios/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ffmpeg/ios/lib",
+					"$(PROJECT_DIR)/boost/1.70.0/ios/lib",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-lbz2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9DE706E522ACF83300B1A64D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BITCODE_GENERATION_MODE = bitcode;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8C46L5TFQ;
+				GCC_PREPROCESSOR_DEFINITIONS = "XCODE=1";
+				HEADER_SEARCH_PATHS = (
+					"${PROJECT_DIR}/boost/1.70.0/ios/include",
+					"$(PROJECT_DIR)/ffmpeg/ios/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ffmpeg/ios/lib",
+					"$(PROJECT_DIR)/boost/1.70.0/ios/lib",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-lbz2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9DE706F522ACFCA200B1A64D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8C46L5TFQ;
+				EXCLUDED_SOURCE_FILE_NAMES = "Swift-Bridge/Rak-Framework-Header.h";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-lavformat",
+					"-lswscale",
+					"-lavutil",
+					"-lavcodec",
+					"-llzma",
+					"-lbz2",
+					"-lz",
+					"-liconv",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9DE706F622ACFCA200B1A64D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8C46L5TFQ;
+				EXCLUDED_SOURCE_FILE_NAMES = "Swift-Bridge/Rak-Framework-Header.h";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = (
+					"-lavformat",
+					"-lswscale",
+					"-lavutil",
+					"-lavcodec",
+					"-llzma",
+					"-lbz2",
+					"-lz",
+					"-liconv",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B156B15623D0554E00FCDCAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8C46L5TFQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"XCODE=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ffmpeg/macos/include",
+					"$(PROJECT_DIR)/boost/1.70.0/macos/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/boost/1.70.0/macos/lib",
+					"$(PROJECT_DIR)/ffmpeg/macos/lib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_LDFLAGS = (
+					"-lavformat",
+					"-lavcodec",
+					"-lswscale",
+					"-lavutil",
+					"-lswresample",
+					"-lz",
+					"-llzma",
+					"-lbz2",
+					"-lboost_filesystem",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B156B15723D0554E00FCDCAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E8C46L5TFQ;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "XCODE=1";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/ffmpeg/macos/include",
+					"$(PROJECT_DIR)/boost/1.70.0/macos/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/boost/1.70.0/macos/lib",
+					"$(PROJECT_DIR)/ffmpeg/macos/lib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_LDFLAGS = (
+					"-lavformat",
+					"-lavcodec",
+					"-lswscale",
+					"-lavutil",
+					"-lswresample",
+					"-lz",
+					"-llzma",
+					"-lbz2",
+					"-lboost_filesystem",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9D1B26E422B920DE00E0822E /* Build configuration list for PBXNativeTarget "macOS_NeuroRobot-Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D1B26E522B920DE00E0822E /* Debug */,
+				9D1B26E622B920DE00E0822E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DE706D722ACF83300B1A64D /* Build configuration list for PBXProject "NeuroRobot-Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DE706E122ACF83300B1A64D /* Debug */,
+				9DE706E222ACF83300B1A64D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DE706E322ACF83300B1A64D /* Build configuration list for PBXNativeTarget "iOS_NeuroRobot-Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DE706E422ACF83300B1A64D /* Debug */,
+				9DE706E522ACF83300B1A64D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DE706F422ACFCA200B1A64D /* Build configuration list for PBXAggregateTarget "fatNeuroRobot-Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DE706F522ACFCA200B1A64D /* Debug */,
+				9DE706F622ACFCA200B1A64D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B156B15523D0554E00FCDCAF /* Build configuration list for PBXNativeTarget "NeuroRobot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B156B15623D0554E00FCDCAF /* Debug */,
+				B156B15723D0554E00FCDCAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9DE706D422ACF83300B1A64D /* Project object */;
+}
