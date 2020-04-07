@@ -49,6 +49,7 @@ final class VideoStreamViewController: BaseStreamViewController {
         
         robotConnected = true
         initialCompletionBlock = nil
+        brain.delegate = self
         
         setupUI()
         setupAudioRecorder()
@@ -112,7 +113,6 @@ final class VideoStreamViewController: BaseStreamViewController {
                 if streamerIsWorking, fooAudio != nil {
                     audioSteramer?.scheduleData(audioData: fooAudio!)
                 }
-                
             }
         }
         
@@ -150,9 +150,6 @@ final class VideoStreamViewController: BaseStreamViewController {
             brainNetworkView.update(brain: brain)
             
             bottomScrollView.scrollRectToVisible(brainNetworkView.frame, animated: true)
-        } else {
-            send(leftPWM: 0, rightPWM: 0, toneFrequency: 0)
-            bottomScrollView.scrollRectToVisible(CGRect(x: 0, y: 0, width: view.bounds.width, height: bottomScrollView.bounds.height), animated: true)
         }
     }
     
@@ -440,3 +437,11 @@ extension VideoStreamViewController: NeuroRobotDelegate {
     }
 }
 
+//MARK:- BrainDelegate
+extension VideoStreamViewController: BrainDelegate {
+    
+    func brainStopped() {
+        send(leftPWM: 0, rightPWM: 0, toneFrequency: 0)
+        bottomScrollView.scrollRectToVisible(CGRect(x: 0, y: 0, width: view.bounds.width, height: bottomScrollView.bounds.height), animated: true)
+    }
+}

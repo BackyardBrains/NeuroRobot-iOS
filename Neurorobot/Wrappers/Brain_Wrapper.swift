@@ -14,9 +14,14 @@ enum BrainError: Error {
     case cannotLoadBrain
 }
 
+protocol BrainDelegate: class {
+    func brainStopped()
+}
+
 final class Brain
 {
     private var brainObject: UnsafeRawPointer?
+    weak var delegate: BrainDelegate?
     
     public var isRunning        = false
     private var isVideoSizeSet  = false
@@ -89,6 +94,7 @@ final class Brain
         
         isRunning = false
         brain_stop(brainObject)
+        delegate?.brainStopped()
     }
     
     deinit {
