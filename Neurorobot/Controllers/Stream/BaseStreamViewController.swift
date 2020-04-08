@@ -44,7 +44,6 @@ class BaseStreamViewController: BaseViewController {
 private extension BaseStreamViewController
 {
     @IBAction func startNeuronNetworkTapped(_ sender: Any) {
-        brain.stop()
         togglePickerConstraints(brainIsRunning: false)
     }
     

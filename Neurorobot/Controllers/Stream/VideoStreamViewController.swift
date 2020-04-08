@@ -30,6 +30,7 @@ final class VideoStreamViewController: BaseStreamViewController {
     @IBOutlet weak var intensityLabel           : UILabel!
     @IBOutlet weak var maxPWMTextField          : UITextField!
     @IBOutlet weak var bottomScrollView         : UIScrollView!
+    
     // Data
     private var maxPWM          : CGFloat = 255
     private var ipAddress       : String!

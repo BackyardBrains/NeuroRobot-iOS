@@ -25,18 +25,25 @@ final class VideoStreamWithoutRobotViewController: BaseStreamViewController {
         return videoDeviceInput
     }
     
+    private let toneGenerator = AVToneGenerator()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         handleCameraAccess()
-        
-        brain.setVideoSize(width: 1000, height: 1000)
+        setupBrain()
     }
     
     func setupUI() {
         navigationController?.setNavigationBarHidden(false, animated: true)
         
         scrollView.decelerationRate = .fast
+    }
+    
+    func setupBrain() {
+        brain.setVideoSize(width: 1000, height: 1000)
+        brain.setDistance(distance: 4000)
+        brain.delegate = self
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -70,6 +77,9 @@ final class VideoStreamWithoutRobotViewController: BaseStreamViewController {
             brainActivityView?.updateActivityValues(brain: brain)
             brainRasterView.updateActivityValues(brain: brain)
             brainNetworkView.update(brain: brain)
+            
+            let speakerTone = brain.getSpeakerTone()
+            toneGenerator.playTone(frequency: speakerTone)
         }
     }
     
@@ -168,5 +178,13 @@ extension VideoStreamWithoutRobotViewController: UIScrollViewDelegate {
         pageIndicator.currentPage = Int(newPage)
         let point = CGPoint(x: CGFloat(newPage * pageWidth) - leftInset, y: targetContentOffset.pointee.y)
         targetContentOffset.pointee = point
+    }
+}
+
+//MARK:- BrainDelegate
+extension VideoStreamWithoutRobotViewController: BrainDelegate {
+    
+    func brainStopped() {
+        toneGenerator.stop()
     }
 }

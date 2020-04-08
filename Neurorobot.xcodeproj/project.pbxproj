@@ -144,6 +144,8 @@
 		B11A98C1243C74EB005C8AB2 /* Tide.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CD42435D20C00B75A5D /* Tide.mat */; };
 		B11A98C2243C74EB005C8AB2 /* Vomba.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CD12435D20A00B75A5D /* Vomba.mat */; };
 		B11A98C3243C74EB005C8AB2 /* Ypsilon.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CDC2435D21200B75A5D /* Ypsilon.mat */; };
+		B11A98C5243CBE17005C8AB2 /* AVTonePlayerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11A98C4243CBE16005C8AB2 /* AVTonePlayerNode.swift */; };
+		B11A98C8243CC0D4005C8AB2 /* AVToneGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11A98C7243CC0D4005C8AB2 /* AVToneGenerator.swift */; };
 		B1254ABE2438A0AD00220DE1 /* Bao.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1254ABD2438A0AD00220DE1 /* Bao.mat */; };
 		B1254ABF2438A0AD00220DE1 /* Bao.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1254ABD2438A0AD00220DE1 /* Bao.mat */; };
 		B1254AC12438A0C600220DE1 /* Shouk.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1254AC02438A0C600220DE1 /* Shouk.mat */; };
@@ -436,6 +438,8 @@
 		9F2D2E032370624000C0FFF4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9FA5A2B9236D8E38000A23EA /* libNeuroRobot-Framework.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libNeuroRobot-Framework.a"; path = "NeuroRobot-Framework/library/lib/libNeuroRobot-Framework.a"; sourceTree = "<group>"; };
 		AE6339D9F2A846A2E25278CE /* Pods-Neurorobot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neurorobot.release.xcconfig"; path = "Target Support Files/Pods-Neurorobot/Pods-Neurorobot.release.xcconfig"; sourceTree = "<group>"; };
+		B11A98C4243CBE16005C8AB2 /* AVTonePlayerNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVTonePlayerNode.swift; sourceTree = "<group>"; };
+		B11A98C7243CC0D4005C8AB2 /* AVToneGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVToneGenerator.swift; sourceTree = "<group>"; };
 		B1254ABD2438A0AD00220DE1 /* Bao.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bao.mat; sourceTree = "<group>"; };
 		B1254AC02438A0C600220DE1 /* Shouk.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Shouk.mat; sourceTree = "<group>"; };
 		B12778E62423726D005551E6 /* BrainNetworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainNetworkView.swift; sourceTree = "<group>"; };
@@ -841,6 +845,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B11A98C6243CC0C3005C8AB2 /* AVToneGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				B11A98C7243CC0D4005C8AB2 /* AVToneGenerator.swift */,
+				B11A98C4243CBE16005C8AB2 /* AVTonePlayerNode.swift */,
+			);
+			path = AVToneGenerator;
+			sourceTree = "<group>";
+		};
 		B12778E52423725A005551E6 /* Brain network */ = {
 			isa = PBXGroup;
 			children = (
@@ -875,6 +888,7 @@
 		B12CA5F824334561006C7606 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B11A98C6243CC0C3005C8AB2 /* AVToneGenerator */,
 				B17D64C02434A9CE0011DD12 /* DictionaryCodable.swift */,
 				B12CA5F624334541006C7606 /* API Manager */,
 				B12CA5F924334572006C7606 /* Extensions */,
@@ -1271,6 +1285,7 @@
 				B12CA60E24334F4F006C7606 /* CharacterSet+Additions.swift in Sources */,
 				B12CA61424335970006C7606 /* BaudRate.swift in Sources */,
 				9D5BDE0923191C3300CA51CC /* VideoStreamViewController.swift in Sources */,
+				B11A98C8243CC0D4005C8AB2 /* AVToneGenerator.swift in Sources */,
 				9D5BDE0E23191C4300CA51CC /* FingerView.swift in Sources */,
 				B12778E72423726D005551E6 /* BrainNetworkView.swift in Sources */,
 				B12CA6042433467D006C7606 /* ErrorObject.swift in Sources */,
@@ -1300,6 +1315,7 @@
 				B1BEADA124238C2F008B2FCF /* Coordinate.swift in Sources */,
 				9D834DF3234620FC00BBBD62 /* BrainActivityRasterView.swift in Sources */,
 				9D5BDE0323191C2700CA51CC /* BaseNavigationViewController.swift in Sources */,
+				B11A98C5243CBE17005C8AB2 /* AVTonePlayerNode.swift in Sources */,
 				B1C48C1E241CF6A60049A3F1 /* UIApplication+Additions.swift in Sources */,
 				B1C48C1C241CF4620049A3F1 /* UIWindow+Additions.swift in Sources */,
 				9D1B77EF231A6C7E00E2258E /* hackForiPhone5.c in Sources */,
