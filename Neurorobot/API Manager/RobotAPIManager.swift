@@ -76,7 +76,7 @@ extension APIManager {
     
     /// Set GOP of module
     /// - Parameters:
-    ///   - gop: The GOP of module you want to set (range: 0~100)
+    ///   - gop: The GOP of module you want to set (range: 1~100)
     ///   - type: Local video resolution or Remote video resolution, default is remote
     ///   - completion: Completion block
     func setGOP(gop: String, type: PipeType = .remote, completion: (() -> Void)? = nil) {
@@ -108,7 +108,7 @@ extension APIManager {
     
     /// Set quality of module
     /// - Parameters:
-    ///   - quality: The quality of module you want to set (range: 0~139)
+    ///   - quality: The quality of module you want to set (range: 1~52)
     ///   - type: Local video resolution or Remote video resolution, default is local
     ///   - completion: Completion block
     func setQuality(quality: String, type: PipeType = .local, completion: (() -> Void)? = nil) {

@@ -48,6 +48,7 @@ typedef enum : int {
     StreamErrorCannotReconnect,
     
     StreamInfoReconnecting = 200,
+    StreamInfoStopped,
     
 } StreamStateType;
 typedef void (*StreamErrorOccurredCallback) (StreamStateType error);
@@ -159,6 +160,9 @@ const static char* getStreamStateMessage(StreamStateType type)
             break;
         case StreamInfoReconnecting:
             sprintf(retVal, "Stream info: Reconnecting");
+            break;
+        case StreamInfoStopped:
+            sprintf(retVal, "Stream info: Stopped");
             break;
     }
     return retVal;

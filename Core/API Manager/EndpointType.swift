@@ -13,12 +13,15 @@ enum EndpointType {
     case setBaudRate
     case getBaudRate
     
+    // MARK: FPS
     case setFPS
     case getFPS
     
+    // MARK: GOP
     case setGOP
     case getGOP
     
+    // MARK: FPS
     case setQuality
     case getQuality
 }
