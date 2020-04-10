@@ -362,7 +362,7 @@ int VideoAndAudioObtainer::decode(AVCodecContext* avctx, AVFrame* frame, int* go
 
 void VideoAndAudioObtainer::closeStreams()
 {
-    if (stateType == StreamInfoStopped) { return; }
+    if (stateType == StreamStateStopped) { return; }
     
     logMessage("closeStreams >>> entered");
     SharedMemory::getInstance()->blockWritters();
@@ -379,7 +379,7 @@ void VideoAndAudioObtainer::closeStreams()
     
     imgConvertCtx = NULL;
     
-    updateState(StreamInfoStopped, -1);
+    updateState(StreamStateStopped, -1);
     logMessage("closeStreams >>> finished");
 }
 
