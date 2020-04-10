@@ -20,11 +20,12 @@ protocol BrainDelegate: class {
 
 final class Brain
 {
-    private var brainObject: UnsafeRawPointer?
+    public var isRunning = false
+    
     weak var delegate: BrainDelegate?
     
-    public var isRunning        = false
-    private var isVideoSizeSet  = false
+    private var brainObject: UnsafeRawPointer?
+    private var isVideoSizeSet = false
     
     static func availableBrains() -> [String] {
         var brainPaths = [String]()
@@ -37,7 +38,6 @@ final class Brain
                 }
             }
         }
-        
         return brainPaths
     }
     
@@ -202,7 +202,7 @@ final class Brain
         return coordinates
     }
     
-    func getConnections() -> [[Double]]? {
+    func getInnerConnections() -> [[Double]]? {
         guard let brainObject = brainObject else { return nil }
         
         let numberOfNeuronsPointer = UnsafeMutablePointer<Int32>.allocate(capacity: 1)
@@ -227,7 +227,7 @@ final class Brain
         return connections
     }
     
-    func getConnections2() -> [[Double]]? {
+    func getOuterConnections() -> [[Double]]? {
         guard let brainObject = brainObject else { return nil }
         
         let numberOfNeuronsPointer = UnsafeMutablePointer<Int32>.allocate(capacity: 1)

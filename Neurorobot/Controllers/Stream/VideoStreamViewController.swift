@@ -76,7 +76,7 @@ final class VideoStreamViewController: BaseStreamViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        timer = Timer.scheduledTimer(withTimeInterval: 0.4, repeats: true) { [weak self] (timer) in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.04, repeats: true) { [weak self] (timer) in
             self?.handleTimer()
         }
         
@@ -204,7 +204,7 @@ final class VideoStreamViewController: BaseStreamViewController {
     }
     
     func setupParameters() {
-        APIManager.shared().setGOP(gop: "100") {
+        APIManager.shared().setGOP(gop: "50") {
             APIManager.shared().getGOP { (resp: RobotResponse?) in
                 print("set gop: \(resp!.value)")
             }
@@ -215,7 +215,7 @@ final class VideoStreamViewController: BaseStreamViewController {
         }
         
         DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
-            APIManager.shared().setFPS(fps: "10") {
+            APIManager.shared().setFPS(fps: "25") {
                 APIManager.shared().getFPS { (resp: RobotResponse?) in
                     print("set fps: \(resp!.value)")
                 }
@@ -223,7 +223,7 @@ final class VideoStreamViewController: BaseStreamViewController {
         }
         
         DispatchQueue.global().asyncAfter(deadline: .now() + 1.5) {
-            APIManager.shared().setQuality(quality: "35") {
+            APIManager.shared().setQuality(quality: "0") {
                 APIManager.shared().getQuality { (resp: RobotResponse?) in
                     print("set quality: \(resp!.value)")
                 }

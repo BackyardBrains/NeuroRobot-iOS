@@ -146,7 +146,7 @@ class BrainNetworkView: UIView {
     private func drawConnections() {
         guard let brain = brain else { return }
         
-        if let connections = brain.getConnections() {
+        if let connections = brain.getInnerConnections() {
             for i in 0..<connections.count {
                 for j in 0..<connections[i].count where connections[i][j] > 0 {
                     var lineWidth = CGFloat(connections[i][j]) / 12
@@ -158,7 +158,7 @@ class BrainNetworkView: UIView {
             }
         }
         
-        if let contacts = brain.getConnections2() {
+        if let contacts = brain.getOuterConnections() {
             for i in 0..<contacts.count {
                 for j in 0..<contacts[i].count where contacts[i][j] > 0 {
                     var startPoint = neuronViews[i].center
