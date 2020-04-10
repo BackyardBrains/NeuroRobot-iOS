@@ -340,6 +340,8 @@ std::string Socket::receiveSerial(boost::system::error_code* ec)
 
 void Socket::closeSockets()
 {
+    if (stateType == SocketInfoStopped) { return; }
+    
     logMessage("------------- closeSockets -----------");
     
     closeDataSocket();
@@ -347,6 +349,9 @@ void Socket::closeSockets()
     
     io_context.reset();
     io_context.stop();
+    
+    boost::system::error_code ec;
+    updateState(SocketInfoStopped, ec);
 }
 
 void Socket::closeDataSocket()

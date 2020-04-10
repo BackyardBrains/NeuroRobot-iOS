@@ -25,7 +25,8 @@ typedef enum : int {
     SocketInfoCannotCancelDataSocket = 200,
     SocketInfoCannotCancelAudioSocket,
     SocketInfoCannotCloseDataSocket,
-    SocketInfoCannotCloseAudioSocket
+    SocketInfoCannotCloseAudioSocket,
+    SocketInfoStopped,
 } SocketStateType;
 typedef void (*SocketErrorOccurredCallback) (SocketStateType error);
 
@@ -103,6 +104,10 @@ static char* getSocketStateMessage(SocketStateType type)
         }
         case SocketInfoCannotCloseAudioSocket: {
             sprintf(retVal, "Socket info: cannot close audio socket");
+            break;
+        }
+        case SocketInfoStopped: {
+            sprintf(retVal, "Socket info: Stopped");
             break;
         }
     }

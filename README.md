@@ -146,7 +146,8 @@ notes:
 
 #### iOS 
 
-run `git clone https://github.com/kewlbear/FFmpeg-iOS-build-script.git`  
+run `git clone https://github.com/kewlbear/FFmpeg-iOS-build-script.git`
+(alternative: `https://github.com/tanersener/mobile-ffmpeg`)  
 run `cd FFmpeg-iOS-build-script`  
 edit value of `CONFIGURE_FLAGS` in `build-ffmpeg.sh` to be:  
 ```
