@@ -149,8 +149,6 @@ final class VideoStreamViewController: BaseStreamViewController {
             brainActivityView?.updateActivityValues(brain: brain)
             brainRasterView.updateActivityValues(brain: brain)
             brainNetworkView.update(brain: brain)
-            
-            bottomScrollView.scrollRectToVisible(brainNetworkView.frame, animated: true)
         }
     }
     
@@ -441,8 +439,20 @@ extension VideoStreamViewController: NeuroRobotDelegate {
 //MARK:- BrainDelegate
 extension VideoStreamViewController: BrainDelegate {
     
+    func brainStarted() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            self.bottomScrollView.scrollRectToVisible(self.brainNetworkView.frame, animated: true)
+        }
+    }
+    
     func brainStopped() {
         send(leftPWM: 0, rightPWM: 0, toneFrequency: 0)
-        bottomScrollView.scrollRectToVisible(CGRect(x: 0, y: 0, width: view.bounds.width, height: bottomScrollView.bounds.height), animated: true)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            
+            self.bottomScrollView.scrollRectToVisible(CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.bottomScrollView.bounds.height), animated: true)
+        }
     }
 }

@@ -16,6 +16,7 @@ enum BrainError: Error {
 
 protocol BrainDelegate: class {
     func brainStopped()
+    func brainStarted()
 }
 
 final class Brain
@@ -87,6 +88,7 @@ final class Brain
         
         isRunning = true
         brain_start(brainObject)
+        delegate?.brainStarted()
     }
     
     func stop() {

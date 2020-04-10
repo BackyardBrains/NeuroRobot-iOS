@@ -184,6 +184,10 @@ extension VideoStreamWithoutRobotViewController: UIScrollViewDelegate {
 //MARK:- BrainDelegate
 extension VideoStreamWithoutRobotViewController: BrainDelegate {
     
+    func brainStarted() {
+        
+    }
+    
     func brainStopped() {
         toneGenerator.stop()
     }
