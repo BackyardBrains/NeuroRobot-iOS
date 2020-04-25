@@ -24,9 +24,8 @@ final class BrainPickerView: UIView {
     private var pickerUpConstraint  : NSLayoutConstraint!
     private var pickerDownConstraint: NSLayoutConstraint!
     
-    typealias ChoosenBrainWithPathCallback = ((String?, String?) -> ())
-
-    var choosenBrainWithPath: ChoosenBrainWithPathCallback?
+    typealias ChoosenBrainWithPathCallback = ((_ brainPath: String?, _ brainName: String?) -> ())
+    private var choosenBrainWithPath: ChoosenBrainWithPathCallback?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -52,7 +51,7 @@ final class BrainPickerView: UIView {
         pickerDownConstraint.isActive = true
     }
     
-    func setupUI() {
+    private func setupUI() {
         backgroundColor = .lightGray
         translatesAutoresizingMaskIntoConstraints = false
         
@@ -112,6 +111,10 @@ final class BrainPickerView: UIView {
             pickerDownConstraint.isActive = false
             pickerUpConstraint.isActive = true
         }
+    }
+    
+    func choosenBrain(callback: @escaping ChoosenBrainWithPathCallback) {
+        choosenBrainWithPath = callback
     }
 }
 

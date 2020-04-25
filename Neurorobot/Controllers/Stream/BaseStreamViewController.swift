@@ -11,7 +11,7 @@ import UIKit
 class BaseStreamViewController: BaseViewController {
     
     // UI
-    var brainPicker = BrainPickerView()
+    var brainPicker                             = BrainPickerView()
     @IBOutlet weak var videoStreamView          : VideoStreamView!
     @IBOutlet weak var brainActivityView        : BrainActivityView?
     @IBOutlet weak var brainRasterView          : BrainActivityRasterView!
@@ -27,16 +27,34 @@ class BaseStreamViewController: BaseViewController {
         setupUI()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+//        DispatchQueue.main.async { [weak self] in
+//            guard let self = self else { return }
+            
+            self.brainRasterView.stop()
+//        }
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
+//        DispatchQueue.global().async { [weak self] in
+//            guard let self = self else { return }
+//
+//            self.brain.stop()
+//        }
         brain.stop()
     }
     
     private func setupUI() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(startNeuronNetworkTapped))
         view.addSubview(brainPicker)
-        brainPicker.choosenBrainWithPath = choosenBrainWithPath
+        brainPicker.choosenBrain { [weak self] (brainPath, brainName) in
+            self?.choosenBrainWithPath(brainPath: brainPath, brainName: brainName)
+        }
+//        brainPicker.choosenBrainWithPath = choosenBrainWithPath
     }
 }
 

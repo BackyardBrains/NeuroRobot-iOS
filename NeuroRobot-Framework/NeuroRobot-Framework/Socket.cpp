@@ -58,18 +58,25 @@ Socket::Socket(std::string ip_, std::string port_, SocketErrorOccurredCallback c
     connectSerialSocket(ipAddress, port);
 }
 
+Socket::~Socket()
+{
+    if (whileLoopIsRunning) {
+        semaphore.wait();
+    }
+    closeSockets();
+}
+
 void Socket::run()
 {
     logMessage("run >> entered ");
     
+    whileLoopIsRunning = true;
     while (isRunning()) {
         logMessage("run >> while >> entered ");
         
         boost::system::error_code ec;
         std::string readSerialData = receiveSerial(&ec);
         logMessage("run >> while >> received ");
-        
-        if (!isRunning()) { break; }
         
         if (ec) {
             logMessage("run >> while >> error ");
@@ -83,8 +90,6 @@ void Socket::run()
         }
         logMessage("run >> while >> no err ");
         
-        if (!isRunning()) { break; }
-        
         if (readSerialData.length() > 0) {
             if (isRunning()) {
                 SharedMemory::getInstance()->setSerialData(readSerialData);
@@ -94,7 +99,9 @@ void Socket::run()
             logMessage(readSerialData);
         }
     }
+    whileLoopIsRunning = false;
     closeSockets();
+    semaphore.signal();
     
     logMessage("Socket -> read serial ended");
 }
@@ -341,6 +348,8 @@ std::string Socket::receiveSerial(boost::system::error_code* ec)
 void Socket::closeSockets()
 {
     if (stateType == SocketStateStopped) { return; }
+    boost::system::error_code ec;
+    updateState(SocketStateStopped, ec);
     
     logMessage("------------- closeSockets -----------");
     
@@ -349,9 +358,6 @@ void Socket::closeSockets()
     
     io_context.reset();
     io_context.stop();
-    
-    boost::system::error_code ec;
-    updateState(SocketStateStopped, ec);
 }
 
 void Socket::closeDataSocket()

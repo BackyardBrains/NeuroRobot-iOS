@@ -24,10 +24,7 @@
 		9D96D6F223168C2400AF0409 /* Brain_Brigde.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D6BCD23152B9F00C43AC3 /* Brain_Brigde.cpp */; };
 		9D96D6F323168C2400AF0409 /* Brain_Brigde.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D6BCD23152B9F00C43AC3 /* Brain_Brigde.cpp */; };
 		9DC3990623082B8B002961FE /* Brain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE8027E230804B00042B32B /* Brain.cpp */; };
-		9DC3990723082B90002961FE /* Neuron.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE8027C230804B00042B32B /* Neuron.cpp */; };
 		9DC3990A23082BE4002961FE /* Brain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE8027E230804B00042B32B /* Brain.cpp */; };
-		9DC3990B23082BE9002961FE /* Neuron.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE8027C230804B00042B32B /* Neuron.cpp */; };
-		9DE80280230804B00042B32B /* Neuron.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE8027C230804B00042B32B /* Neuron.cpp */; };
 		9DE80281230804B00042B32B /* Brain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE8027E230804B00042B32B /* Brain.cpp */; };
 		9DE80299230807370042B32B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DE80298230807370042B32B /* main.cpp */; };
 		B12BB92F2381822B00857538 /* Brain_Bridge_Tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B12BB92E2381822B00857538 /* Brain_Bridge_Tests.cpp */; };
@@ -46,6 +43,17 @@
 		B1E9D09C23BF711F00663C09 /* MathFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B18A071A23B12A3F009145C7 /* MathFunctions.cpp */; };
 		B1E9D09D23BF711F00663C09 /* MathFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B18A071A23B12A3F009145C7 /* MathFunctions.cpp */; };
 		B1E9D09E23BF712000663C09 /* MathFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B18A071A23B12A3F009145C7 /* MathFunctions.cpp */; };
+		B1F5650E24460788002FDC7A /* Semaphore.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F5650C24460788002FDC7A /* Semaphore.h */; };
+		B1F5650F24460788002FDC7A /* Semaphore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1F5650D24460788002FDC7A /* Semaphore.cpp */; };
+		B1F5651024460788002FDC7A /* Semaphore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1F5650D24460788002FDC7A /* Semaphore.cpp */; };
+		B1F5651324460874002FDC7A /* BrainWorker.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B1F5651124460874002FDC7A /* BrainWorker.hpp */; };
+		B1F5651424460874002FDC7A /* BrainWorker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1F5651224460874002FDC7A /* BrainWorker.cpp */; };
+		B1F5651524460874002FDC7A /* BrainWorker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1F5651224460874002FDC7A /* BrainWorker.cpp */; };
+		B1F56519244609B9002FDC7A /* Score.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B1F56517244609B9002FDC7A /* Score.hpp */; };
+		B1F5651E244609ED002FDC7A /* Color.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B1F5651C244609ED002FDC7A /* Color.hpp */; };
+		B1F5652124461012002FDC7A /* BrainWorker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1F5651224460874002FDC7A /* BrainWorker.cpp */; };
+		B1F565222446109B002FDC7A /* libmatio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B149BAC62432061500974872 /* libmatio.a */; };
+		B1F56523244610DD002FDC7A /* libopencv_world.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B149BAC8243215F400974872 /* libopencv_world.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,7 +83,6 @@
 		9DC20A93233632E9003D842A /* test2.dat */ = {isa = PBXFileReference; lastKnownFileType = text; path = test2.dat; sourceTree = "<group>"; };
 		9DE8026E2308048D0042B32B /* libiOS_Brain-Framework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libiOS_Brain-Framework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE8027A230804AF0042B32B /* Neuron.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Neuron.hpp; sourceTree = "<group>"; };
-		9DE8027C230804B00042B32B /* Neuron.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Neuron.cpp; sourceTree = "<group>"; };
 		9DE8027D230804B00042B32B /* Brain.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Brain.hpp; sourceTree = "<group>"; };
 		9DE8027E230804B00042B32B /* Brain.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Brain.cpp; sourceTree = "<group>"; };
 		9DE80286230805150042B32B /* libmacOS_Brain-Framework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libmacOS_Brain-Framework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +100,13 @@
 		B18A071923B12A3F009145C7 /* MathFunctions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MathFunctions.hpp; sourceTree = "<group>"; };
 		B18A071A23B12A3F009145C7 /* MathFunctions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MathFunctions.cpp; sourceTree = "<group>"; };
 		B19F08B123884FC700E8D280 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		B1ABB6632448DBB60013C533 /* CameraType.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CameraType.hpp; sourceTree = "<group>"; };
+		B1F5650C24460788002FDC7A /* Semaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Semaphore.h; sourceTree = "<group>"; };
+		B1F5650D24460788002FDC7A /* Semaphore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Semaphore.cpp; sourceTree = "<group>"; };
+		B1F5651124460874002FDC7A /* BrainWorker.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BrainWorker.hpp; sourceTree = "<group>"; };
+		B1F5651224460874002FDC7A /* BrainWorker.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BrainWorker.cpp; sourceTree = "<group>"; };
+		B1F56517244609B9002FDC7A /* Score.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Score.hpp; sourceTree = "<group>"; };
+		B1F5651C244609ED002FDC7A /* Color.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Color.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +132,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1F56523244610DD002FDC7A /* libopencv_world.a in Frameworks */,
+				B1F565222446109B002FDC7A /* libmatio.a in Frameworks */,
 				B19F08B223884FC800E8D280 /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,13 +175,13 @@
 		9DE802702308048D0042B32B /* Brain-Framework */ = {
 			isa = PBXGroup;
 			children = (
-				B18A071823B12A24009145C7 /* Math */,
+				B1F5651624460893002FDC7A /* Models */,
 				9D4D6BCC23152B6800C43AC3 /* Bridge */,
-				9DE8027E230804B00042B32B /* Brain.cpp */,
-				9DE8027D230804B00042B32B /* Brain.hpp */,
-				9DE8027C230804B00042B32B /* Neuron.cpp */,
-				9DE8027A230804AF0042B32B /* Neuron.hpp */,
+				B1F565062446076A002FDC7A /* Core */,
+				B18A071823B12A24009145C7 /* Math */,
 				B12BB934238188F600857538 /* AudioProcessing.cpp */,
+				B1F5651224460874002FDC7A /* BrainWorker.cpp */,
+				B1F5651124460874002FDC7A /* BrainWorker.hpp */,
 			);
 			path = "Brain-Framework";
 			sourceTree = "<group>";
@@ -202,6 +218,28 @@
 			path = Math;
 			sourceTree = "<group>";
 		};
+		B1F565062446076A002FDC7A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B1F5650D24460788002FDC7A /* Semaphore.cpp */,
+				B1F5650C24460788002FDC7A /* Semaphore.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B1F5651624460893002FDC7A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9DE8027E230804B00042B32B /* Brain.cpp */,
+				9DE8027D230804B00042B32B /* Brain.hpp */,
+				9DE8027A230804AF0042B32B /* Neuron.hpp */,
+				B1F56517244609B9002FDC7A /* Score.hpp */,
+				B1F5651C244609ED002FDC7A /* Color.hpp */,
+				B1ABB6632448DBB60013C533 /* CameraType.hpp */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -209,6 +247,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1F56519244609B9002FDC7A /* Score.hpp in Headers */,
+				B1F5650E24460788002FDC7A /* Semaphore.h in Headers */,
+				B1F5651E244609ED002FDC7A /* Color.hpp in Headers */,
+				B1F5651324460874002FDC7A /* BrainWorker.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,8 +378,9 @@
 			files = (
 				9DE80281230804B00042B32B /* Brain.cpp in Sources */,
 				B133B12A23802F43008B8CEE /* FFT_Apple.mm in Sources */,
-				9DE80280230804B00042B32B /* Neuron.cpp in Sources */,
+				B1F5650F24460788002FDC7A /* Semaphore.cpp in Sources */,
 				B12BB935238188F600857538 /* AudioProcessing.cpp in Sources */,
+				B1F5651424460874002FDC7A /* BrainWorker.cpp in Sources */,
 				B12BB92F2381822B00857538 /* Brain_Bridge_Tests.cpp in Sources */,
 				9D96D6F223168C2400AF0409 /* Brain_Brigde.cpp in Sources */,
 				B1E9D09C23BF711F00663C09 /* MathFunctions.cpp in Sources */,
@@ -350,9 +393,10 @@
 			files = (
 				B12BB9362381892B00857538 /* AudioProcessing.cpp in Sources */,
 				9DC3990623082B8B002961FE /* Brain.cpp in Sources */,
+				B1F5651024460788002FDC7A /* Semaphore.cpp in Sources */,
 				B12BB9312381832B00857538 /* FFT_Apple.mm in Sources */,
 				B12BB93823818C4000857538 /* Brain_Bridge_Tests.cpp in Sources */,
-				9DC3990723082B90002961FE /* Neuron.cpp in Sources */,
+				B1F5651524460874002FDC7A /* BrainWorker.cpp in Sources */,
 				9D96D6F323168C2400AF0409 /* Brain_Brigde.cpp in Sources */,
 				B1E9D09D23BF711F00663C09 /* MathFunctions.cpp in Sources */,
 			);
@@ -362,11 +406,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1F5652124461012002FDC7A /* BrainWorker.cpp in Sources */,
 				B12BB9372381892B00857538 /* AudioProcessing.cpp in Sources */,
 				9DC3990A23082BE4002961FE /* Brain.cpp in Sources */,
 				B12BB9322381832C00857538 /* FFT_Apple.mm in Sources */,
 				9DE80299230807370042B32B /* main.cpp in Sources */,
-				9DC3990B23082BE9002961FE /* Neuron.cpp in Sources */,
 				B1E9D09E23BF712000663C09 /* MathFunctions.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,7 +540,10 @@
 				BITCODE_GENERATION_MODE = bitcode;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E8C46L5TFQ;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/3rd/include";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/3rd/ios/matio/include",
+					"$(PROJECT_DIR)/3rd/ios/opencv/include",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/3rd/ios/matio/lib",
 					"$(PROJECT_DIR)/3rd/ios/opencv/lib",
@@ -514,7 +561,10 @@
 				BITCODE_GENERATION_MODE = bitcode;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E8C46L5TFQ;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/3rd/include";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/3rd/ios/matio/include",
+					"$(PROJECT_DIR)/3rd/ios/opencv/include",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/3rd/ios/matio/lib",
 					"$(PROJECT_DIR)/3rd/ios/opencv/lib",
@@ -533,7 +583,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E8C46L5TFQ;
 				EXECUTABLE_PREFIX = lib;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/3rd/macos/matio/include",
+					"$(PROJECT_DIR)/3rd/macos/opencv/include",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/3rd/macos/matio/lib",
@@ -553,7 +606,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E8C46L5TFQ;
 				EXECUTABLE_PREFIX = lib;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/3rd/macos/matio/include",
+					"$(PROJECT_DIR)/3rd/macos/opencv/include",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/3rd/macos/matio/lib",
@@ -590,8 +646,15 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E8C46L5TFQ;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/3rd/include";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/3rd/lib";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/3rd/macos/matio/include",
+					"$(PROJECT_DIR)/3rd/macos/opencv/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/3rd/macos/matio/lib",
+					"$(PROJECT_DIR)/3rd/macos/opencv/lib",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -605,8 +668,15 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E8C46L5TFQ;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/3rd/include";
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/3rd/lib";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/3rd/macos/matio/include",
+					"$(PROJECT_DIR)/3rd/macos/opencv/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/3rd/macos/matio/lib",
+					"$(PROJECT_DIR)/3rd/macos/opencv/lib",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -29,8 +29,8 @@
 		9D5BDDFE23191C0800CA51CC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDDFD23191C0800CA51CC /* MainTabBarController.swift */; };
 		9D5BDE0323191C2700CA51CC /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDE0123191C2700CA51CC /* BaseNavigationViewController.swift */; };
 		9D5BDE0423191C2700CA51CC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDE0223191C2700CA51CC /* BaseViewController.swift */; };
-		9D5BDE0923191C3300CA51CC /* VideoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDE0623191C3300CA51CC /* VideoStreamViewController.swift */; };
-		9D5BDE0A23191C3300CA51CC /* VideoStreamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D5BDE0723191C3300CA51CC /* VideoStreamViewController.xib */; };
+		9D5BDE0923191C3300CA51CC /* VideoStreamDebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDE0623191C3300CA51CC /* VideoStreamDebugViewController.swift */; };
+		9D5BDE0A23191C3300CA51CC /* VideoStreamDebugViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D5BDE0723191C3300CA51CC /* VideoStreamDebugViewController.xib */; };
 		9D5BDE0E23191C4300CA51CC /* FingerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDE0D23191C4200CA51CC /* FingerView.swift */; };
 		9D834DEF2345289E00BBBD62 /* BrainActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D834DEE2345289E00BBBD62 /* BrainActivityView.swift */; };
 		9D834DF3234620FC00BBBD62 /* BrainActivityRasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D834DF2234620FC00BBBD62 /* BrainActivityRasterView.swift */; };
@@ -245,6 +245,8 @@
 		B1CE7D4C23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1CE7D4A23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.xib */; };
 		B1CE7D4D23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE7D4B23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.swift */; };
 		B1CE7D4F23E1B8E5007E45A9 /* VideoStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE7D4E23E1B8E4007E45A9 /* VideoStreamView.swift */; };
+		B1D6E5382440BA9200046773 /* VideoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D6E5362440BA9200046773 /* VideoStreamViewController.swift */; };
+		B1D6E5392440BA9200046773 /* VideoStreamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1D6E5372440BA9200046773 /* VideoStreamViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -418,8 +420,8 @@
 		9D5BDDFD23191C0800CA51CC /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		9D5BDE0123191C2700CA51CC /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
 		9D5BDE0223191C2700CA51CC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		9D5BDE0623191C3300CA51CC /* VideoStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoStreamViewController.swift; sourceTree = "<group>"; };
-		9D5BDE0723191C3300CA51CC /* VideoStreamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoStreamViewController.xib; sourceTree = "<group>"; };
+		9D5BDE0623191C3300CA51CC /* VideoStreamDebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoStreamDebugViewController.swift; sourceTree = "<group>"; };
+		9D5BDE0723191C3300CA51CC /* VideoStreamDebugViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoStreamDebugViewController.xib; sourceTree = "<group>"; };
 		9D5BDE0D23191C4200CA51CC /* FingerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerView.swift; sourceTree = "<group>"; };
 		9D5BDE1023191C7400CA51CC /* Neurorobot-iOS-BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Neurorobot-iOS-BridgingHeader.h"; sourceTree = "<group>"; };
 		9D834DEE2345289E00BBBD62 /* BrainActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainActivityView.swift; sourceTree = "<group>"; };
@@ -539,6 +541,8 @@
 		B1CE7D4A23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoStreamWithoutRobotViewController.xib; sourceTree = "<group>"; };
 		B1CE7D4B23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamWithoutRobotViewController.swift; sourceTree = "<group>"; };
 		B1CE7D4E23E1B8E4007E45A9 /* VideoStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamView.swift; sourceTree = "<group>"; };
+		B1D6E5362440BA9200046773 /* VideoStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoStreamViewController.swift; sourceTree = "<group>"; };
+		B1D6E5372440BA9200046773 /* VideoStreamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoStreamViewController.xib; sourceTree = "<group>"; };
 		C47C25879CD481284D55F82F /* Pods-Neuro RobotUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neuro RobotUITests.release.xcconfig"; path = "Target Support Files/Pods-Neuro RobotUITests/Pods-Neuro RobotUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -796,10 +800,11 @@
 		9D5BDE0023191C1100CA51CC /* Stream */ = {
 			isa = PBXGroup;
 			children = (
+				B1D6E53A2440BA9F00046773 /* [Archive] */,
 				B12778E52423725A005551E6 /* Brain network */,
 				9D5BDE0F23191C4A00CA51CC /* View */,
-				9D5BDE0623191C3300CA51CC /* VideoStreamViewController.swift */,
-				9D5BDE0723191C3300CA51CC /* VideoStreamViewController.xib */,
+				B1D6E5362440BA9200046773 /* VideoStreamViewController.swift */,
+				B1D6E5372440BA9200046773 /* VideoStreamViewController.xib */,
 				B1CE7D4B23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.swift */,
 				B1CE7D4A23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.xib */,
 				B1C48C1F241CFA750049A3F1 /* BaseStreamViewController.swift */,
@@ -889,9 +894,9 @@
 			isa = PBXGroup;
 			children = (
 				B11A98C6243CC0C3005C8AB2 /* AVToneGenerator */,
-				B17D64C02434A9CE0011DD12 /* DictionaryCodable.swift */,
 				B12CA5F624334541006C7606 /* API Manager */,
 				B12CA5F924334572006C7606 /* Extensions */,
+				B17D64C02434A9CE0011DD12 /* DictionaryCodable.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1015,6 +1020,15 @@
 				B1618D442435DA1200B75A5D /* SerialData.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B1D6E53A2440BA9F00046773 /* [Archive] */ = {
+			isa = PBXGroup;
+			children = (
+				9D5BDE0623191C3300CA51CC /* VideoStreamDebugViewController.swift */,
+				9D5BDE0723191C3300CA51CC /* VideoStreamDebugViewController.xib */,
+			);
+			path = "[Archive]";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1156,6 +1170,7 @@
 				B1618CE12435D21300B75A5D /* Karl.mat in Resources */,
 				B1618CFD2435D21300B75A5D /* Birk.mat in Resources */,
 				B1618CDE2435D21300B75A5D /* Rapid.mat in Resources */,
+				B1D6E5392440BA9200046773 /* VideoStreamViewController.xib in Resources */,
 				B1618CFF2435D21300B75A5D /* Cern.mat in Resources */,
 				9D5BDDA223191B4000CA51CC /* Main.storyboard in Resources */,
 				B1618CE72435D21300B75A5D /* Gibson.mat in Resources */,
@@ -1170,7 +1185,7 @@
 				B1618D002435D21300B75A5D /* Archimedes.mat in Resources */,
 				B1618CEE2435D21300B75A5D /* Fingers Crossed.mat in Resources */,
 				B1618CF52435D21300B75A5D /* Accretion.mat in Resources */,
-				9D5BDE0A23191C3300CA51CC /* VideoStreamViewController.xib in Resources */,
+				9D5BDE0A23191C3300CA51CC /* VideoStreamDebugViewController.xib in Resources */,
 				B1618D102435D21300B75A5D /* Chopin.mat in Resources */,
 				9D5BDDF623191BF000CA51CC /* ConnectViewController.xib in Resources */,
 				B1254AC12438A0C600220DE1 /* Shouk.mat in Resources */,
@@ -1284,8 +1299,9 @@
 				B1BEADA62423D242008B2FCF /* UIColor+Additions.swift in Sources */,
 				B12CA60E24334F4F006C7606 /* CharacterSet+Additions.swift in Sources */,
 				B12CA61424335970006C7606 /* BaudRate.swift in Sources */,
-				9D5BDE0923191C3300CA51CC /* VideoStreamViewController.swift in Sources */,
+				9D5BDE0923191C3300CA51CC /* VideoStreamDebugViewController.swift in Sources */,
 				B11A98C8243CC0D4005C8AB2 /* AVToneGenerator.swift in Sources */,
+				B1D6E5382440BA9200046773 /* VideoStreamViewController.swift in Sources */,
 				9D5BDE0E23191C4300CA51CC /* FingerView.swift in Sources */,
 				B12778E72423726D005551E6 /* BrainNetworkView.swift in Sources */,
 				B12CA6042433467D006C7606 /* ErrorObject.swift in Sources */,

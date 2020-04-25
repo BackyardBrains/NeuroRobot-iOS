@@ -15,7 +15,7 @@ class BaseViewController: UIViewController {
         baseSetupUI()
     }
     
-    func baseSetupUI() {
+    private func baseSetupUI() {
         view.backgroundColor = .white
         if #available(iOS 13.0, *) {
             overrideUserInterfaceStyle = .light
@@ -26,5 +26,9 @@ class BaseViewController: UIViewController {
         super.touchesBegan(touches, with: event)
         
         view.endEditing(true)
+    }
+    
+    deinit {
+        print("deinit: " + String(describing: self))
     }
 }

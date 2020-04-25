@@ -99,8 +99,8 @@ private extension VideoStreamWithoutRobotViewController {
         case .authorized:
             setupCaptureSession()
         case .notDetermined:
-            AVCaptureDevice.requestAccess(for: .video) { [weak self] granted in
-                DispatchQueue.main.async {
+            AVCaptureDevice.requestAccess(for: .video) { granted in
+                DispatchQueue.main.async { [weak self] in
                     guard granted else { self?.showAccessCameraError(); return }
                     self?.setupCaptureSession()
                 }

@@ -17,7 +17,7 @@ class BrainNetworkView: UIView {
     private var contactViews = [ContactView]()
     
     //
-    private var brain: Brain?
+    private weak var brain: Brain?
     private var didSetup = false
     
     // Data
@@ -64,8 +64,6 @@ class BrainNetworkView: UIView {
         
         let backLayer = CAShapeLayer()
         backLayer.frame = self.bounds
-//        backLayer.fillColor = clear.CGColor
-//        backLayer.path = UIBezierPath(ovalInRect: rect).CGPath
         layer.addSublayer(backLayer)
 
         
@@ -218,26 +216,6 @@ class BrainNetworkView: UIView {
                 neuronViews.append(neuronView)
             }
         }
-        
-//        if let positions = brain.getPosition() {
-//            for coordinate in positions {
-//                let neuronView = NeuronView()
-//                addSubview(neuronView)
-//                neuronView.setNumber(number: positions.firstIndex(where: {$0 == coordinate})! + 1)
-//
-//                var x = (coordinate.x + 3) / 3
-//                var y = (-coordinate.y + 3) / 3
-//
-//                x = x < 0.001 ? 0.001 : x
-//                y = y < 0.001 ? 0.001 : y
-//
-//                NSLayoutConstraint.activate([
-//                    NSLayoutConstraint(item: neuronView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: x, constant: 0),
-//                    NSLayoutConstraint(item: neuronView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: y, constant: 0)
-//                ])
-//                neuronViews.append(neuronView)
-//            }
-//        }
         
         setNeedsDisplay()
     }

@@ -71,13 +71,13 @@ final class Brain
         guard let brainObject = brainObject else { return }
         guard isVideoSizeSet else { throw BrainError.videoSizeNotSet }
         
-        let errorPtr = UnsafeMutablePointer<Int32>.allocate(capacity: 1)
+//        let errorPtr = UnsafeMutablePointer<Int32>.allocate(capacity: 1)
         let pathToMatFilePointer = UnsafeMutablePointer<Int8>(mutating: (pathToMatFile as NSString).utf8String)
         
-        brain_load(brainObject, pathToMatFilePointer, errorPtr)
+        let error = brain_load(brainObject, pathToMatFilePointer)
         
-        let error = Int(errorPtr.pointee)
-        errorPtr.deallocate()
+//        let error = Int(errorPtr.pointee)
+//        errorPtr.deallocate()
         if error != 0 {
             throw BrainError.cannotLoadBrain
         }
@@ -145,7 +145,7 @@ final class Brain
     func getNeuronValues() -> [Double] {
         guard let brainObject = brainObject else { return [Double]() }
         
-        let numberOfNeuronsPointer = UnsafeMutablePointer<Int32>.allocate(capacity: 1)
+        let numberOfNeuronsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
         let neuronValuesPointer = brain_getNeuronValues(brainObject, numberOfNeuronsPointer)
         let neuronValuesBufferPointer = UnsafeBufferPointer(start: neuronValuesPointer, count: Int(numberOfNeuronsPointer.pointee))
         
@@ -159,7 +159,7 @@ final class Brain
     func getFiringNeurons() -> [Bool] {
         guard let brainObject = brainObject else { return [Bool]() }
         
-        let numberOfNeuronsPointer = UnsafeMutablePointer<Int32>.allocate(capacity: 1)
+        let numberOfNeuronsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
         let neuronValuesPointer = brain_getFiringNeurons(brainObject, numberOfNeuronsPointer)
         let neuronValuesBufferPointer = UnsafeBufferPointer(start: neuronValuesPointer, count: Int(numberOfNeuronsPointer.pointee))
         
@@ -172,7 +172,7 @@ final class Brain
     func getPosition() -> [Coordinate]? {
         guard let brainObject = brainObject else { return nil }
         
-        let numberOfNeuronsPointer = UnsafeMutablePointer<Int32>.allocate(capacity: 1)
+        let numberOfNeuronsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
         
         let xValuesPointer = brain_getX(brainObject, numberOfNeuronsPointer)
         let yValuesPointer = brain_getY(brainObject, numberOfNeuronsPointer)
@@ -207,7 +207,7 @@ final class Brain
     func getInnerConnections() -> [[Double]]? {
         guard let brainObject = brainObject else { return nil }
         
-        let numberOfNeuronsPointer = UnsafeMutablePointer<Int32>.allocate(capacity: 1)
+        let numberOfNeuronsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
         
         let connectionsPointer = brain_getConnectToMe(brainObject, numberOfNeuronsPointer)
         
@@ -232,8 +232,8 @@ final class Brain
     func getOuterConnections() -> [[Double]]? {
         guard let brainObject = brainObject else { return nil }
         
-        let numberOfNeuronsPointer = UnsafeMutablePointer<Int32>.allocate(capacity: 1)
-        let numberOfConnectionsPointer = UnsafeMutablePointer<Int32>.allocate(capacity: 1)
+        let numberOfNeuronsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
+        let numberOfConnectionsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
         
         let connectionsPointer = brain_getContacts(brainObject, numberOfNeuronsPointer, numberOfConnectionsPointer)
         

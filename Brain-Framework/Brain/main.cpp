@@ -8,7 +8,7 @@
 
 #include <iostream>
 #include <fstream>
-#include "../Brain-Framework/Brain.hpp"
+#include "../Brain-Framework/BrainWorker.hpp"
 #include "../Brain-Framework/AudioProcessing.cpp"
 
 void testAudioProcessing() {
