@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreGraphics
+import UIKit.UIColor
 
 enum BrainError: Error {
     case videoSizeNotSet
@@ -255,5 +256,35 @@ final class Brain
         connectionsPointer?.deallocate()
         
         return connections
+    }
+    
+    func getColors() -> [UIColor]? {
+        guard let brainObject = brainObject else { return nil }
+        
+        let numberOfNeuronsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
+        let numberOfColorsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
+        
+        let colorsPointer = brain_getColors(brainObject, numberOfNeuronsPointer, numberOfColorsPointer)
+        
+        let numberOfNeurons = Int(numberOfNeuronsPointer.pointee)
+        numberOfNeuronsPointer.deallocate()
+        let numberOfColors = Int(numberOfColorsPointer.pointee)
+        numberOfColorsPointer.deallocate()
+        
+        let arrayPointer1 = UnsafeBufferPointer(start: colorsPointer, count: numberOfNeurons)
+        let colorValues = Array(arrayPointer1)
+        
+        var colors = [UIColor]()
+        for i in 0..<colorValues.count {
+            let arrayPointer2 = UnsafeBufferPointer(start: colorValues[i], count: numberOfColors)
+            let colorValue = Array(arrayPointer2)
+            
+            let color = UIColor(red: CGFloat(colorValue[0]), green: CGFloat(colorValue[1]), blue: CGFloat(colorValue[2]), alpha: 1.0)
+            
+            colors.append(color)
+        }
+        colorsPointer?.deallocate()
+        
+        return colors
     }
 }

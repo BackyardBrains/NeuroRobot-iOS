@@ -217,6 +217,12 @@ class BrainNetworkView: UIView {
             }
         }
         
+        if let colors = brain.getColors(), colors.count == neuronViews.count {
+            for i in 0..<colors.count {
+                neuronViews[i].backgroundColor = colors[i]
+            }
+        }
+        
         setNeedsDisplay()
     }
     

@@ -128,26 +128,6 @@ const double** brain_getConnectToMe(const void* object, size_t *numberOfNeurons)
     }
     
     return connectToMe;
-    
-    
-//    Brain* brainObject = (Brain*)object;
-//
-//    std::vector<Neuron*> neurons = brainObject->neurons;
-//    *numberOfNeurons = (int)brainObject->numberOfNeurons;
-//
-//    const double** connections = new const double*[*numberOfNeurons];
-//
-//    for (int i = 0; i < brainObject->numberOfNeurons; i++) {
-//        auto foo = new double[neurons[0]->connectToMe.size()];
-//        auto neuron = neurons[i];
-//        for (int j = 0; j < neuron->connectToMe.size(); j++) {
-//            auto connectToMe = neuron->connectToMe[j];
-//            foo[j] = connectToMe;
-//        }
-//        connections[i] = foo;
-//    }
-//
-//    return connections;
 }
 
 const double** brain_getContacts(const void* object, size_t *numberOfNeurons, size_t *numberOfConnections)
@@ -172,30 +152,6 @@ const double** brain_getContacts(const void* object, size_t *numberOfNeurons, si
     }
     
     return contacts;
-    
-    
-    
-//    BrainWorker* brainObject = (BrainWorker*)object;
-//
-//    std::vector<Neuron*> neurons = brainObject->neurons;
-//    *numberOfNeurons = (int)brainObject->numberOfNeurons;
-//
-//    const double** connections = new const double*[*numberOfNeurons];
-//
-//    for (int i = 0; i < brainObject->numberOfNeurons; i++) {
-//        auto foo = new double[neurons[0]->contacts.size()];
-//        auto neuron = neurons[i];
-//
-//        for (int j = 0; j < neuron->contacts.size(); j++) {
-//            auto contact = neuron->contacts[j];
-//            foo[j] = contact;
-//        }
-//        connections[i] = foo;
-//
-//        *numberOfConnections = (int)neuron->contacts.size();
-//    }
-//
-//    return connections;
 }
 
 const double* brain_getX(const void* object, size_t *numberOfNeurons)
@@ -244,6 +200,30 @@ const bool* brain_getFiringNeurons(const void* object, size_t *numberOfNeurons)
     }
     
     return neuronValues;
+}
+
+const double** brain_getColors(const void* object, size_t *numberOfNeurons, size_t *numberOfColors)
+{
+    BrainWorker* brainObject = (BrainWorker*)object;
+    
+    auto valuesVector = brainObject->getColors();
+    
+    *numberOfNeurons = valuesVector.size();
+    *numberOfColors = valuesVector.front().size();
+    const double** colors = new const double*[*numberOfNeurons];
+    
+    for (int i = 0; i < *numberOfNeurons; i++) {
+        auto neuron = valuesVector[i];
+        auto foo = new double[neuron.size()];
+        
+        for (int j = 0; j < neuron.size(); j++) {
+            auto value = neuron[j];
+            foo[j] = value;
+        }
+        colors[i] = foo;
+    }
+    
+    return colors;
 }
 
 #ifdef __cplusplus

@@ -1,5 +1,5 @@
 //
-//  Color.hpp
+//  ColorType.hpp
 //  Brain-Framework
 //
 //  Created by Djordje Jovic on 14/04/2020.
@@ -15,6 +15,6 @@ typedef enum : int {
     ColorRed = 0,
     ColorGreen,
     ColorBlue
-} Color;
+} ColorType;
 
 #endif /* Color_hpp */

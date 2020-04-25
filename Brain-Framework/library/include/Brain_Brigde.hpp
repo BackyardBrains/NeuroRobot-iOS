@@ -35,6 +35,7 @@ const double** brain_getConnectToMe(const void* object, size_t *numberOfNeurons)
 const double** brain_getContacts(const void* object, size_t *numberOfNeurons, size_t *numberOfConnections);
 const double* brain_getX(const void* object, size_t *numberOfNeurons);
 const double* brain_getY(const void* object, size_t *numberOfNeurons);
+const double** brain_getColors(const void* object, size_t *numberOfNeurons, size_t *numberOfColors);
 
 #ifdef __cplusplus
 }

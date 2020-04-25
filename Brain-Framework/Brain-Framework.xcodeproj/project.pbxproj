@@ -50,7 +50,7 @@
 		B1F5651424460874002FDC7A /* BrainWorker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1F5651224460874002FDC7A /* BrainWorker.cpp */; };
 		B1F5651524460874002FDC7A /* BrainWorker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1F5651224460874002FDC7A /* BrainWorker.cpp */; };
 		B1F56519244609B9002FDC7A /* Score.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B1F56517244609B9002FDC7A /* Score.hpp */; };
-		B1F5651E244609ED002FDC7A /* Color.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B1F5651C244609ED002FDC7A /* Color.hpp */; };
+		B1F5651E244609ED002FDC7A /* ColorType.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B1F5651C244609ED002FDC7A /* ColorType.hpp */; };
 		B1F5652124461012002FDC7A /* BrainWorker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1F5651224460874002FDC7A /* BrainWorker.cpp */; };
 		B1F565222446109B002FDC7A /* libmatio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B149BAC62432061500974872 /* libmatio.a */; };
 		B1F56523244610DD002FDC7A /* libopencv_world.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B149BAC8243215F400974872 /* libopencv_world.a */; };
@@ -106,7 +106,7 @@
 		B1F5651124460874002FDC7A /* BrainWorker.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BrainWorker.hpp; sourceTree = "<group>"; };
 		B1F5651224460874002FDC7A /* BrainWorker.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BrainWorker.cpp; sourceTree = "<group>"; };
 		B1F56517244609B9002FDC7A /* Score.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Score.hpp; sourceTree = "<group>"; };
-		B1F5651C244609ED002FDC7A /* Color.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Color.hpp; sourceTree = "<group>"; };
+		B1F5651C244609ED002FDC7A /* ColorType.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ColorType.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,7 +234,7 @@
 				9DE8027D230804B00042B32B /* Brain.hpp */,
 				9DE8027A230804AF0042B32B /* Neuron.hpp */,
 				B1F56517244609B9002FDC7A /* Score.hpp */,
-				B1F5651C244609ED002FDC7A /* Color.hpp */,
+				B1F5651C244609ED002FDC7A /* ColorType.hpp */,
 				B1ABB6632448DBB60013C533 /* CameraType.hpp */,
 			);
 			path = Models;
@@ -249,7 +249,7 @@
 			files = (
 				B1F56519244609B9002FDC7A /* Score.hpp in Headers */,
 				B1F5650E24460788002FDC7A /* Semaphore.h in Headers */,
-				B1F5651E244609ED002FDC7A /* Color.hpp in Headers */,
+				B1F5651E244609ED002FDC7A /* ColorType.hpp in Headers */,
 				B1F5651324460874002FDC7A /* BrainWorker.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

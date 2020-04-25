@@ -270,7 +270,7 @@ void BrainWorker::processAudioInput()
     }
 }
 
-Score BrainWorker::calculateScore(Color color, cv::Mat frame, CameraType camera)
+Score BrainWorker::calculateScore(ColorType color, cv::Mat frame, CameraType camera)
 {
     Score score;
     
@@ -498,4 +498,20 @@ std::vector<bool> BrainWorker::getFiringNeurons()
     }
     
     return neuronValues;
+}
+
+std::vector<std::vector<double>> BrainWorker::getColors()
+{
+    auto numberOfNeurons = brain.neurons.size();
+    auto colorSize = brain.neurons.front().color.size();
+    std::vector<std::vector<double>> colors(numberOfNeurons, std::vector<double>(colorSize));
+    
+    for (int i = 0; i < numberOfNeurons; i++) {
+        auto neuron = brain.neurons[i];
+        for (int j = 0; j < colorSize; j++) {
+            colors[i][j] = neuron.color[j];
+        }
+    }
+    
+    return colors;
 }

@@ -15,7 +15,7 @@
 
 #include "Models/Brain.hpp"
 #include "Models/Score.hpp"
-#include "Models/Color.hpp"
+#include "Models/ColorType.hpp"
 #include "Models/CameraType.hpp"
 #include "Core/Semaphore.h"
 
@@ -86,7 +86,7 @@ public:
     /// @param color Red, green or blue color
     /// @param frame Video frame
     /// @param camera Left or right camera
-    Score calculateScore(Color color, cv::Mat frame, CameraType camera);
+    Score calculateScore(ColorType color, cv::Mat frame, CameraType camera);
     
 //MARK:- Out functions
     
@@ -108,6 +108,8 @@ public:
     /// Returns firing neurons.
     std::vector<bool> getFiringNeurons();
     
+    /// Returns `neuron_cols` values of neurons
+    std::vector<std::vector<double>> getColors();
 };
 
 #endif /* BrainWorker_hpp */
