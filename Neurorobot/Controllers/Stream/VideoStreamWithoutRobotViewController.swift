@@ -12,9 +12,9 @@ import AVKit
 final class VideoStreamWithoutRobotViewController: BaseStreamViewController {
     
     // UI
-    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var stackView    : UIStackView!
     @IBOutlet weak var pageIndicator: UIPageControl!
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var scrollView   : UIScrollView!
     
     // Video session
     private let captureSession  = AVCaptureSession()
@@ -25,24 +25,24 @@ final class VideoStreamWithoutRobotViewController: BaseStreamViewController {
         return videoDeviceInput
     }
     
+    private let toneGenerator = AVToneGenerator()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         handleCameraAccess()
-        
-        brain.setVideoSize(width: 1000, height: 1000)
-    }
-    
-    func setupUI() {
-        navigationController?.setNavigationBarHidden(false, animated: true)
-        
-        scrollView.decelerationRate = .fast
+        setupBrain()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         
         setCorrectCameraOrientation()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        captureSession.stopRunning()
     }
     
     override func viewDidLayoutSubviews() {
@@ -53,6 +53,18 @@ final class VideoStreamWithoutRobotViewController: BaseStreamViewController {
         }
         pageIndicator.currentPage = 0
         stackView.spacing = max(insets.left, insets.right)
+    }
+    
+    func setupUI() {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        scrollView.decelerationRate = .fast
+    }
+    
+    func setupBrain() {
+        brain.setVideoSize(width: 1000, height: 1000)
+        brain.setDistance(distance: 4000)
+        brain.delegate = self
     }
     
     private func updateVideo(_ videoFrame: UIImage) {
@@ -70,6 +82,9 @@ final class VideoStreamWithoutRobotViewController: BaseStreamViewController {
             brainActivityView?.updateActivityValues(brain: brain)
             brainRasterView.updateActivityValues(brain: brain)
             brainNetworkView.update(brain: brain)
+            
+            let speakerTone = brain.getSpeakerTone()
+            toneGenerator.playTone(frequency: speakerTone)
         }
     }
     
@@ -89,8 +104,8 @@ private extension VideoStreamWithoutRobotViewController {
         case .authorized:
             setupCaptureSession()
         case .notDetermined:
-            AVCaptureDevice.requestAccess(for: .video) { [weak self] granted in
-                DispatchQueue.main.async {
+            AVCaptureDevice.requestAccess(for: .video) { granted in
+                DispatchQueue.main.async { [weak self] in
                     guard granted else { self?.showAccessCameraError(); return }
                     self?.setupCaptureSession()
                 }
@@ -168,5 +183,17 @@ extension VideoStreamWithoutRobotViewController: UIScrollViewDelegate {
         pageIndicator.currentPage = Int(newPage)
         let point = CGPoint(x: CGFloat(newPage * pageWidth) - leftInset, y: targetContentOffset.pointee.y)
         targetContentOffset.pointee = point
+    }
+}
+
+//MARK:- BrainDelegate
+extension VideoStreamWithoutRobotViewController: BrainDelegate {
+    
+    func brainStarted() {
+        
+    }
+    
+    func brainStopped() {
+        toneGenerator.stop()
     }
 }

@@ -13,7 +13,7 @@ class MainTabBarController: UITabBarController {
     init(ip: String, port: String) {
         super.init(nibName: nil, bundle: nil)
         
-        let vcs = [VideoStreamViewController.loadFromNib(),
+        let vcs = [VideoStreamDebugViewController.loadFromNib(),
                    LedViewController()]
         
         vcs[0].tabBarItem = UITabBarItem(title: "Stream", image: #imageLiteral(resourceName: "camera"), selectedImage: nil)

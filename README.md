@@ -98,11 +98,10 @@ Commands need to run in terminal from `Apple-Boost-BuildScript` folder.
 
 ### FFmpeg
 Guidelines for building ffmpeg library
-  
-run `git clone https://github.com/FFmpeg/FFmpeg.git`
 
 #### Windows
 
+run `git clone https://github.com/FFmpeg/FFmpeg.git`  
 get msys2 - https://www.msys2.org/  
 
 launch msvc "developer command prompt".  
@@ -133,6 +132,7 @@ run `./configure --disable-static --enable-shared --disable-doc --arch=x86_64 --
 
 #### macOS
 
+run `git clone https://github.com/FFmpeg/FFmpeg.git`  
 Edit the file `libavformat/rtpdec.c`. Line number 323: `rtcp_bytes /= 50;`, it should be: `rtcp_bytes /= 5;`. This is because of sending receive report more frequent.    
 Commands need to run in terminal from ffmpeg folder.  
 If you don't set `--prefix`, library will be in `/usr/lib`  
@@ -141,19 +141,20 @@ If you don't set `--prefix`, library will be in `/usr/lib`
 `make install`    
 
 notes:  
-- Libraries (*.dylib) must be in /usr/lib. So copy *.dylib files from FFmpeg-macOS/dylib to /usr/lib. (doesn't work, cannot copy, should rebuild whole library without `--prefix`)    
+- Libraries (*.dylib) must be in /usr/lib. So copy *.dylib files from FFmpeg-macOS/dylib to /usr/lib. (doesn't work, cannot copy, should rebuild whole library without `--prefix`)  
 - Followed https://trac.ffmpeg.org/wiki/CompilationGuide/macOS  
 
 #### iOS 
 
-run `git clone https://github.com/kewlbear/FFmpeg-iOS-build-script.git`    
+run `git clone https://github.com/kewlbear/FFmpeg-iOS-build-script.git`
+(alternative: `https://github.com/tanersener/mobile-ffmpeg`)  
 run `cd FFmpeg-iOS-build-script`  
 edit value of `CONFIGURE_FLAGS` in `build-ffmpeg.sh` to be:  
 ```
 --enable-cross-compile --disable-debug --disable-programs \
---disable-doc --enable-pic \  
+--disable-doc --enable-pic \
 --enable-static --enable-shared --disable-avfilter --disable-avdevice --enable-swresample \
---enable-zlib --enable-bzlib --enable-iconv`
+--enable-zlib --enable-bzlib --enable-iconv
 ```
 
 run `./build-ffmpeg.sh`  

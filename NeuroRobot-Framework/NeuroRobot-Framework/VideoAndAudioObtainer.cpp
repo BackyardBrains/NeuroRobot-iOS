@@ -67,6 +67,9 @@ VideoAndAudioObtainer::VideoAndAudioObtainer(std::string ipAddress, StreamErrorO
 
 VideoAndAudioObtainer::~VideoAndAudioObtainer()
 {
+    if (whileLoopIsRunning) {
+        semaphore.wait();
+    }
     closeStreams();
 }
 
@@ -242,6 +245,7 @@ void VideoAndAudioObtainer::run()
     /// This mechanism is used to take adventage of `interruptFunction` and break reading of frame if it exceeds time limit.
     int avReadFrameResponse = av_read_frame(formatCtx, &packet);
     
+    whileLoopIsRunning = true;
     while (avReadFrameResponse >= 0 && isRunning()) {
         isReadingNextFrame = false;
         
@@ -266,6 +270,7 @@ void VideoAndAudioObtainer::run()
         avReadFrameResponse = av_read_frame(formatCtx, &packet);
         logMessage("run >>> avReadFrameResponse = av_read_frame(formatCtx, &packet);");
     }
+    whileLoopIsRunning = false;
     long long elapsedTime = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now() - beginTime).count();
     
     logMessage("run >>> End of run()");
@@ -294,6 +299,7 @@ void VideoAndAudioObtainer::run()
     } else {
         /// Stop called
         stop();
+        semaphore.signal();
     }
 }
 
@@ -362,6 +368,9 @@ int VideoAndAudioObtainer::decode(AVCodecContext* avctx, AVFrame* frame, int* go
 
 void VideoAndAudioObtainer::closeStreams()
 {
+    if (stateType == StreamStateStopped) { return; }
+    updateState(StreamStateStopped, -1);
+    
     logMessage("closeStreams >>> entered");
     SharedMemory::getInstance()->blockWritters();
     
@@ -376,6 +385,7 @@ void VideoAndAudioObtainer::closeStreams()
     avformat_network_deinit();
     
     imgConvertCtx = NULL;
+    
     logMessage("closeStreams >>> finished");
 }
 

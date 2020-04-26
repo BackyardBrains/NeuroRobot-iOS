@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		468CC3943FDC73E9C809D933 /* Pods_Neurorobot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288E6DBFE20A9BBF8982EF09 /* Pods_Neurorobot.framework */; };
+		74A89AC72454937000F8735F /* CoreGraphics+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A89AC62454937000F8735F /* CoreGraphics+Additions.swift */; };
 		9D0B5B3C2340CD4D0017BD74 /* AlertBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0B5B3B2340CD4D0017BD74 /* AlertBanner.swift */; };
 		9D0B5B3E234109A30017BD74 /* NeurorobotImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0B5B3D234109A30017BD74 /* NeurorobotImage.swift */; };
 		9D1B77EF231A6C7E00E2258E /* hackForiPhone5.c in Sources */ = {isa = PBXBuildFile; fileRef = 9D1B77EE231A6C7E00E2258E /* hackForiPhone5.c */; };
@@ -17,7 +18,6 @@
 		9D5BDDA223191B4000CA51CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D5BDDA023191B4000CA51CC /* Main.storyboard */; };
 		9D5BDDA423191B4200CA51CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D5BDDA323191B4200CA51CC /* Assets.xcassets */; };
 		9D5BDDA723191B4200CA51CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D5BDDA523191B4200CA51CC /* LaunchScreen.storyboard */; };
-		9D5BDDB923191B7900CA51CC /* CGFloat+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDDB523191B7900CA51CC /* CGFloat+Additions.swift */; };
 		9D5BDDBA23191B7900CA51CC /* UIViewController+XIB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDDB623191B7900CA51CC /* UIViewController+XIB.swift */; };
 		9D5BDDBB23191B7900CA51CC /* URL+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDDB723191B7900CA51CC /* URL+Additions.swift */; };
 		9D5BDDBE23191B8200CA51CC /* NeuroRobot-Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDDBC23191B8100CA51CC /* NeuroRobot-Wrapper.swift */; };
@@ -29,8 +29,8 @@
 		9D5BDDFE23191C0800CA51CC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDDFD23191C0800CA51CC /* MainTabBarController.swift */; };
 		9D5BDE0323191C2700CA51CC /* BaseNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDE0123191C2700CA51CC /* BaseNavigationViewController.swift */; };
 		9D5BDE0423191C2700CA51CC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDE0223191C2700CA51CC /* BaseViewController.swift */; };
-		9D5BDE0923191C3300CA51CC /* VideoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDE0623191C3300CA51CC /* VideoStreamViewController.swift */; };
-		9D5BDE0A23191C3300CA51CC /* VideoStreamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D5BDE0723191C3300CA51CC /* VideoStreamViewController.xib */; };
+		9D5BDE0923191C3300CA51CC /* VideoStreamDebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDE0623191C3300CA51CC /* VideoStreamDebugViewController.swift */; };
+		9D5BDE0A23191C3300CA51CC /* VideoStreamDebugViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D5BDE0723191C3300CA51CC /* VideoStreamDebugViewController.xib */; };
 		9D5BDE0E23191C4300CA51CC /* FingerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDE0D23191C4200CA51CC /* FingerView.swift */; };
 		9D834DEF2345289E00BBBD62 /* BrainActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D834DEE2345289E00BBBD62 /* BrainActivityView.swift */; };
 		9D834DF3234620FC00BBBD62 /* BrainActivityRasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D834DF2234620FC00BBBD62 /* BrainActivityRasterView.swift */; };
@@ -144,6 +144,8 @@
 		B11A98C1243C74EB005C8AB2 /* Tide.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CD42435D20C00B75A5D /* Tide.mat */; };
 		B11A98C2243C74EB005C8AB2 /* Vomba.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CD12435D20A00B75A5D /* Vomba.mat */; };
 		B11A98C3243C74EB005C8AB2 /* Ypsilon.mat in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1618CDC2435D21200B75A5D /* Ypsilon.mat */; };
+		B11A98C5243CBE17005C8AB2 /* AVTonePlayerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11A98C4243CBE16005C8AB2 /* AVTonePlayerNode.swift */; };
+		B11A98C8243CC0D4005C8AB2 /* AVToneGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11A98C7243CC0D4005C8AB2 /* AVToneGenerator.swift */; };
 		B1254ABE2438A0AD00220DE1 /* Bao.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1254ABD2438A0AD00220DE1 /* Bao.mat */; };
 		B1254ABF2438A0AD00220DE1 /* Bao.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1254ABD2438A0AD00220DE1 /* Bao.mat */; };
 		B1254AC12438A0C600220DE1 /* Shouk.mat in Resources */ = {isa = PBXBuildFile; fileRef = B1254AC02438A0C600220DE1 /* Shouk.mat */; };
@@ -167,7 +169,6 @@
 		B1380F08240D189800364049 /* AudioStreamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1380F07240D189800364049 /* AudioStreamer.swift */; };
 		B1403ED72436298D00C2DCCF /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BEADA024238C2F008B2FCF /* Coordinate.swift */; };
 		B1403ED9243629A300C2DCCF /* Data+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C19885240E965500FDF0BE /* Data+Additions.swift */; };
-		B1403EDB243629B600C2DCCF /* CGFloat+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5BDDB523191B7900CA51CC /* CGFloat+Additions.swift */; };
 		B142148A24387DDD000977FD /* Neuro_RobotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B142148924387DDD000977FD /* Neuro_RobotUITests.swift */; };
 		B142149124387F18000977FD /* libBrain-Framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98FB04231938D0001AB5B5 /* libBrain-Framework.a */; };
 		B149BACD24322B5600974872 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B149BACB24322B5600974872 /* SplashViewController.xib */; };
@@ -232,7 +233,6 @@
 		B1BEADA62423D242008B2FCF /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BEADA52423D242008B2FCF /* UIColor+Additions.swift */; };
 		B1BEADA82423DB30008B2FCF /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BEADA72423DB30008B2FCF /* LineView.swift */; };
 		B1BEADAE2428C5F9008B2FCF /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BEADAD2428C5F9008B2FCF /* ContactView.swift */; };
-		B1BEADB0242A5281008B2FCF /* CGPoint+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BEADAF242A5280008B2FCF /* CGPoint+Additions.swift */; };
 		B1BEADB2242A5790008B2FCF /* NeuronContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BEADB1242A5790008B2FCF /* NeuronContactView.swift */; };
 		B1C19886240E965500FDF0BE /* Data+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C19885240E965500FDF0BE /* Data+Additions.swift */; };
 		B1C48C1A241CDA0F0049A3F1 /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C48C19241CDA0F0049A3F1 /* UIImage+Additions.swift */; };
@@ -243,6 +243,8 @@
 		B1CE7D4C23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1CE7D4A23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.xib */; };
 		B1CE7D4D23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE7D4B23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.swift */; };
 		B1CE7D4F23E1B8E5007E45A9 /* VideoStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CE7D4E23E1B8E4007E45A9 /* VideoStreamView.swift */; };
+		B1D6E5382440BA9200046773 /* VideoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D6E5362440BA9200046773 /* VideoStreamViewController.swift */; };
+		B1D6E5392440BA9200046773 /* VideoStreamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1D6E5372440BA9200046773 /* VideoStreamViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -386,6 +388,7 @@
 		288E6DBFE20A9BBF8982EF09 /* Pods_Neurorobot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neurorobot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6433B82D04BFDFDA2EA881E9 /* Pods-NeurorobotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeurorobotTests.release.xcconfig"; path = "Target Support Files/Pods-NeurorobotTests/Pods-NeurorobotTests.release.xcconfig"; sourceTree = "<group>"; };
 		6D10BE879AE523240DA4364E /* Pods-NeurorobotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeurorobotTests.debug.xcconfig"; path = "Target Support Files/Pods-NeurorobotTests/Pods-NeurorobotTests.debug.xcconfig"; sourceTree = "<group>"; };
+		74A89AC62454937000F8735F /* CoreGraphics+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Additions.swift"; sourceTree = "<group>"; };
 		81FD5EE340082278341C0CF3 /* Pods-Neurorobot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neurorobot.debug.xcconfig"; path = "Target Support Files/Pods-Neurorobot/Pods-Neurorobot.debug.xcconfig"; sourceTree = "<group>"; };
 		8A45043F79EB858AEC2AC913 /* Pods-Neuro RobotUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neuro RobotUITests.debug.xcconfig"; path = "Target Support Files/Pods-Neuro RobotUITests/Pods-Neuro RobotUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D003D77231A749D005603A8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -404,7 +407,6 @@
 		9D5BDDA323191B4200CA51CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D5BDDA623191B4200CA51CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D5BDDA823191B4200CA51CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9D5BDDB523191B7900CA51CC /* CGFloat+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Additions.swift"; sourceTree = "<group>"; };
 		9D5BDDB623191B7900CA51CC /* UIViewController+XIB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+XIB.swift"; sourceTree = "<group>"; };
 		9D5BDDB723191B7900CA51CC /* URL+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Additions.swift"; sourceTree = "<group>"; };
 		9D5BDDBC23191B8100CA51CC /* NeuroRobot-Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NeuroRobot-Wrapper.swift"; sourceTree = "<group>"; };
@@ -416,8 +418,8 @@
 		9D5BDDFD23191C0800CA51CC /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		9D5BDE0123191C2700CA51CC /* BaseNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationViewController.swift; sourceTree = "<group>"; };
 		9D5BDE0223191C2700CA51CC /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		9D5BDE0623191C3300CA51CC /* VideoStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoStreamViewController.swift; sourceTree = "<group>"; };
-		9D5BDE0723191C3300CA51CC /* VideoStreamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoStreamViewController.xib; sourceTree = "<group>"; };
+		9D5BDE0623191C3300CA51CC /* VideoStreamDebugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoStreamDebugViewController.swift; sourceTree = "<group>"; };
+		9D5BDE0723191C3300CA51CC /* VideoStreamDebugViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoStreamDebugViewController.xib; sourceTree = "<group>"; };
 		9D5BDE0D23191C4200CA51CC /* FingerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerView.swift; sourceTree = "<group>"; };
 		9D5BDE1023191C7400CA51CC /* Neurorobot-iOS-BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Neurorobot-iOS-BridgingHeader.h"; sourceTree = "<group>"; };
 		9D834DEE2345289E00BBBD62 /* BrainActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainActivityView.swift; sourceTree = "<group>"; };
@@ -436,6 +438,8 @@
 		9F2D2E032370624000C0FFF4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9FA5A2B9236D8E38000A23EA /* libNeuroRobot-Framework.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libNeuroRobot-Framework.a"; path = "NeuroRobot-Framework/library/lib/libNeuroRobot-Framework.a"; sourceTree = "<group>"; };
 		AE6339D9F2A846A2E25278CE /* Pods-Neurorobot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neurorobot.release.xcconfig"; path = "Target Support Files/Pods-Neurorobot/Pods-Neurorobot.release.xcconfig"; sourceTree = "<group>"; };
+		B11A98C4243CBE16005C8AB2 /* AVTonePlayerNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVTonePlayerNode.swift; sourceTree = "<group>"; };
+		B11A98C7243CC0D4005C8AB2 /* AVToneGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVToneGenerator.swift; sourceTree = "<group>"; };
 		B1254ABD2438A0AD00220DE1 /* Bao.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bao.mat; sourceTree = "<group>"; };
 		B1254AC02438A0C600220DE1 /* Shouk.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Shouk.mat; sourceTree = "<group>"; };
 		B12778E62423726D005551E6 /* BrainNetworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainNetworkView.swift; sourceTree = "<group>"; };
@@ -524,7 +528,6 @@
 		B1BEADA52423D242008B2FCF /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		B1BEADA72423DB30008B2FCF /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		B1BEADAD2428C5F9008B2FCF /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
-		B1BEADAF242A5280008B2FCF /* CGPoint+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Additions.swift"; sourceTree = "<group>"; };
 		B1BEADB1242A5790008B2FCF /* NeuronContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuronContactView.swift; sourceTree = "<group>"; };
 		B1C19885240E965500FDF0BE /* Data+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Additions.swift"; sourceTree = "<group>"; };
 		B1C48C19241CDA0F0049A3F1 /* UIImage+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
@@ -535,6 +538,8 @@
 		B1CE7D4A23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoStreamWithoutRobotViewController.xib; sourceTree = "<group>"; };
 		B1CE7D4B23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamWithoutRobotViewController.swift; sourceTree = "<group>"; };
 		B1CE7D4E23E1B8E4007E45A9 /* VideoStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamView.swift; sourceTree = "<group>"; };
+		B1D6E5362440BA9200046773 /* VideoStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoStreamViewController.swift; sourceTree = "<group>"; };
+		B1D6E5372440BA9200046773 /* VideoStreamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoStreamViewController.xib; sourceTree = "<group>"; };
 		C47C25879CD481284D55F82F /* Pods-Neuro RobotUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neuro RobotUITests.release.xcconfig"; path = "Target Support Files/Pods-Neuro RobotUITests/Pods-Neuro RobotUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -792,10 +797,11 @@
 		9D5BDE0023191C1100CA51CC /* Stream */ = {
 			isa = PBXGroup;
 			children = (
+				B1D6E53A2440BA9F00046773 /* [Archive] */,
 				B12778E52423725A005551E6 /* Brain network */,
 				9D5BDE0F23191C4A00CA51CC /* View */,
-				9D5BDE0623191C3300CA51CC /* VideoStreamViewController.swift */,
-				9D5BDE0723191C3300CA51CC /* VideoStreamViewController.xib */,
+				B1D6E5362440BA9200046773 /* VideoStreamViewController.swift */,
+				B1D6E5372440BA9200046773 /* VideoStreamViewController.xib */,
 				B1CE7D4B23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.swift */,
 				B1CE7D4A23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.xib */,
 				B1C48C1F241CFA750049A3F1 /* BaseStreamViewController.swift */,
@@ -841,6 +847,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B11A98C6243CC0C3005C8AB2 /* AVToneGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				B11A98C7243CC0D4005C8AB2 /* AVToneGenerator.swift */,
+				B11A98C4243CBE16005C8AB2 /* AVTonePlayerNode.swift */,
+			);
+			path = AVToneGenerator;
+			sourceTree = "<group>";
+		};
 		B12778E52423725A005551E6 /* Brain network */ = {
 			isa = PBXGroup;
 			children = (
@@ -875,9 +890,10 @@
 		B12CA5F824334561006C7606 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				B17D64C02434A9CE0011DD12 /* DictionaryCodable.swift */,
+				B11A98C6243CC0C3005C8AB2 /* AVToneGenerator */,
 				B12CA5F624334541006C7606 /* API Manager */,
 				B12CA5F924334572006C7606 /* Extensions */,
+				B17D64C02434A9CE0011DD12 /* DictionaryCodable.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -885,8 +901,7 @@
 		B12CA5F924334572006C7606 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9D5BDDB523191B7900CA51CC /* CGFloat+Additions.swift */,
-				B1BEADAF242A5280008B2FCF /* CGPoint+Additions.swift */,
+				74A89AC62454937000F8735F /* CoreGraphics+Additions.swift */,
 				B12CA60D24334F4F006C7606 /* CharacterSet+Additions.swift */,
 				B1C19885240E965500FDF0BE /* Data+Additions.swift */,
 				B1380F05240D13E700364049 /* Data+AVAudioPCMBuffer.swift */,
@@ -1001,6 +1016,15 @@
 				B1618D442435DA1200B75A5D /* SerialData.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B1D6E53A2440BA9F00046773 /* [Archive] */ = {
+			isa = PBXGroup;
+			children = (
+				9D5BDE0623191C3300CA51CC /* VideoStreamDebugViewController.swift */,
+				9D5BDE0723191C3300CA51CC /* VideoStreamDebugViewController.xib */,
+			);
+			path = "[Archive]";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1142,6 +1166,7 @@
 				B1618CE12435D21300B75A5D /* Karl.mat in Resources */,
 				B1618CFD2435D21300B75A5D /* Birk.mat in Resources */,
 				B1618CDE2435D21300B75A5D /* Rapid.mat in Resources */,
+				B1D6E5392440BA9200046773 /* VideoStreamViewController.xib in Resources */,
 				B1618CFF2435D21300B75A5D /* Cern.mat in Resources */,
 				9D5BDDA223191B4000CA51CC /* Main.storyboard in Resources */,
 				B1618CE72435D21300B75A5D /* Gibson.mat in Resources */,
@@ -1156,7 +1181,7 @@
 				B1618D002435D21300B75A5D /* Archimedes.mat in Resources */,
 				B1618CEE2435D21300B75A5D /* Fingers Crossed.mat in Resources */,
 				B1618CF52435D21300B75A5D /* Accretion.mat in Resources */,
-				9D5BDE0A23191C3300CA51CC /* VideoStreamViewController.xib in Resources */,
+				9D5BDE0A23191C3300CA51CC /* VideoStreamDebugViewController.xib in Resources */,
 				B1618D102435D21300B75A5D /* Chopin.mat in Resources */,
 				9D5BDDF623191BF000CA51CC /* ConnectViewController.xib in Resources */,
 				B1254AC12438A0C600220DE1 /* Shouk.mat in Resources */,
@@ -1260,7 +1285,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1BEADA42423D1EA008B2FCF /* UIColor+App.swift in Sources */,
-				B1BEADB0242A5281008B2FCF /* CGPoint+Additions.swift in Sources */,
 				B12CA6032433467D006C7606 /* APIConstants.swift in Sources */,
 				9D5BDDBA23191B7900CA51CC /* UIViewController+XIB.swift in Sources */,
 				B1C19886240E965500FDF0BE /* Data+Additions.swift in Sources */,
@@ -1270,7 +1294,9 @@
 				B1BEADA62423D242008B2FCF /* UIColor+Additions.swift in Sources */,
 				B12CA60E24334F4F006C7606 /* CharacterSet+Additions.swift in Sources */,
 				B12CA61424335970006C7606 /* BaudRate.swift in Sources */,
-				9D5BDE0923191C3300CA51CC /* VideoStreamViewController.swift in Sources */,
+				9D5BDE0923191C3300CA51CC /* VideoStreamDebugViewController.swift in Sources */,
+				B11A98C8243CC0D4005C8AB2 /* AVToneGenerator.swift in Sources */,
+				B1D6E5382440BA9200046773 /* VideoStreamViewController.swift in Sources */,
 				9D5BDE0E23191C4300CA51CC /* FingerView.swift in Sources */,
 				B12778E72423726D005551E6 /* BrainNetworkView.swift in Sources */,
 				B12CA6042433467D006C7606 /* ErrorObject.swift in Sources */,
@@ -1293,13 +1319,14 @@
 				B1BEAD9C242378F3008B2FCF /* UIView+Constraints.swift in Sources */,
 				B12CA6012433467D006C7606 /* AlertMessage.swift in Sources */,
 				B1380F06240D13E700364049 /* Data+AVAudioPCMBuffer.swift in Sources */,
-				9D5BDDB923191B7900CA51CC /* CGFloat+Additions.swift in Sources */,
 				B1BEADB2242A5790008B2FCF /* NeuronContactView.swift in Sources */,
 				B18C150C2421344C0095E6C8 /* UIDeviceOrientation+Additions.swift in Sources */,
+				74A89AC72454937000F8735F /* CoreGraphics+Additions.swift in Sources */,
 				B1CE7D4D23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.swift in Sources */,
 				B1BEADA124238C2F008B2FCF /* Coordinate.swift in Sources */,
 				9D834DF3234620FC00BBBD62 /* BrainActivityRasterView.swift in Sources */,
 				9D5BDE0323191C2700CA51CC /* BaseNavigationViewController.swift in Sources */,
+				B11A98C5243CBE17005C8AB2 /* AVTonePlayerNode.swift in Sources */,
 				B1C48C1E241CF6A60049A3F1 /* UIApplication+Additions.swift in Sources */,
 				B1C48C1C241CF4620049A3F1 /* UIWindow+Additions.swift in Sources */,
 				9D1B77EF231A6C7E00E2258E /* hackForiPhone5.c in Sources */,
@@ -1321,7 +1348,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B133B13523817527008B8CEE /* NeurorobotTests.swift in Sources */,
-				B1403EDB243629B600C2DCCF /* CGFloat+Additions.swift in Sources */,
 				B1403ED72436298D00C2DCCF /* Coordinate.swift in Sources */,
 				B1403ED9243629A300C2DCCF /* Data+Additions.swift in Sources */,
 			);

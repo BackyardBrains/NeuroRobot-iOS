@@ -12,7 +12,7 @@
 #include "Log.h"
 #ifdef XCODE
     #include "Bridge/Helpers/StringHelper.hpp"
-#else
+#else§
     #include "Helpers/StringHelper.hpp"
 #endif
 
@@ -29,8 +29,8 @@
 
 static std::string path;
 
-const static std::string codeVersion = "v1.0.3";
-const static std::string codeDate = "9/Mar/2020";
+const static std::string codeVersion = "v1.0.5";
+const static std::string codeDate = "25/Apr/2020";
 
 Log::Log(std::string className)
 {

@@ -12,13 +12,13 @@ import AsyncTimer
 final class BrainActivityRasterView: UIView {
 
     // UI
-    private var titleLabel = UILabel()
+    private var titleLabel      = UILabel()
     private let titlesStackView = UIStackView()
-    private var backLineViews = [UIView]()
-    private var scrollView = UIScrollView()
-    private var timelineView = UIView()
-    private var firingLines = [UIView]()
-
+    private var scrollView      = UIScrollView()
+    private var timelineView    = UIView()
+    private var backLineViews   = [UIView]()
+    private var firingLines     = [UIView]()
+    
     // Constraints
     private var firingLineLeadingConstraints = [NSLayoutConstraint]()
     private var firingLineTrailingConstraints = [NSLayoutConstraint]()
@@ -26,6 +26,7 @@ final class BrainActivityRasterView: UIView {
     // Data
     private var didSetup = false
     private var canSetup = false
+    private var isRunning = false
     private var didConfigured = false
     private var scrollOffset: CGFloat = 0
     private var maxSeconds = 0
@@ -46,6 +47,10 @@ final class BrainActivityRasterView: UIView {
         super.init(frame: frame)
 
         setupUI()
+    }
+    
+    deinit {
+        print("deinit: " + String(describing: self))
     }
 
     private func setupUI() {
@@ -84,61 +89,57 @@ final class BrainActivityRasterView: UIView {
     }
 
     func configureUI(brain: Brain) {
-
+        
         timelineView.isHidden = false
         didConfigured = false
         didSetup = false
         canSetup = false
         maxSeconds = 0
-
+        
+        let brainValues = brain.getFiringNeurons()
+        
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else { return }
-
-                self.removeGraphInternal()
-
-                let brainValues = brain.getFiringNeurons()
-
-                for i in 0..<brainValues.count {
-
-                    let neuronNumberLabel = UILabel()
-                    self.titlesStackView.addArrangedSubview(neuronNumberLabel)
-                    neuronNumberLabel.textAlignment = .center
-                    neuronNumberLabel.font = neuronNumberLabel.font.withSize(6)
-                    neuronNumberLabel.text = String(i + 1)
-
-                    let backLineView = UIView()
-                    self.addSubview(backLineView)
-                    backLineView.translatesAutoresizingMaskIntoConstraints = false
-                    backLineView.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
-                    backLineView.leadingAnchor.constraint(equalTo: self.titlesStackView.trailingAnchor, constant: 2).isActive = true
-                    backLineView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5).isActive = true
-                    backLineView.centerYAnchor.constraint(equalTo: neuronNumberLabel.centerYAnchor).isActive = true
-                    backLineView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.5)
-
-                    self.backLineViews.append(backLineView)
-
-                    let firingLineView = UIView()
-                    self.scrollView.addSubview(firingLineView)
-                    firingLineView.translatesAutoresizingMaskIntoConstraints = false
-                    firingLineView.heightAnchor.constraint(equalToConstant: 2).isActive = true
-                    firingLineView.centerYAnchor.constraint(equalTo: self.backLineViews[i].centerYAnchor).isActive = true
-                    let trailingAnchorConstraint = firingLineView.trailingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 1000)
-                    trailingAnchorConstraint.isActive = true
-                    let leadingAnchorConstraint = firingLineView.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor)
-                    leadingAnchorConstraint.isActive = true
-                    firingLineView.backgroundColor = .red
-                    firingLineView.isHidden = true
-
-                    self.firingLines.append(firingLineView)
-                    self.firingLineLeadingConstraints.append(leadingAnchorConstraint)
-                    self.firingLineTrailingConstraints.append(trailingAnchorConstraint)
-                }
-
-                self.canSetup = true
+            
+            self.removeGraphInternal()
+            
+            for i in 0..<brainValues.count {
+                
+                let neuronNumberLabel = UILabel()
+                self.titlesStackView.addArrangedSubview(neuronNumberLabel)
+                neuronNumberLabel.textAlignment = .center
+                neuronNumberLabel.font = neuronNumberLabel.font.withSize(6)
+                neuronNumberLabel.text = String(i + 1)
+                
+                let backLineView = UIView()
+                self.addSubview(backLineView)
+                backLineView.translatesAutoresizingMaskIntoConstraints = false
+                backLineView.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
+                backLineView.leadingAnchor.constraint(equalTo: self.titlesStackView.trailingAnchor, constant: 2).isActive = true
+                backLineView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5).isActive = true
+                backLineView.centerYAnchor.constraint(equalTo: neuronNumberLabel.centerYAnchor).isActive = true
+                backLineView.backgroundColor = UIColor.lightGray.withAlphaComponent(0.5)
+                
+                self.backLineViews.append(backLineView)
+                
+                let firingLineView = UIView()
+                self.scrollView.addSubview(firingLineView)
+                firingLineView.translatesAutoresizingMaskIntoConstraints = false
+                firingLineView.heightAnchor.constraint(equalToConstant: 2).isActive = true
+                firingLineView.centerYAnchor.constraint(equalTo: self.backLineViews[i].centerYAnchor).isActive = true
+                let trailingAnchorConstraint = firingLineView.trailingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: 1000)
+                trailingAnchorConstraint.isActive = true
+                let leadingAnchorConstraint = firingLineView.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor)
+                leadingAnchorConstraint.isActive = true
+                firingLineView.backgroundColor = .red
+                firingLineView.isHidden = true
+                
+                self.firingLines.append(firingLineView)
+                self.firingLineLeadingConstraints.append(leadingAnchorConstraint)
+                self.firingLineTrailingConstraints.append(trailingAnchorConstraint)
             }
+            
+            self.canSetup = true
         }
     }
 
@@ -183,31 +184,29 @@ final class BrainActivityRasterView: UIView {
     private func playTimeline() {
 
         DispatchQueue.main.async { [weak self] in
-
             guard let self = self else { return }
 
-            self.timer = AsyncTimer(queue: DispatchQueue.main, interval: .milliseconds(10), repeats: true) {
+            self.timer = AsyncTimer(queue: DispatchQueue.main, interval: .milliseconds(10), repeats: true) { [weak self] in
+                guard let self = self else { return }
                 guard self.didConfigured else { return }
-
-                DispatchQueue.main.async {
-
-                    self.scrollOffset = self.scrollView.contentOffset.x + self.offsetForOneInterval
-
-                    self.scrollView.contentSize = CGSize(width: self.scrollView.frame.width + self.scrollOffset, height: self.scrollView.frame.height)
-
-                    var point = self.scrollView.contentOffset
-                    point.x = self.scrollOffset
-                    self.scrollView.contentOffset = point
-
-                    if self.scrollOffset > CGFloat(self.maxSeconds - 6) * self.offsetForOneSecond {
-                        self.spreadGraph()
-                    }
-
-                    for i in 0..<self.firingLineTrailingConstraints.count {
-                        if !self.firingLines[i].isHidden {
-                            let trailingConstraint = self.firingLineTrailingConstraints[i]
-                            trailingConstraint.constant = point.x + self.relativeTimelimeOriginX
-                        }
+                guard self.isRunning else { return }
+                
+                self.scrollOffset = self.scrollView.contentOffset.x + self.offsetForOneInterval
+                
+                self.scrollView.contentSize = CGSize(width: self.scrollView.frame.width + self.scrollOffset, height: self.scrollView.frame.height)
+                
+                var point = self.scrollView.contentOffset
+                point.x = self.scrollOffset
+                self.scrollView.contentOffset = point
+                
+                if self.scrollOffset > CGFloat(self.maxSeconds - 6) * self.offsetForOneSecond {
+                    self.spreadGraph()
+                }
+                
+                for i in 0..<self.firingLineTrailingConstraints.count {
+                    if !self.firingLines[i].isHidden {
+                        let trailingConstraint = self.firingLineTrailingConstraints[i]
+                        trailingConstraint.constant = point.x + self.relativeTimelimeOriginX
                     }
                 }
             }
@@ -217,47 +216,60 @@ final class BrainActivityRasterView: UIView {
 
     private func removeGraphInternal() {
 
-        self.firingLineLeadingConstraints.removeAll()
-        self.firingLineTrailingConstraints.removeAll()
+        firingLineLeadingConstraints.removeAll()
+        firingLineTrailingConstraints.removeAll()
 
-        for view in self.firingLines {
+        for view in firingLines {
             view.removeFromSuperview()
         }
-        for view in self.backLineViews {
+        for view in backLineViews {
             view.removeFromSuperview()
         }
-        for view in self.scrollView.subviews {
+        for view in scrollView.subviews {
             view.removeFromSuperview()
         }
-        for view in self.titlesStackView.arrangedSubviews {
+        for view in titlesStackView.arrangedSubviews {
             view.removeFromSuperview()
         }
 
-        self.firingLines.removeAll()
-        self.backLineViews.removeAll()
-        self.scrollView.contentOffset = CGPoint(x: 0, y: 0)
-        self.scrollOffset = 0
+        firingLines.removeAll()
+        backLineViews.removeAll()
+        scrollView.contentOffset = CGPoint(x: 0, y: 0)
+        scrollOffset = 0
     }
 
     func play() {
+        guard !isRunning else { return }
+        isRunning = true
+        
         scrollView.isScrollEnabled = false
         playTimeline()
     }
 
     func pause() {
+        defer { isRunning = false }
+        
         scrollView.isScrollEnabled = true
         guard let timer = timer else { return }
         timer.stop()
     }
+    
+    func stop() {
+        pause()
+        DispatchQueue.main.async { [weak self] in
+            self?.removeGraphInternal()
+        }
+    }
 
     func updateActivityValues(brain: Brain) {
+        let firingNeurons = brain.getFiringNeurons()
+        
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             guard self.didConfigured else { return }
-
-            let firingNeurons = brain.getFiringNeurons()
+            
             guard firingNeurons.count == self.titlesStackView.arrangedSubviews.count else { return }
-
+            
             for i in 0..<firingNeurons.count {
 
                 if firingNeurons[i] {

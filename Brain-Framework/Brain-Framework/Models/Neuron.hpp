@@ -39,7 +39,6 @@ public:
     double tone;
     double audioPref;
     
-    
     std::vector<double> spikesStep;
     std::vector<double> iStep;
     double visI = 0;

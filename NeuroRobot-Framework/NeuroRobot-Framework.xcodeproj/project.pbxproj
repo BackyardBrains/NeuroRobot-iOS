@@ -86,6 +86,9 @@
 		B1BE5C3023F717B0008D73BF /* AudioHelper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B1BE5C2E23F717B0008D73BF /* AudioHelper.hpp */; };
 		B1BE5C3923F81AA9008D73BF /* StringHelper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B1BE5C3723F81AA9008D73BF /* StringHelper.hpp */; };
 		B1BE5C3E23F81CBF008D73BF /* TypeDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D0B5B38233FF7F90017BD74 /* TypeDefs.h */; };
+		B1F565022445E20E002FDC7A /* Semaphore.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F565002445E20E002FDC7A /* Semaphore.h */; };
+		B1F565032445E20E002FDC7A /* Semaphore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1F565012445E20E002FDC7A /* Semaphore.cpp */; };
+		B1F565042445E20E002FDC7A /* Semaphore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1F565012445E20E002FDC7A /* Semaphore.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -167,6 +170,8 @@
 		B1C8779D23EAFFFF006D1CFA /* NeuroRobot_MatlabBridge_OutOfProcess.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NeuroRobot_MatlabBridge_OutOfProcess.cpp; sourceTree = "<group>"; };
 		B1C8779F23EB0063006D1CFA /* NeuroRobot_matlab_OutOfProcess.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NeuroRobot_matlab_OutOfProcess.cpp; sourceTree = "<group>"; };
 		B1C877A223EB00A3006D1CFA /* NeuroRobot_framework_testScript_OutOfProcess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeuroRobot_framework_testScript_OutOfProcess.m; sourceTree = "<group>"; };
+		B1F565002445E20E002FDC7A /* Semaphore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Semaphore.h; sourceTree = "<group>"; };
+		B1F565012445E20E002FDC7A /* Semaphore.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Semaphore.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +305,7 @@
 		9DE706DE22ACF83300B1A64D /* NeuroRobot-Framework */ = {
 			isa = PBXGroup;
 			children = (
+				B1F565052446073F002FDC7A /* Core */,
 				9D5BDE172319326800CA51CC /* Bridge */,
 				9FEDBA30236D80140084F84D /* BackgroundThread.h */,
 				9FEDBA2B236D80130084F84D /* Log.cpp */,
@@ -365,6 +371,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		B1F565052446073F002FDC7A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B1F565012445E20E002FDC7A /* Semaphore.cpp */,
+				B1F565002445E20E002FDC7A /* Semaphore.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -379,6 +394,7 @@
 				9FEDBA40236D80140084F84D /* NeuroRobotManager.h in Headers */,
 				9FEDBA39236D80140084F84D /* Log.h in Headers */,
 				B1BE5C3923F81AA9008D73BF /* StringHelper.hpp in Headers */,
+				B1F565022445E20E002FDC7A /* Semaphore.h in Headers */,
 				9FEDBA3F236D80140084F84D /* Macros.h in Headers */,
 				9FEDBA3C236D80140084F84D /* VideoAndAudioObtainer.h in Headers */,
 				9FEDBA47236D80140084F84D /* Socket.h in Headers */,
@@ -510,6 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1F565042445E20E002FDC7A /* Semaphore.cpp in Sources */,
 				9FEDBA38236D80140084F84D /* Log.cpp in Sources */,
 				9FEDBA42236D80140084F84D /* VideoAndAudioObtainer.cpp in Sources */,
 				9FEDBA44236D80140084F84D /* SharedMemory.cpp in Sources */,
@@ -523,6 +540,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1F565032445E20E002FDC7A /* Semaphore.cpp in Sources */,
 				9FEDBA37236D80140084F84D /* Log.cpp in Sources */,
 				9FEDBA41236D80140084F84D /* VideoAndAudioObtainer.cpp in Sources */,
 				9FEDBA43236D80140084F84D /* SharedMemory.cpp in Sources */,

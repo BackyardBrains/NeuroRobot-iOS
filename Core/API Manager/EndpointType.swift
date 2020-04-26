@@ -1,9 +1,8 @@
 //
-//  TruckerEndpointType.swift
-//  TruckerAI
+//  EndpointType.swift
 //
 //  Created by Djordje Jovic on 03/12/2019.
-//  Copyright © 2019 Cleverlance. All rights reserved.
+//  Copyright © 2019 Go Go Encode. All rights reserved.
 //
 
 import Alamofire
@@ -14,12 +13,15 @@ enum EndpointType {
     case setBaudRate
     case getBaudRate
     
+    // MARK: FPS
     case setFPS
     case getFPS
     
+    // MARK: GOP
     case setGOP
     case getGOP
     
+    // MARK: FPS
     case setQuality
     case getQuality
 }
