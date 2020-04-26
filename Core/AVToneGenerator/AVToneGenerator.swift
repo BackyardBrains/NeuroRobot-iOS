@@ -26,11 +26,13 @@ final class AVToneGenerator {
     }
     
     func playTone(frequency: Int) {
-        if !engine.isRunning, let _ = try? engine.start() {
-            toneNode.preparePlaying()
-            toneNode.play()
-        } else {
-            print("Cannot run engine")
+        if !engine.isRunning {
+            if let _ = try? engine.start() {
+                toneNode.preparePlaying()
+                toneNode.play()
+            } else {
+                print("Cannot run engine")
+            }
         }
         
         toneNode.frequency = Double(frequency)

@@ -47,10 +47,12 @@ final class AVTonePlayerNode: AVAudioPlayerNode {
     private func scheduleBuffer() {
         let buffer = prepareBuffer()
         scheduleBuffer(buffer) { [weak self] in
-            guard let self = self else { return }
-            guard self.isPlaying else { return }
-
-            self.scheduleBuffer()
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                guard self.isPlaying else { return }
+                
+                self.scheduleBuffer()
+            }
         }
     }
 
