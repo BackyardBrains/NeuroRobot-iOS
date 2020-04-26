@@ -12,9 +12,9 @@ import AVKit
 final class VideoStreamWithoutRobotViewController: BaseStreamViewController {
     
     // UI
-    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var stackView    : UIStackView!
     @IBOutlet weak var pageIndicator: UIPageControl!
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var scrollView   : UIScrollView!
     
     // Video session
     private let captureSession  = AVCaptureSession()
@@ -34,22 +34,15 @@ final class VideoStreamWithoutRobotViewController: BaseStreamViewController {
         setupBrain()
     }
     
-    func setupUI() {
-        navigationController?.setNavigationBarHidden(false, animated: true)
-        
-        scrollView.decelerationRate = .fast
-    }
-    
-    func setupBrain() {
-        brain.setVideoSize(width: 1000, height: 1000)
-        brain.setDistance(distance: 4000)
-        brain.delegate = self
-    }
-    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         
         setCorrectCameraOrientation()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        captureSession.stopRunning()
     }
     
     override func viewDidLayoutSubviews() {
@@ -60,6 +53,18 @@ final class VideoStreamWithoutRobotViewController: BaseStreamViewController {
         }
         pageIndicator.currentPage = 0
         stackView.spacing = max(insets.left, insets.right)
+    }
+    
+    func setupUI() {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        scrollView.decelerationRate = .fast
+    }
+    
+    func setupBrain() {
+        brain.setVideoSize(width: 1000, height: 1000)
+        brain.setDistance(distance: 4000)
+        brain.delegate = self
     }
     
     private func updateVideo(_ videoFrame: UIImage) {

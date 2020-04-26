@@ -30,21 +30,12 @@ class BaseStreamViewController: BaseViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-//        DispatchQueue.main.async { [weak self] in
-//            guard let self = self else { return }
-            
-            self.brainRasterView.stop()
-//        }
+        brainRasterView.stop()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-//        DispatchQueue.global().async { [weak self] in
-//            guard let self = self else { return }
-//
-//            self.brain.stop()
-//        }
         brain.stop()
     }
     

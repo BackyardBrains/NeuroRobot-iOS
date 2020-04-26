@@ -226,6 +226,37 @@ const double** brain_getColors(const void* object, size_t *numberOfNeurons, size
     return colors;
 }
 
+const bool*** brain_getVisPrefs(const void* object, size_t *numberOfNeurons, size_t *numberOfParams, size_t *numberOfCams)
+{
+    BrainWorker* brainObject = (BrainWorker*)object;
+    
+    auto valuesVector = brainObject->getVisPrefs();
+    
+    *numberOfNeurons = valuesVector.size();
+    *numberOfParams = valuesVector.front().size();
+    *numberOfCams = valuesVector.front().front().size();
+    const bool*** visPrefs = new const bool**[*numberOfNeurons];//[*numberOfCams];
+    
+    for (int i = 0; i < *numberOfNeurons; i++) {
+        auto neuron = valuesVector[i];
+        const bool** foo1 = new const bool*[neuron.size()];
+        
+        for (int j = 0; j < neuron.size(); j++) {
+            auto visPref = neuron[j];
+            auto foo2 = new bool[visPref.size()];
+            
+            for (int k = 0; k < visPref.size(); k++) {
+                auto value = visPref[k];
+                foo2[k] = value;
+            }
+            foo1[j] = foo2;
+        }
+        visPrefs[i] = foo1;
+    }
+    
+    return visPrefs;
+}
+
 #ifdef __cplusplus
 }
 #endif

@@ -110,6 +110,9 @@ public:
     
     /// Returns `neuron_cols` values of neurons
     std::vector<std::vector<double>> getColors();
+    
+    /// Returns `vis_prefs` values of neurons
+    std::vector<std::vector<std::vector<bool>>> getVisPrefs();
 };
 
 #endif /* BrainWorker_hpp */

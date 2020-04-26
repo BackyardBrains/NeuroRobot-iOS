@@ -515,3 +515,14 @@ std::vector<std::vector<double>> BrainWorker::getColors()
     
     return colors;
 }
+
+std::vector<std::vector<std::vector<bool>>> BrainWorker::getVisPrefs()
+{
+    std::vector<std::vector<std::vector<bool>>> visPrefs;
+    
+    for (auto & neuron : brain.neurons) {
+        visPrefs.push_back(neuron.visPref);
+    }
+    
+    return visPrefs;
+}

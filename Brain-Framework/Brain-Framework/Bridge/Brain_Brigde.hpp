@@ -36,6 +36,7 @@ const double** brain_getContacts(const void* object, size_t *numberOfNeurons, si
 const double* brain_getX(const void* object, size_t *numberOfNeurons);
 const double* brain_getY(const void* object, size_t *numberOfNeurons);
 const double** brain_getColors(const void* object, size_t *numberOfNeurons, size_t *numberOfColors);
+const bool*** brain_getVisPrefs(const void* object, size_t *numberOfNeurons, size_t *numberOfParams, size_t *numberOfCams);
 
 #ifdef __cplusplus
 }

@@ -16,6 +16,9 @@ class BrainNetworkView: UIView {
     private var lineLayers = [CALayer]()
     private var contactViews = [ContactView]()
     
+    private var linesLayer = CALayer()
+    private var contactsLayer = CALayer()
+    
     //
     private weak var brain: Brain?
     private var didSetup = false
@@ -55,17 +58,14 @@ class BrainNetworkView: UIView {
         backgroundImageView.fillSuperView()
         backgroundImageView.contentMode = .scaleAspectFit
         backgroundImageView.image = #imageLiteral(resourceName: "workspace_background_white")
+        
+        layer.addSublayer(linesLayer)
+        layer.addSublayer(contactsLayer)
     }
     
     override func draw(_ rect: CGRect) {
         guard !didSetup, brain != nil else { return }
         didSetup = true
-        
-        
-        let backLayer = CAShapeLayer()
-        backLayer.frame = self.bounds
-        layer.addSublayer(backLayer)
-
         
         drawConnections()
     }
@@ -76,13 +76,22 @@ class BrainNetworkView: UIView {
         }
         neuronViews.removeAll()
         
-        for layer in lineLayers {
+        for layer in linesLayer.sublayers ?? [] {
             layer.removeFromSuperlayer()
         }
-        lineLayers.removeAll()
+        linesLayer.removeFromSuperlayer()
+        linesLayer = CALayer()
+        layer.addSublayer(linesLayer)
+        
+        for layer in contactsLayer.sublayers ?? [] {
+            layer.removeFromSuperlayer()
+        }
+        contactsLayer.removeFromSuperlayer()
+        contactsLayer = CALayer()
+        layer.addSublayer(contactsLayer)
     }
     
-    func drawLine(from: CGPoint, to: CGPoint, lineWidth: CGFloat = 0.5) -> CALayer {
+    func drawLine(from: CGPoint, to: CGPoint, lineWidth: CGFloat = 0.5, diamond: (Bool, UIColor?) = (false, nil)) {
         print("lineWidth: \(lineWidth)")
         var to = to
         var padding: CGFloat = 20
@@ -120,25 +129,25 @@ class BrainNetworkView: UIView {
         aPath.addLine(to: to)
         aPath.close()
         
-        let containerLayer = CALayer()
-        
-        let backLayer = CAShapeLayer()
-        backLayer.frame = self.bounds
-        backLayer.lineWidth = lineWidth
-        backLayer.strokeColor = UIColor.black.cgColor
-        backLayer.path = aPath.cgPath
-        containerLayer.addSublayer(backLayer)
+        let lineLayer = CAShapeLayer()
+        lineLayer.frame = bounds
+        lineLayer.lineWidth = lineWidth
+        lineLayer.strokeColor = UIColor.black.cgColor
+        lineLayer.path = aPath.cgPath
         
         var contactSize = lineWidth * 3
         contactSize.limit(lower: 4, upper: 15)
         
-        let contactView = NeuronContactView(frame: CGRect(x: 0, y: 0, width: contactSize, height: contactSize))
+        var contactView: NeuronContactView!
+        if diamond.0, let color = diamond.1 {
+            contactView = NeuronContactView(frame: CGRect(origin: .zero, size: CGSize(contactSize * 3.5)), type: .diamond(color))
+        } else {
+            contactView = NeuronContactView(frame: CGRect(origin: .zero, size: CGSize(contactSize)), type: .square)
+        }
         contactView.center = to
-        contactView.backgroundColor = .white
-        containerLayer.addSublayer(contactView.layer)
         
-        layer.insertSublayer(containerLayer, above: backgroundImageView.layer)
-        return containerLayer
+        linesLayer.addSublayer(lineLayer)
+        contactsLayer.addSublayer(contactView.layer)
     }
     
     private func drawConnections() {
@@ -150,13 +159,14 @@ class BrainNetworkView: UIView {
                     var lineWidth = CGFloat(connections[i][j]) / 12
                     lineWidth.limit(lower: 1, upper: 10)
                     
-                    let layer = drawLine(from: neuronViews[i].center, to: neuronViews[j].center, lineWidth: lineWidth)
-                    lineLayers.append(layer)
+                    drawLine(from: neuronViews[i].center, to: neuronViews[j].center, lineWidth: lineWidth)
                 }
             }
         }
         
         if let contacts = brain.getOuterConnections() {
+            let visPrefs = brain.getVisPrefs()
+            
             for i in 0..<contacts.count {
                 for j in 0..<contacts[i].count where contacts[i][j] > 0 {
                     var startPoint = neuronViews[i].center
@@ -167,8 +177,24 @@ class BrainNetworkView: UIView {
                         endPoint = neuronViews[i].center
                     }
                     
-                    let layer = drawLine(from: startPoint, to: endPoint)
-                    lineLayers.append(layer)
+                    var isDiamond = false
+                    var color: UIColor?
+                    
+                    if [0, 1].contains(j), let visPrefs = visPrefs {
+                        if visPrefs[i][0][j] || visPrefs[i][1][j] {
+                            // ret diamond
+                            color = .red
+                        } else if visPrefs[i][2][j] || visPrefs[i][3][j] {
+                            // green diamond
+                            color = .green
+                        } else if visPrefs[i][4][j] || visPrefs[i][5][j] {
+                            // blue diamond
+                            color = .blue
+                        }
+                        isDiamond = true
+                    }
+                    
+                    drawLine(from: startPoint, to: endPoint, diamond: (isDiamond, color))
                 }
             }
         }

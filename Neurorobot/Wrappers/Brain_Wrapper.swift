@@ -287,4 +287,44 @@ final class Brain
         
         return colors
     }
+    
+    func getVisPrefs() -> [[[Bool]]]? {
+        guard let brainObject = brainObject else { return nil }
+        
+        let numberOfNeuronsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
+        let numberOfParamsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
+        let numberOfCamsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
+        
+        let visPrefsPointer = brain_getVisPrefs(brainObject, numberOfNeuronsPointer, numberOfParamsPointer, numberOfCamsPointer)
+        
+        let numberOfNeurons = Int(numberOfNeuronsPointer.pointee)
+        numberOfNeuronsPointer.deallocate()
+        let numberOfParams = Int(numberOfParamsPointer.pointee)
+        numberOfParamsPointer.deallocate()
+        let numberOfCams = Int(numberOfCamsPointer.pointee)
+        numberOfCamsPointer.deallocate()
+        
+        let arrayPointer1 = UnsafeBufferPointer(start: visPrefsPointer, count: numberOfNeurons)
+        let colorValues = Array(arrayPointer1)
+        
+        var visPrefs = [[[Bool]]]()
+        for i in 0..<colorValues.count {
+            let arrayPointer2 = UnsafeBufferPointer(start: colorValues[i], count: numberOfParams)
+            let params = Array(arrayPointer2)
+            
+            var paramValues = [[Bool]]()
+            
+            for j in 0..<params.count {
+                let arrayPointer3 = UnsafeBufferPointer(start: params[j], count: numberOfCams)
+                let cams = Array(arrayPointer3)
+                
+                paramValues.append([cams[0], cams[1]])
+            }
+            
+            visPrefs.append(paramValues)
+        }
+        visPrefsPointer?.deallocate()
+        
+        return visPrefs
+    }
 }
