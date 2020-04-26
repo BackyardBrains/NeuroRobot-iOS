@@ -91,7 +91,7 @@ class BrainNetworkView: UIView {
         layer.addSublayer(contactsLayer)
     }
     
-    func drawLine(from: CGPoint, to: CGPoint, lineWidth: CGFloat = 0.5, diamond: (Bool, UIColor?) = (false, nil)) {
+    func drawLine(from: CGPoint, to: CGPoint, lineWidth: CGFloat = 0.5, color: UIColor = .white, isDiamond: Bool = false, toPresentNum: Bool = false) {
         print("lineWidth: \(lineWidth)")
         var to = to
         var padding: CGFloat = 20
@@ -139,27 +139,51 @@ class BrainNetworkView: UIView {
         contactSize.limit(lower: 4, upper: 15)
         
         var contactView: NeuronContactView!
-        if diamond.0, let color = diamond.1 {
-            contactView = NeuronContactView(frame: CGRect(origin: .zero, size: CGSize(contactSize * 3.5)), type: .diamond(color))
+        var numLabel: UILabel?
+        if isDiamond {
+            contactView = NeuronContactView(frame: CGRect(origin: .zero, size: CGSize(contactSize * 3.5)), type: .diamond, backColor: color)
         } else {
-            contactView = NeuronContactView(frame: CGRect(origin: .zero, size: CGSize(contactSize)), type: .square)
+            contactView = NeuronContactView(frame: CGRect(origin: .zero, size: CGSize(contactSize)), type: .square, backColor: color)
+            
+            if toPresentNum {
+                numLabel = UILabel(frame: CGRect(origin: .zero, size: CGSize(20)))
+                numLabel?.text = "\(Int(lineWidth * 12))"
+                numLabel?.font = UIFont.systemFont(ofSize: 8)
+                numLabel?.layer.displayIfNeeded()
+            }
         }
+        
         contactView.center = to
+        numLabel?.center = to.applying(CGAffineTransform(translationX: 0, y: -10))
         
         linesLayer.addSublayer(lineLayer)
         contactsLayer.addSublayer(contactView.layer)
+        if numLabel != nil {
+            contactsLayer.addSublayer(numLabel!.layer)
+        }
     }
     
     private func drawConnections() {
         guard let brain = brain else { return }
         
         if let connections = brain.getInnerConnections() {
+            let daConnectToMe = brain.getDaConnectToMe()
+            
             for i in 0..<connections.count {
                 for j in 0..<connections[i].count where connections[i][j] > 0 {
                     var lineWidth = CGFloat(connections[i][j]) / 12
                     lineWidth.limit(lower: 1, upper: 10)
                     
-                    drawLine(from: neuronViews[i].center, to: neuronViews[j].center, lineWidth: lineWidth)
+                    var color = UIColor.white
+                    if let daConnectToMe = daConnectToMe {
+                        if daConnectToMe[i][j][0] == 1 {
+                            color = UIColor(red: 1, green: 0.7, blue: 0.4, alpha: 1)
+                        } else if daConnectToMe[i][j][0] == 2 {
+                            color = UIColor(red: 0.6, green: 0.7, blue: 1, alpha: 1)
+                        }
+                    }
+                    
+                    drawLine(from: neuronViews[i].center, to: neuronViews[j].center, lineWidth: lineWidth, color: color, toPresentNum: true)
                 }
             }
         }
@@ -178,7 +202,7 @@ class BrainNetworkView: UIView {
                     }
                     
                     var isDiamond = false
-                    var color: UIColor?
+                    var color: UIColor = .white
                     
                     if [0, 1].contains(j), let visPrefs = visPrefs {
                         if visPrefs[i][0][j] || visPrefs[i][1][j] {
@@ -194,7 +218,7 @@ class BrainNetworkView: UIView {
                         isDiamond = true
                     }
                     
-                    drawLine(from: startPoint, to: endPoint, diamond: (isDiamond, color))
+                    drawLine(from: startPoint, to: endPoint, color: color, isDiamond: isDiamond)
                 }
             }
         }

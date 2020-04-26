@@ -96,6 +96,9 @@ public:
     /// Returns `connectome` values of neurons.
     std::vector<std::vector<double>> getConnectToMe();
     
+    /// Returns `da_connectome` values of neurons.
+    std::vector<std::vector<std::vector<double>>> getDaConnectToMe();
+    
     /// Returns `neuron_contacts` values of neurons.
     std::vector<std::vector<double>> getContacts();
     

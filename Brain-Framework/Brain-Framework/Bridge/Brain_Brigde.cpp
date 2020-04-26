@@ -130,6 +130,37 @@ const double** brain_getConnectToMe(const void* object, size_t *numberOfNeurons)
     return connectToMe;
 }
 
+const double*** brain_getDaConnectToMe(const void* object, size_t *numberOfNeurons, size_t *numberOfParams1, size_t *numberOfParams2)
+{
+    BrainWorker* brainObject = (BrainWorker*)object;
+    
+    auto valuesVector = brainObject->getDaConnectToMe();
+    
+    *numberOfNeurons = valuesVector.size();
+    *numberOfParams1 = valuesVector.front().size();
+    *numberOfParams2 = valuesVector.front().front().size();
+    const double*** valuesMatrix = new const double**[*numberOfNeurons];
+    
+    for (int i = 0; i < *numberOfNeurons; i++) {
+        auto neuron = valuesVector[i];
+        const double** foo1 = new const double*[neuron.size()];
+        
+        for (int j = 0; j < neuron.size(); j++) {
+            auto visPref = neuron[j];
+            auto foo2 = new double[visPref.size()];
+            
+            for (int k = 0; k < visPref.size(); k++) {
+                auto value = visPref[k];
+                foo2[k] = value;
+            }
+            foo1[j] = foo2;
+        }
+        valuesMatrix[i] = foo1;
+    }
+    
+    return valuesMatrix;
+}
+
 const double** brain_getContacts(const void* object, size_t *numberOfNeurons, size_t *numberOfConnections)
 {
     BrainWorker* brainObject = (BrainWorker*)object;
@@ -235,7 +266,7 @@ const bool*** brain_getVisPrefs(const void* object, size_t *numberOfNeurons, siz
     *numberOfNeurons = valuesVector.size();
     *numberOfParams = valuesVector.front().size();
     *numberOfCams = valuesVector.front().front().size();
-    const bool*** visPrefs = new const bool**[*numberOfNeurons];//[*numberOfCams];
+    const bool*** visPrefs = new const bool**[*numberOfNeurons];
     
     for (int i = 0; i < *numberOfNeurons; i++) {
         auto neuron = valuesVector[i];

@@ -10,13 +10,14 @@ import UIKit
 
 enum NeuronContactViewType {
     case square
-    case diamond(UIColor)
+    case diamond
 }
 
 class NeuronContactView: UIView {
     
     private var path: UIBezierPath?
     private var type: NeuronContactViewType = .square
+    private var backColor: UIColor = .white
     
     required init?(coder: NSCoder) {
         super.init(frame: .zero)
@@ -28,9 +29,10 @@ class NeuronContactView: UIView {
         setupUI()
     }
     
-    init(frame: CGRect, type: NeuronContactViewType) {
+    init(frame: CGRect, type: NeuronContactViewType, backColor: UIColor) {
         super.init(frame: frame)
         self.type = type
+        self.backColor = backColor
         setupUI()
     }
     
@@ -39,10 +41,10 @@ class NeuronContactView: UIView {
         switch type {
         case .square:
             
-            backgroundColor = .white
+            backgroundColor = backColor
             layer.borderWidth = bounds.width > 5 ? 1.5 : 0.5
             layer.borderColor = UIColor.black.cgColor
-        case .diamond(let color):
+        case .diamond:
             
             path = UIBezierPath()
             path?.move(to: CGPoint(x: 0, y: frame.size.height / 2))
@@ -53,7 +55,7 @@ class NeuronContactView: UIView {
             
             let shapeLayer = CAShapeLayer()
             shapeLayer.path = path!.cgPath
-            shapeLayer.fillColor = color.cgColor
+            shapeLayer.fillColor = backColor.cgColor
             shapeLayer.strokeColor = UIColor.black.cgColor
             shapeLayer.lineWidth = 0.5
             

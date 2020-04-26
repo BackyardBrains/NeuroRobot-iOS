@@ -230,6 +230,46 @@ final class Brain
         return connections
     }
     
+    func getDaConnectToMe() -> [[[Double]]]? {
+        guard let brainObject = brainObject else { return nil }
+        
+        let numberOfNeuronsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
+        let numberOfParams1Pointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
+        let numberOfParams2Pointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
+        
+        let valuesPointer = brain_getDaConnectToMe(brainObject, numberOfNeuronsPointer, numberOfParams1Pointer, numberOfParams2Pointer)
+        
+        let numberOfNeurons = Int(numberOfNeuronsPointer.pointee)
+        numberOfNeuronsPointer.deallocate()
+        let numberOfParams1 = Int(numberOfParams1Pointer.pointee)
+        numberOfParams1Pointer.deallocate()
+        let numberOfParams2 = Int(numberOfParams2Pointer.pointee)
+        numberOfParams2Pointer.deallocate()
+        
+        let arrayPointer1 = UnsafeBufferPointer(start: valuesPointer, count: numberOfNeurons)
+        let colorValues = Array(arrayPointer1)
+        
+        var values = [[[Double]]]()
+        for i in 0..<colorValues.count {
+            let arrayPointer2 = UnsafeBufferPointer(start: colorValues[i], count: numberOfParams1)
+            let params1 = Array(arrayPointer2)
+            
+            var paramValues = [[Double]]()
+            
+            for j in 0..<params1.count {
+                let arrayPointer3 = UnsafeBufferPointer(start: params1[j], count: numberOfParams2)
+                let params2 = Array(arrayPointer3)
+                
+                paramValues.append(params2)
+            }
+            
+            values.append(paramValues)
+        }
+        valuesPointer?.deallocate()
+        
+        return values
+    }
+    
     func getOuterConnections() -> [[Double]]? {
         guard let brainObject = brainObject else { return nil }
         

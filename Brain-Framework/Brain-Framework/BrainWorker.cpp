@@ -445,6 +445,17 @@ std::vector<std::vector<double>> BrainWorker::getConnectToMe()
     return connectToMe;
 }
 
+std::vector<std::vector<std::vector<double>>> BrainWorker::getDaConnectToMe()
+{
+    std::vector<std::vector<std::vector<double>>> daConnectToMe;
+    
+    for (auto & neuron : brain.neurons) {
+        daConnectToMe.push_back(neuron.daConnecToMe);
+    }
+    
+    return daConnectToMe;
+}
+
 std::vector<std::vector<double>> BrainWorker::getContacts()
 {
     auto numberOfNeurons = brain.neurons.size();
