@@ -17,6 +17,7 @@
     Semaphore::~Semaphore() {
         dispatch_release(semaphoreMutex);
     }
+
     void Semaphore::wait() {
         dispatch_semaphore_wait(semaphoreMutex, DISPATCH_TIME_FOREVER);
     }
@@ -28,19 +29,19 @@
 #else
 
     Semaphore::Semaphore() {
-        sem_init(&semaphoreMutex, 0, 1);
+        semaphoreMutex = CreateSemaphore(NULL, 0, 1, NULL);
     }
 
     Semaphore::~Semaphore() {
-        sem_destroy(&semaphoreMutex);
+        CloseHandle(semaphoreMutex);
     }
 
     void Semaphore::wait() {
-        sem_wait(&semaphoreMutex);
+        WaitForSingleObject(semaphoreMutex, INFINITE);
     }
 
     void Semaphore::signal() {
-        sem_post(&semaphoreMutex);
+        ReleaseSemaphore(semaphoreMutex, 1, NULL);
     }
 
 #endif
