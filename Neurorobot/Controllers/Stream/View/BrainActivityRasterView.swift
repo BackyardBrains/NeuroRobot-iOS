@@ -58,7 +58,7 @@ final class BrainActivityRasterView: UIView {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 5).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        titleLabel.text = "Brain raster activity"
+        titleLabel.text = "Brain activity"
 
         addSubview(titlesStackView)
         titlesStackView.translatesAutoresizingMaskIntoConstraints = false
@@ -131,7 +131,7 @@ final class BrainActivityRasterView: UIView {
                 trailingAnchorConstraint.isActive = true
                 let leadingAnchorConstraint = firingLineView.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor)
                 leadingAnchorConstraint.isActive = true
-                firingLineView.backgroundColor = .red
+                firingLineView.backgroundColor = .darkGreen
                 firingLineView.isHidden = true
                 
                 self.firingLines.append(firingLineView)
@@ -289,8 +289,8 @@ final class BrainActivityRasterView: UIView {
                     view.centerYAnchor.constraint(equalTo: self.backLineViews[i].centerYAnchor).isActive = true
                     view.leadingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: self.firingLines[i].frame.origin.x).isActive = true
                     view.trailingAnchor.constraint(equalTo: self.scrollView.leadingAnchor, constant: timelimeOriginX).isActive = true
-                    view.backgroundColor = .red
-
+                    view.backgroundColor = .darkGreen
+                    
                     self.firingLines[i].isHidden = true
                 }
             }
