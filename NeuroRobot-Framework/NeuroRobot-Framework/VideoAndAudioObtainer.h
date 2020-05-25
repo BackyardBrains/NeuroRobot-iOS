@@ -102,9 +102,10 @@ public:
     
     /// Init method.
     /// @param ipAddress IP address of robot
+    /// @param version Version of robot
     /// @param callback Callback in case or occured errors. Used to notify caller
     /// @param audioBlocked Flag whether audio both ways is blocked
-    VideoAndAudioObtainer(std::string ipAddress, StreamErrorOccurredCallback callback, bool audioBlocked);
+    VideoAndAudioObtainer(std::string ipAddress, short version, StreamErrorOccurredCallback callback, bool audioBlocked);
     
     /// Destructor.
     ~VideoAndAudioObtainer();

@@ -35,18 +35,28 @@ public:
     /// @param password Password for rtsp
     /// @param ipAddress IP address of rtsp
     /// @return URL
-    static std::string createUrl(std::string userName, std::string password, std::string ipAddress)
+    static std::string createUrl(std::string userName, std::string password, std::string ipAddress, short version)
     {
-        // rtsp://admin:admin@192.168.100.1:554/cam1/h264
-        std::string url = std::string();
-        url.append("rtsp://");
-        url.append(userName);
-        url.append(":");
-        url.append(password);
-        url.append("@");
-        url.append(ipAddress);
-        url.append(":554/cam1/h264");
-        return url;
+        if (version == 0) {
+            // rtsp://admin:admin@192.168.100.1:554/cam1/h264
+            std::string url = std::string();
+            url.append("rtsp://");
+            url.append(userName);
+            url.append(":");
+            url.append(password);
+            url.append("@");
+            url.append(ipAddress);
+            url.append(":554/cam1/h264");
+            return url;
+        } else if (version == 1) {
+            // rtsp://10.0.0.1:8554/test
+            std::string url = std::string();
+            url.append("rtsp://");
+            url.append(ipAddress);
+            url.append(":8554/test");
+            return url;
+        }
+        return "";
     }
 };
 #endif /* StringHelper_hpp */

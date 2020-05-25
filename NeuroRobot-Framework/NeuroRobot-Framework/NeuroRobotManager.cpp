@@ -11,11 +11,11 @@
 #include <iostream>
 #include <boost/thread/thread.hpp>
 
-NeuroRobotManager::NeuroRobotManager(std::string ipAddress, std::string port, StreamErrorOccurredCallback streamCallback, SocketErrorOccurredCallback socketCallback)
+NeuroRobotManager::NeuroRobotManager(std::string ipAddress, std::string port, short version, StreamErrorOccurredCallback streamCallback, SocketErrorOccurredCallback socketCallback)
 : Log("NeuroRobotManager")
 {
     if (!videoAndAudioObtainerObject) {
-        videoAndAudioObtainerObject = new VideoAndAudioObtainer(ipAddress, streamCallback, audioBlocked);
+        videoAndAudioObtainerObject = new VideoAndAudioObtainer(ipAddress, version, streamCallback, audioBlocked);
     }
     
     if (videoAndAudioObtainerObject->stateType == StreamStateNotStarted && !socketBlocked && !socketObject) {

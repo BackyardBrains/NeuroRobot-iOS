@@ -46,9 +46,10 @@ public:
     /// Init workers to communicate with robot.
     /// @param ipAddress IP address of robot
     /// @param port Port used for serial communication
+    /// @param version Version of robot
     /// @param streamCallback Stream callback for notifying about errors while obtaining video and audio data
     /// @param socketCallback Socket callback for notifying about errors while communicating through socket
-    NeuroRobotManager(std::string ipAddress, std::string port, StreamErrorOccurredCallback streamCallback, SocketErrorOccurredCallback socketCallback);
+    NeuroRobotManager(std::string ipAddress, std::string port, short version, StreamErrorOccurredCallback streamCallback, SocketErrorOccurredCallback socketCallback);
     
     /// Start the video, audio and serial data workers.
     void start();

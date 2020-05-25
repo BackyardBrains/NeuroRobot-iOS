@@ -55,11 +55,11 @@ static int interruptFunction(void* ctx)
     return 0;
 }
 
-VideoAndAudioObtainer::VideoAndAudioObtainer(std::string ipAddress, StreamErrorOccurredCallback callback, bool audioBlocked)
+VideoAndAudioObtainer::VideoAndAudioObtainer(std::string ipAddress, short version, StreamErrorOccurredCallback callback, bool audioBlocked)
 : Log("VideoAndAudioObtainer")
 {
     this->errorCallback = callback;
-    this->url = StringHelper::createUrl("admin", "admin", ipAddress);
+    this->url = StringHelper::createUrl("admin", "admin", ipAddress, version);
     this->audioBlocked = audioBlocked;
     logMessage("ip: " + ipAddress);
     setupStreamers();

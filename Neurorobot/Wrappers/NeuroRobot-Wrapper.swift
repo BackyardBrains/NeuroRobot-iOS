@@ -14,6 +14,11 @@ protocol NeuroRobotDelegate: class {
     func updatedSocketState(stateMessage: String)
 }
 
+enum NeuroRobotVersion: Int {
+    case v1 = 0
+    case v2
+}
+
 final class NeuroRobot
 {
     static let shared = NeuroRobot()
@@ -55,9 +60,9 @@ final class NeuroRobot
         return ipAddress
     }
     
-    func connect(ipAddress: String, port: String) {
+    func connect(ipAddress: String, port: String, version: NeuroRobotVersion) {
         self.ipAddress = ipAddress
-        swift_init(ipAddress: ipAddress, port: port)
+        swift_init(ipAddress: ipAddress, port: port, version: version.rawValue)
     }
     
     func start() {
@@ -122,11 +127,11 @@ final class NeuroRobot
 
 private extension NeuroRobot
 {
-    func swift_init(ipAddress: String, port: String) {
+    func swift_init(ipAddress: String, port: String, version: Int) {
         let ipAddressPointer = UnsafeMutablePointer<Int8>(mutating: (ipAddress as NSString).utf8String)
         let portPointer = UnsafeMutablePointer<Int8>(mutating: (port as NSString).utf8String)
         
-        robotObject = swiftBridge_Init(ipAddressPointer, portPointer, { (streamState) in
+        robotObject = swiftBridge_Init(ipAddressPointer, portPointer, Int16(version), { (streamState) in
             if let errorString = NeuroRobot.parseStreamError(error: streamState) {
                 NotificationCenter.default.post(name: NeuroRobot.kStreamStateUpdatedNotificationName, object: errorString)
             }
