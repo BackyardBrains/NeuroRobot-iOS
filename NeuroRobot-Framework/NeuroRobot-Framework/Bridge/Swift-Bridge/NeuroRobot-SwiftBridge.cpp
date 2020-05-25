@@ -36,12 +36,12 @@ extern "C" {
         return robotObject->audioSampleRate();
     }
     
-    const void *swiftBridge_Init(char *ipAddress, char *port, StreamErrorOccurredCallback streamCallback, SocketErrorOccurredCallback socketCallback)
+    const void *swiftBridge_Init(char *ipAddress, char *port, short version, StreamErrorOccurredCallback streamCallback, SocketErrorOccurredCallback socketCallback)
     {
         std::string ipAddressString(ipAddress);
         std::string portString(port);
         
-        NeuroRobotManager *robotObject = new NeuroRobotManager(ipAddressString, portString, streamCallback, socketCallback);
+        NeuroRobotManager *robotObject = new NeuroRobotManager(ipAddressString, portString, version, streamCallback, socketCallback);
         
         return (void *)robotObject;
     }

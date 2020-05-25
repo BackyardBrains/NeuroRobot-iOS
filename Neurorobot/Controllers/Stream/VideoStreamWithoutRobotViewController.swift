@@ -68,6 +68,12 @@ final class VideoStreamWithoutRobotViewController: BaseStreamViewController {
     }
     
     private func updateVideo(_ videoFrame: UIImage) {
+        var videoFrame = videoFrame
+//        if #available(iOS 13.0, *), let cgImage = videoFrame.cgImage!.balance() {
+//            videoFrame = UIImage(cgImage: cgImage)
+//        } else {
+//            // Fallback on earlier versions
+//        }
         
         guard let images = NeurorobotImage.makeSquareImages(image: videoFrame) else { return }
         videoStreamView.setVideo(images: images)

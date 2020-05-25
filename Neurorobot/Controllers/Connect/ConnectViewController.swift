@@ -14,6 +14,7 @@ class ConnectViewController: BaseViewController {
     @IBOutlet weak var ipAddressTextField   : UITextField!
     @IBOutlet weak var portTextField        : UITextField!
     @IBOutlet weak var activityIndicator    : UIActivityIndicatorView!
+    @IBOutlet weak var segmentedControl     : UISegmentedControl!
     
     @IBOutlet weak var connectButton: UIButton!
     override func viewDidLoad() {
@@ -35,6 +36,7 @@ class ConnectViewController: BaseViewController {
 }
 
 private extension ConnectViewController {
+    
     @IBAction func connectButtonTapped(_ sender: Any) {
         
         activityIndicator.startAnimating()
@@ -43,8 +45,13 @@ private extension ConnectViewController {
             self.connectButton.alpha = 0
         }
         
+        guard let version = NeuroRobotVersion(rawValue: segmentedControl.selectedSegmentIndex) else {
+            AlertBanner.shared.showError(message: "Choose the correct robot version")
+            return
+        }
+        
         let vc = VideoStreamViewController.loadFromNib()
-        vc.setupConnection(ip: ipAddressTextField.text!, port: portTextField.text!, completionBlock: { [weak self] (errorMessage) in
+        vc.setupConnection(ip: ipAddressTextField.text!, port: portTextField.text!, version: version, completionBlock: { [weak self] (errorMessage) in
             DispatchQueue.main.async {
                 self?.activityIndicator.stopAnimating()
                 self?.view.isUserInteractionEnabled = true

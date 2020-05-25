@@ -24,4 +24,8 @@ extension UIColor {
     @nonobjc class var appYellow: UIColor {
         return UIColor(r: 230, g: 153, b: 77)
     }
+    
+    @nonobjc class var darkGreen: UIColor {
+        return UIColor(r: 0, g: 100, b: 0)
+    }
 }

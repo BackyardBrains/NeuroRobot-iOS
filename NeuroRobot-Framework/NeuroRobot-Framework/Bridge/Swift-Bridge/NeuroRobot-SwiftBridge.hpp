@@ -21,7 +21,7 @@ extern "C" {
     const int swiftBridge_videoHeight(const void *object);
     const unsigned int swiftBridge_audioSampleRate(const void *object);
 
-    const void *swiftBridge_Init(char *ipAddress, char *port, StreamErrorOccurredCallback errorCallback, SocketErrorOccurredCallback socketCallback);
+    const void *swiftBridge_Init(char *ipAddress, char *port, short version, StreamErrorOccurredCallback streamCallback, SocketErrorOccurredCallback socketCallback);
     const void swiftBridge_start(const void *object);
     const uint8_t *swiftBridge_readVideo(const void *object);
     const void swiftBridge_stop(const void *object);

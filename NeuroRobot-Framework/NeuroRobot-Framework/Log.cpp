@@ -12,7 +12,7 @@
 #include "Log.h"
 #ifdef XCODE
     #include "Bridge/Helpers/StringHelper.hpp"
-#else§
+#else
     #include "Helpers/StringHelper.hpp"
 #endif
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		468CC3943FDC73E9C809D933 /* Pods_Neurorobot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288E6DBFE20A9BBF8982EF09 /* Pods_Neurorobot.framework */; };
 		74A89AC72454937000F8735F /* CoreGraphics+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A89AC62454937000F8735F /* CoreGraphics+Additions.swift */; };
+		74F03AC7246AB87500AD0A24 /* ImageBalancing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F03AC6246AB87500AD0A24 /* ImageBalancing.swift */; };
 		9D0B5B3C2340CD4D0017BD74 /* AlertBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0B5B3B2340CD4D0017BD74 /* AlertBanner.swift */; };
 		9D0B5B3E234109A30017BD74 /* NeurorobotImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0B5B3D234109A30017BD74 /* NeurorobotImage.swift */; };
 		9D1B77EF231A6C7E00E2258E /* hackForiPhone5.c in Sources */ = {isa = PBXBuildFile; fileRef = 9D1B77EE231A6C7E00E2258E /* hackForiPhone5.c */; };
@@ -389,6 +390,7 @@
 		6433B82D04BFDFDA2EA881E9 /* Pods-NeurorobotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeurorobotTests.release.xcconfig"; path = "Target Support Files/Pods-NeurorobotTests/Pods-NeurorobotTests.release.xcconfig"; sourceTree = "<group>"; };
 		6D10BE879AE523240DA4364E /* Pods-NeurorobotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeurorobotTests.debug.xcconfig"; path = "Target Support Files/Pods-NeurorobotTests/Pods-NeurorobotTests.debug.xcconfig"; sourceTree = "<group>"; };
 		74A89AC62454937000F8735F /* CoreGraphics+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Additions.swift"; sourceTree = "<group>"; };
+		74F03AC6246AB87500AD0A24 /* ImageBalancing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBalancing.swift; sourceTree = "<group>"; };
 		81FD5EE340082278341C0CF3 /* Pods-Neurorobot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neurorobot.debug.xcconfig"; path = "Target Support Files/Pods-Neurorobot/Pods-Neurorobot.debug.xcconfig"; sourceTree = "<group>"; };
 		8A45043F79EB858AEC2AC913 /* Pods-Neuro RobotUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neuro RobotUITests.debug.xcconfig"; path = "Target Support Files/Pods-Neuro RobotUITests/Pods-Neuro RobotUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D003D77231A749D005603A8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -894,6 +896,7 @@
 				B12CA5F624334541006C7606 /* API Manager */,
 				B12CA5F924334572006C7606 /* Extensions */,
 				B17D64C02434A9CE0011DD12 /* DictionaryCodable.swift */,
+				74F03AC6246AB87500AD0A24 /* ImageBalancing.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1323,6 +1326,7 @@
 				B18C150C2421344C0095E6C8 /* UIDeviceOrientation+Additions.swift in Sources */,
 				74A89AC72454937000F8735F /* CoreGraphics+Additions.swift in Sources */,
 				B1CE7D4D23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.swift in Sources */,
+				74F03AC7246AB87500AD0A24 /* ImageBalancing.swift in Sources */,
 				B1BEADA124238C2F008B2FCF /* Coordinate.swift in Sources */,
 				9D834DF3234620FC00BBBD62 /* BrainActivityRasterView.swift in Sources */,
 				9D5BDE0323191C2700CA51CC /* BaseNavigationViewController.swift in Sources */,

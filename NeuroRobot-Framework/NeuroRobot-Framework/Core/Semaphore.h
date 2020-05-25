@@ -14,7 +14,8 @@
 #ifdef __APPLE__
     #include <dispatch/dispatch.h>
 #else
-    #include <semaphore.h>
+    #define WIN32_LEAN_AND_MEAN
+    #include <Windows.h>
 #endif
 
 class Semaphore {
@@ -24,7 +25,7 @@ private:
     #ifdef __APPLE__
         dispatch_semaphore_t semaphoreMutex;
     #else
-        sem_t semaphoreMutex;
+        HANDLE semaphoreMutex;
     #endif
     
 public:

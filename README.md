@@ -136,7 +136,8 @@ run `git clone https://github.com/FFmpeg/FFmpeg.git`
 Edit the file `libavformat/rtpdec.c`. Line number 323: `rtcp_bytes /= 50;`, it should be: `rtcp_bytes /= 5;`. This is because of sending receive report more frequent.    
 Commands need to run in terminal from ffmpeg folder.  
 If you don't set `--prefix`, library will be in `/usr/lib`  
-`./configure --enable-shared --prefix=./install`      
+`./configure --enable-shared --prefix=./install`
+if the error occurs, maybe you have to install yasm, command: `brew install yasm`  
 `make`  
 `make install`    
 

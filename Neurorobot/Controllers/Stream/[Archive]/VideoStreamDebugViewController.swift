@@ -189,7 +189,7 @@ final class VideoStreamDebugViewController: BaseStreamViewController {
         send(leftPWM: leftPWM, rightPWM: rightPWM, toneFrequency: 0)
     }
     
-    func setupConnection(ip: String, port: String, completionBlock: ((_ : String?) -> ())?) {
+    func setupConnection(ip: String, port: String, version: NeuroRobotVersion, completionBlock: ((_ : String?) -> ())?) {
         self.ipAddress = ip
         self.port = port
         
@@ -197,7 +197,7 @@ final class VideoStreamDebugViewController: BaseStreamViewController {
         initialCompletionBlock = completionBlock
         
         DispatchQueue.global().async { [unowned self] in
-            NeuroRobot.shared.connect(ipAddress: self.ipAddress, port: self.port)
+            NeuroRobot.shared.connect(ipAddress: self.ipAddress, port: self.port, version: version)
         }
     }
     

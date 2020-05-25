@@ -13,7 +13,7 @@
 #include "Macros.h"
 #include "SharedMemory.h"
 #include "Log.h"
-#include "Semaphore.h"
+#include "Core/Semaphore.h"
 
 #ifdef MATLAB
     #include "TypeDefs.h"
