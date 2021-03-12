@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>991668137372-bb40dbups5i1ttuqm4fj5git31ksn8i4.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.991668137372-bb40dbups5i1ttuqm4fj5git31ksn8i4</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAofPCmS1atvegSIvOCyFQDuYJeljYjUGc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>991668137372</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.backyardbrains.neurorobot</string>
+	<key>PROJECT_ID</key>
+	<string>neuro-robot</string>
+	<key>STORAGE_BUCKET</key>
+	<string>neuro-robot.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<true/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:991668137372:ios:d69e74a7d0cfbf196f2c59</string>
+	<key>DATABASE_URL</key>
+	<string>https://neuro-robot.firebaseio.com</string>
+</dict>
+</plist>
