@@ -43,11 +43,6 @@ const bool*** brain_getVisPrefs(const void* object, size_t *numberOfNeurons, siz
 /// Helpers
 const void brain_getSpectrum(const int16_t* audioData, const int numberOfSamples, int sampleRate, float *amplitude, float *frequency, int *count);
 
-typedef enum : int {
-    ColorSpaceRGB = 0,
-    ColorSpaceBGRA,
-} ColorSpace;
-
 #ifdef __cplusplus
 }
 #endif

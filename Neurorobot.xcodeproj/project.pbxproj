@@ -152,10 +152,8 @@
 		74B1A7C525F90709004FEA2A /* Brain_Bridge_Tests.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Brain_Bridge_Tests.hpp; sourceTree = "<group>"; };
 		74B1A7C625F90711004FEA2A /* Brain_Brigde.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Brain_Brigde.hpp; sourceTree = "<group>"; };
 		74B1A7C725F9071C004FEA2A /* libBrain-Framework.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libBrain-Framework.a"; sourceTree = "<group>"; };
-		74B1A7C925F9072A004FEA2A /* StringHelper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StringHelper.hpp; sourceTree = "<group>"; };
 		74B1A7CA25F90735004FEA2A /* libNeuroRobot-Framework.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libNeuroRobot-Framework.a"; sourceTree = "<group>"; };
 		74B1A7CC25F9073C004FEA2A /* NeuroRobot-SwiftBridge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "NeuroRobot-SwiftBridge.hpp"; sourceTree = "<group>"; };
-		74B1A7CD25F90743004FEA2A /* AudioHelper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AudioHelper.hpp; sourceTree = "<group>"; };
 		74B1A7CE25F9074A004FEA2A /* TypeDefs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeDefs.h; sourceTree = "<group>"; };
 		74B6858725D59740008C8D18 /* Braitenberg.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Braitenberg.mat; sourceTree = "<group>"; };
 		74B6859425D59744008C8D18 /* Archimedes.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Archimedes.mat; sourceTree = "<group>"; };
@@ -311,21 +309,19 @@
 			path = "Files handler";
 			sourceTree = "<group>";
 		};
-		74B1A7C225F90609004FEA2A /* 3rd Party Libraries */ = {
+		74B1A7C225F90609004FEA2A /* 3rd-Party-Libraries */ = {
 			isa = PBXGroup;
 			children = (
 				74B1A7C325F906DD004FEA2A /* include */,
 				74B1A7C425F906E2004FEA2A /* lib */,
 			);
-			path = "3rd Party Libraries";
+			path = "3rd-Party-Libraries";
 			sourceTree = "<group>";
 		};
 		74B1A7C325F906DD004FEA2A /* include */ = {
 			isa = PBXGroup;
 			children = (
-				74B1A7CD25F90743004FEA2A /* AudioHelper.hpp */,
 				74B1A7CC25F9073C004FEA2A /* NeuroRobot-SwiftBridge.hpp */,
-				74B1A7C925F9072A004FEA2A /* StringHelper.hpp */,
 				74B1A7CE25F9074A004FEA2A /* TypeDefs.h */,
 				74B1A7C525F90709004FEA2A /* Brain_Bridge_Tests.hpp */,
 				74B1A7C625F90711004FEA2A /* Brain_Brigde.hpp */,
@@ -384,7 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				9D003D77231A749D005603A8 /* README.md */,
-				74B1A7C225F90609004FEA2A /* 3rd Party Libraries */,
+				74B1A7C225F90609004FEA2A /* 3rd-Party-Libraries */,
 				B12CA5F824334561006C7606 /* Core */,
 				9D5BDD9B23191B4000CA51CC /* Neurorobot */,
 				B133B13323817527008B8CEE /* NeurorobotTests */,
@@ -1211,7 +1207,7 @@
 					"PB_ENABLE_MALLOC=1",
 				);
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/3rd\\ Party\\ Libraries/library/include",
+					"$(PROJECT_DIR)/3rd-Party-Libraries/library/include",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Neurorobot/Info.plist;
@@ -1220,9 +1216,8 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/3rd\\ Party\\ Libraries/library/lib",
-					"$(PROJECT_DIR)/3rd\\ Party\\ Libraries/lib",
-					"$(PROJECT_DIR)/3rd\\ Party\\ Libraries/lib",
+					"$(PROJECT_DIR)/3rd-Party-Libraries/library/lib",
+					"$(PROJECT_DIR)/3rd-Party-Libraries/lib",
 				);
 				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = (
@@ -1258,7 +1253,7 @@
 					"PB_ENABLE_MALLOC=1",
 				);
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/3rd\\ Party\\ Libraries/library/include",
+					"$(PROJECT_DIR)/3rd-Party-Libraries/library/include",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Neurorobot/Info.plist;
@@ -1267,9 +1262,8 @@
 					"@executable_path/Frameworks",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/3rd\\ Party\\ Libraries/library/lib",
-					"$(PROJECT_DIR)/3rd\\ Party\\ Libraries/lib",
-					"$(PROJECT_DIR)/3rd\\ Party\\ Libraries/lib",
+					"$(PROJECT_DIR)/3rd-Party-Libraries/library/lib",
+					"$(PROJECT_DIR)/3rd-Party-Libraries/lib",
 				);
 				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = (
