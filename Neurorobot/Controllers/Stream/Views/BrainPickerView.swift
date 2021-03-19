@@ -55,7 +55,6 @@ final class BrainPickerView: UIView {
         backgroundColor = .lightGray
         translatesAutoresizingMaskIntoConstraints = false
         
-        
         addSubview(doneButton)
         doneButton.translatesAutoresizingMaskIntoConstraints = false
         doneButton.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor, constant: -20).isActive = true

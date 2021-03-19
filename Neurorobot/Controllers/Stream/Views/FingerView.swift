@@ -8,15 +8,6 @@
 
 import UIKit
 
-extension CGPoint {
-    static func -(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
-        return CGPoint(x: lhs.x - rhs.x, y: lhs.y - rhs.y)
-    }
-    static func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
-        return CGPoint(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
-    }
-}
-
 final class Vector {
     public var x            : CGFloat = 0
     public var y            : CGFloat = 0
@@ -172,6 +163,5 @@ final class FingerView: UIView {
         DispatchQueue.main.async { [weak self] in
             self?.intensityCallback?(self!.vector, radius)
         }
-        
     }
 }

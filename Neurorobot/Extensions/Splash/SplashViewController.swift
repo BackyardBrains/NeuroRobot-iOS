@@ -19,7 +19,7 @@ class SplashViewController: BaseViewController {
     
     private func download() {
         
-        guard checkInternet() else {
+        guard checkInternet(), AppSettings.shared.isBrainAutoDownloadEnabled else {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 appDelegate.goToConnect()
             }

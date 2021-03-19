@@ -19,8 +19,8 @@ enum NeuroRobotVersion: Int {
     case v2
 }
 
-final class NeuroRobot
-{
+final class NeuroRobot {
+    
     static let shared = NeuroRobot()
     weak var delegate: NeuroRobotDelegate?
     
@@ -97,9 +97,59 @@ final class NeuroRobot
         swift_writeSerial(message: message)
     }
     
+    /// Send audio to robot's speaker
+    /// - Parameters:
+    ///   - audioData: 14bit wav (raw) data, 8kHz
+    ///   - numberOfBytes: number of bytes
     func sendAudio(audioData: UnsafeMutablePointer<Int16>, numberOfBytes: Int) {
         guard let _ = robotObject else { return }
         swift_sendAudio(audioData: audioData, numberOfBytes: numberOfBytes)
+    }
+    
+    /// Send audio to robot's speaker
+    /// - Parameter url: url to wav file, 8kHz
+    func sendAudio(url: URL) {
+//        guard let audioPlayer = try? AVAudioPlayer(contentsOf: url) else { fatalError("There is no sample rate") }
+//        guard let sampleRate = audioPlayer.settings[AVSampleRateKey] as? Int else { fatalError("There is no sample rate") }
+        
+        let offset = 4096
+        guard let data = try? Data(contentsOf: url) else { return }
+        let size = data.count - offset
+        guard size > 0 else { return }
+        
+        let pointer = UnsafeMutablePointer<UInt8>.allocate(capacity: size)
+        data.advanced(by: offset).copyBytes(to: pointer, count: size)
+        
+        let audioData = UnsafeMutablePointer<Int16>.allocate(capacity: size / 2)
+        
+        audioData.assign(from: pointer.withMemoryRebound(to: Int16.self, capacity: size / 2, { (pointer) -> UnsafeMutablePointer<Int16> in
+            return pointer
+        }), count: size / 2)
+        
+        let audioData2 = UnsafeMutablePointer<Int16>.allocate(capacity: Int(size / 2))
+        
+        for i in 0..<size / 2 {
+            let value = Int16(audioData.advanced(by: i).pointee)
+            audioData2.advanced(by: i).pointee = Int16(Double(value) / Double(INT16_MAX) * 8158)
+        }
+        NeuroRobot.shared.sendAudio(audioData: audioData2, numberOfBytes: size)
+        
+        pointer.deallocate()
+        audioData.deallocate()
+        audioData2.deallocate()
+    }
+    
+    func sendBeepAudio() {
+        let foo3 = UnsafeMutablePointer<Int16>.allocate(capacity: Int(10000))
+        for i in 0..<10000 {
+            let multiplier = Double(i % 10) / Double(10)
+            let sinus = sin(2 * Double.pi * multiplier) * 8158
+            let value = Int16(sinus)
+            print(value)
+            foo3.advanced(by: i).pointee = value
+        }
+        NeuroRobot.shared.sendAudio(audioData: foo3, numberOfBytes: 10000)
+        foo3.deallocate()
     }
     
     func readAudio() -> Data? {

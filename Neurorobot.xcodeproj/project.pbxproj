@@ -8,18 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		2E1FC06A2C8BBD2E53E97172 /* Pods_Neurorobot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288E6DBFE20A9BBF8982EF09 /* Pods_Neurorobot.framework */; };
+		74067D652603986E00B54592 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74067D642603986E00B54592 /* Sounds.swift */; };
 		741D560A25F79DF800B05A14 /* APIManager+Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741D560925F79DF800B05A14 /* APIManager+Brain.swift */; };
 		741D561025F7A85100B05A14 /* FilesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741D560F25F7A85100B05A14 /* FilesHandler.swift */; };
 		741D561825F7AB4B00B05A14 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741D561725F7AB4B00B05A14 /* General.swift */; };
 		741D567425F7B0F300B05A14 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741D567325F7B0F300B05A14 /* Message.swift */; };
 		741D567925F7B1BA00B05A14 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741D567825F7B1BA00B05A14 /* AppSettings.swift */; };
 		741D567E25F7B1DE00B05A14 /* UserDefaults+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741D567D25F7B1DE00B05A14 /* UserDefaults+Additions.swift */; };
+		7430316A2601066300D5BECF /* alarm.mp3 in Copy Sounds */ = {isa = PBXBuildFile; fileRef = 743031302600C12C00D5BECF /* alarm.mp3 */; };
 		7465FD9425C047B600A2CDC3 /* Data+CMSampleBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7465FD9325C047B600A2CDC3 /* Data+CMSampleBuffer.swift */; };
 		746C1B4225B1DFD7007B2D62 /* FFTBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746C1B4125B1DFD7007B2D62 /* FFTBarView.swift */; };
+		747F1B272601069300A53292 /* bark.mp3 in Copy Sounds */ = {isa = PBXBuildFile; fileRef = 7430312B2600C12B00D5BECF /* bark.mp3 */; };
+		747F1B2B2601069400A53292 /* kitten.mp3 in Copy Sounds */ = {isa = PBXBuildFile; fileRef = 7430312F2600C12C00D5BECF /* kitten.mp3 */; };
+		747F1B2C2601069700A53292 /* mex.mp3 in Copy Sounds */ = {isa = PBXBuildFile; fileRef = 7430312E2600C12B00D5BECF /* mex.mp3 */; };
+		747F1B302601069900A53292 /* monkey.mp3 in Copy Sounds */ = {isa = PBXBuildFile; fileRef = 743031292600C12B00D5BECF /* monkey.mp3 */; };
+		747F1B342601069B00A53292 /* panther.mp3 in Copy Sounds */ = {isa = PBXBuildFile; fileRef = 7430312A2600C12B00D5BECF /* panther.mp3 */; };
+		747F1B382601069D00A53292 /* pounder.mp3 in Copy Sounds */ = {isa = PBXBuildFile; fileRef = 7430312D2600C12B00D5BECF /* pounder.mp3 */; };
+		747F1B3F260106A100A53292 /* wolf.mp3 in Copy Sounds */ = {isa = PBXBuildFile; fileRef = 7430312C2600C12B00D5BECF /* wolf.mp3 */; };
+		747F1B4426010E1200A53292 /* Int+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747F1B4326010E1200A53292 /* Int+Additions.swift */; };
 		74A3533225FA917900527CC0 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A3533125FA917900527CC0 /* UIView+Constraints.swift */; };
 		74A89AC72454937000F8735F /* CoreGraphics+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A89AC62454937000F8735F /* CoreGraphics+Additions.swift */; };
 		74B1A7D225F907F7004FEA2A /* libBrain-Framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B1A7C725F9071C004FEA2A /* libBrain-Framework.a */; };
 		74B1A7D325F907F9004FEA2A /* libNeuroRobot-Framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B1A7CA25F90735004FEA2A /* libNeuroRobot-Framework.a */; };
+		74BC0A312604B54B00DBC434 /* mex.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74BC0A292604B54800DBC434 /* mex.wav */; };
+		74BC0A322604B54B00DBC434 /* wolf.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74BC0A2A2604B54800DBC434 /* wolf.wav */; };
+		74BC0A332604B54B00DBC434 /* bark.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74BC0A2B2604B54900DBC434 /* bark.wav */; };
+		74BC0A342604B54B00DBC434 /* kitten.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74BC0A2C2604B54900DBC434 /* kitten.wav */; };
+		74BC0A352604B54B00DBC434 /* monkey_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74BC0A2D2604B54A00DBC434 /* monkey_1.wav */; };
+		74BC0A362604B54B00DBC434 /* panther.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74BC0A2E2604B54A00DBC434 /* panther.wav */; };
+		74BC0A372604B54B00DBC434 /* pounder.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74BC0A2F2604B54A00DBC434 /* pounder.wav */; };
+		74BC0A382604B54B00DBC434 /* alarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74BC0A302604B54B00DBC434 /* alarm.wav */; };
+		74BC0A402604B57100DBC434 /* mex.wav in Copy Sounds wav */ = {isa = PBXBuildFile; fileRef = 74BC0A292604B54800DBC434 /* mex.wav */; };
+		74BC0A442604B57D00DBC434 /* alarm.wav in Copy Sounds wav */ = {isa = PBXBuildFile; fileRef = 74BC0A302604B54B00DBC434 /* alarm.wav */; };
+		74BC0A482604B57F00DBC434 /* bark.wav in Copy Sounds wav */ = {isa = PBXBuildFile; fileRef = 74BC0A2B2604B54900DBC434 /* bark.wav */; };
+		74BC0A4C2604B58100DBC434 /* kitten.wav in Copy Sounds wav */ = {isa = PBXBuildFile; fileRef = 74BC0A2C2604B54900DBC434 /* kitten.wav */; };
+		74BC0A502604B58400DBC434 /* monkey_1.wav in Copy Sounds wav */ = {isa = PBXBuildFile; fileRef = 74BC0A2D2604B54A00DBC434 /* monkey_1.wav */; };
+		74BC0A542604B58600DBC434 /* panther.wav in Copy Sounds wav */ = {isa = PBXBuildFile; fileRef = 74BC0A2E2604B54A00DBC434 /* panther.wav */; };
+		74BC0A582604B58700DBC434 /* pounder.wav in Copy Sounds wav */ = {isa = PBXBuildFile; fileRef = 74BC0A2F2604B54A00DBC434 /* pounder.wav */; };
+		74BC0A5C2604B58900DBC434 /* wolf.wav in Copy Sounds wav */ = {isa = PBXBuildFile; fileRef = 74BC0A2A2604B54800DBC434 /* wolf.wav */; };
 		74DC211C25F642CC0055C6F5 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DC211B25F642CC0055C6F5 /* DownloadService.swift */; };
 		74DC212225F642D70055C6F5 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DC212125F642D70055C6F5 /* Download.swift */; };
 		74DC212A25F642FB0055C6F5 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DC212925F642FB0055C6F5 /* APIError.swift */; };
@@ -124,6 +150,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		743031662601063800D5BECF /* Copy Sounds */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Sounds;
+			dstSubfolderSpec = 7;
+			files = (
+				7430316A2601066300D5BECF /* alarm.mp3 in Copy Sounds */,
+				747F1B272601069300A53292 /* bark.mp3 in Copy Sounds */,
+				747F1B2B2601069400A53292 /* kitten.mp3 in Copy Sounds */,
+				747F1B2C2601069700A53292 /* mex.mp3 in Copy Sounds */,
+				747F1B302601069900A53292 /* monkey.mp3 in Copy Sounds */,
+				747F1B342601069B00A53292 /* panther.mp3 in Copy Sounds */,
+				747F1B382601069D00A53292 /* pounder.mp3 in Copy Sounds */,
+				747F1B3F260106A100A53292 /* wolf.mp3 in Copy Sounds */,
+			);
+			name = "Copy Sounds";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74BC0A3F2604B56400DBC434 /* Copy Sounds wav */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Sounds/wav;
+			dstSubfolderSpec = 7;
+			files = (
+				74BC0A442604B57D00DBC434 /* alarm.wav in Copy Sounds wav */,
+				74BC0A482604B57F00DBC434 /* bark.wav in Copy Sounds wav */,
+				74BC0A4C2604B58100DBC434 /* kitten.wav in Copy Sounds wav */,
+				74BC0A402604B57100DBC434 /* mex.wav in Copy Sounds wav */,
+				74BC0A502604B58400DBC434 /* monkey_1.wav in Copy Sounds wav */,
+				74BC0A542604B58600DBC434 /* panther.wav in Copy Sounds wav */,
+				74BC0A582604B58700DBC434 /* pounder.wav in Copy Sounds wav */,
+				74BC0A5C2604B58900DBC434 /* wolf.wav in Copy Sounds wav */,
+			);
+			name = "Copy Sounds wav";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1254A8924389BAB00220DE1 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,14 +201,24 @@
 		288E6DBFE20A9BBF8982EF09 /* Pods_Neurorobot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neurorobot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6433B82D04BFDFDA2EA881E9 /* Pods-NeurorobotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeurorobotTests.release.xcconfig"; path = "Target Support Files/Pods-NeurorobotTests/Pods-NeurorobotTests.release.xcconfig"; sourceTree = "<group>"; };
 		6D10BE879AE523240DA4364E /* Pods-NeurorobotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeurorobotTests.debug.xcconfig"; path = "Target Support Files/Pods-NeurorobotTests/Pods-NeurorobotTests.debug.xcconfig"; sourceTree = "<group>"; };
+		74067D642603986E00B54592 /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		741D560925F79DF800B05A14 /* APIManager+Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+Brain.swift"; sourceTree = "<group>"; };
 		741D560F25F7A85100B05A14 /* FilesHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesHandler.swift; sourceTree = "<group>"; };
 		741D561725F7AB4B00B05A14 /* General.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
 		741D567325F7B0F300B05A14 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		741D567825F7B1BA00B05A14 /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		741D567D25F7B1DE00B05A14 /* UserDefaults+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Additions.swift"; sourceTree = "<group>"; };
+		743031292600C12B00D5BECF /* monkey.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = monkey.mp3; sourceTree = "<group>"; };
+		7430312A2600C12B00D5BECF /* panther.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = panther.mp3; sourceTree = "<group>"; };
+		7430312B2600C12B00D5BECF /* bark.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bark.mp3; sourceTree = "<group>"; };
+		7430312C2600C12B00D5BECF /* wolf.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wolf.mp3; sourceTree = "<group>"; };
+		7430312D2600C12B00D5BECF /* pounder.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pounder.mp3; sourceTree = "<group>"; };
+		7430312E2600C12B00D5BECF /* mex.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mex.mp3; sourceTree = "<group>"; };
+		7430312F2600C12C00D5BECF /* kitten.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kitten.mp3; sourceTree = "<group>"; };
+		743031302600C12C00D5BECF /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 		7465FD9325C047B600A2CDC3 /* Data+CMSampleBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+CMSampleBuffer.swift"; sourceTree = "<group>"; };
 		746C1B4125B1DFD7007B2D62 /* FFTBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFTBarView.swift; sourceTree = "<group>"; };
+		747F1B4326010E1200A53292 /* Int+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Additions.swift"; sourceTree = "<group>"; };
 		74A3533125FA917900527CC0 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		74A89AC62454937000F8735F /* CoreGraphics+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+Additions.swift"; sourceTree = "<group>"; };
 		74B1A7C525F90709004FEA2A /* Brain_Bridge_Tests.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Brain_Bridge_Tests.hpp; sourceTree = "<group>"; };
@@ -158,6 +230,14 @@
 		74B6858725D59740008C8D18 /* Braitenberg.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Braitenberg.mat; sourceTree = "<group>"; };
 		74B6859425D59744008C8D18 /* Archimedes.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Archimedes.mat; sourceTree = "<group>"; };
 		74B6859625D59745008C8D18 /* Betsy.mat */ = {isa = PBXFileReference; lastKnownFileType = file; path = Betsy.mat; sourceTree = "<group>"; };
+		74BC0A292604B54800DBC434 /* mex.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mex.wav; sourceTree = "<group>"; };
+		74BC0A2A2604B54800DBC434 /* wolf.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wolf.wav; sourceTree = "<group>"; };
+		74BC0A2B2604B54900DBC434 /* bark.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bark.wav; sourceTree = "<group>"; };
+		74BC0A2C2604B54900DBC434 /* kitten.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = kitten.wav; sourceTree = "<group>"; };
+		74BC0A2D2604B54A00DBC434 /* monkey_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = monkey_1.wav; sourceTree = "<group>"; };
+		74BC0A2E2604B54A00DBC434 /* panther.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = panther.wav; sourceTree = "<group>"; };
+		74BC0A2F2604B54A00DBC434 /* pounder.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pounder.wav; sourceTree = "<group>"; };
+		74BC0A302604B54B00DBC434 /* alarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alarm.wav; sourceTree = "<group>"; };
 		74DC211B25F642CC0055C6F5 /* DownloadService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
 		74DC212125F642D70055C6F5 /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
 		74DC212925F642FB0055C6F5 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -309,6 +389,22 @@
 			path = "Files handler";
 			sourceTree = "<group>";
 		};
+		743031282600C0CB00D5BECF /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				74BC0A282604B54100DBC434 /* wav */,
+				743031302600C12C00D5BECF /* alarm.mp3 */,
+				7430312B2600C12B00D5BECF /* bark.mp3 */,
+				7430312F2600C12C00D5BECF /* kitten.mp3 */,
+				7430312E2600C12B00D5BECF /* mex.mp3 */,
+				743031292600C12B00D5BECF /* monkey.mp3 */,
+				7430312A2600C12B00D5BECF /* panther.mp3 */,
+				7430312D2600C12B00D5BECF /* pounder.mp3 */,
+				7430312C2600C12B00D5BECF /* wolf.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		74B1A7C225F90609004FEA2A /* 3rd-Party-Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +432,21 @@
 				74B1A7CA25F90735004FEA2A /* libNeuroRobot-Framework.a */,
 			);
 			path = lib;
+			sourceTree = "<group>";
+		};
+		74BC0A282604B54100DBC434 /* wav */ = {
+			isa = PBXGroup;
+			children = (
+				74BC0A302604B54B00DBC434 /* alarm.wav */,
+				74BC0A2B2604B54900DBC434 /* bark.wav */,
+				74BC0A2C2604B54900DBC434 /* kitten.wav */,
+				74BC0A292604B54800DBC434 /* mex.wav */,
+				74BC0A2D2604B54A00DBC434 /* monkey_1.wav */,
+				74BC0A2E2604B54A00DBC434 /* panther.wav */,
+				74BC0A2F2604B54A00DBC434 /* pounder.wav */,
+				74BC0A2A2604B54800DBC434 /* wolf.wav */,
+			);
+			path = wav;
 			sourceTree = "<group>";
 		};
 		74DC211A25F642C60055C6F5 /* DownloadService */ = {
@@ -428,8 +539,9 @@
 		9D5BDDAE23191B4F00CA51CC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B18004B5238ACAA600D9AAA1 /* Test files */,
 				9D5BDDC123191B9900CA51CC /* Brains */,
+				743031282600C0CB00D5BECF /* Sounds */,
+				B18004B5238ACAA600D9AAA1 /* Test files */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -527,12 +639,12 @@
 		9D5BDE0F23191C4A00CA51CC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9D5BDE0D23191C4200CA51CC /* FingerView.swift */,
-				9D3EAE60233B4ED900C29A70 /* BrainPickerView.swift */,
-				9D834DEE2345289E00BBBD62 /* BrainActivityView.swift */,
 				9D834DF2234620FC00BBBD62 /* BrainActivityRasterView.swift */,
-				B1CE7D4E23E1B8E4007E45A9 /* VideoStreamView.swift */,
+				9D834DEE2345289E00BBBD62 /* BrainActivityView.swift */,
+				9D3EAE60233B4ED900C29A70 /* BrainPickerView.swift */,
 				746C1B4125B1DFD7007B2D62 /* FFTBarView.swift */,
+				9D5BDE0D23191C4200CA51CC /* FingerView.swift */,
+				B1CE7D4E23E1B8E4007E45A9 /* VideoStreamView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -628,6 +740,7 @@
 				7465FD9325C047B600A2CDC3 /* Data+CMSampleBuffer.swift */,
 				B12CA6052433486E006C7606 /* Dictionary+Additions.swift */,
 				B1C48C21241D05D30049A3F1 /* Error+Additions.swift */,
+				747F1B4326010E1200A53292 /* Int+Additions.swift */,
 				B1BE5C3423F723A7008D73BF /* String+Additions.swift */,
 				B1C48C1D241CF6A60049A3F1 /* UIApplication+Additions.swift */,
 				B1BEADA52423D242008B2FCF /* UIColor+Additions.swift */,
@@ -729,6 +842,7 @@
 				B1380F07240D189800364049 /* AudioStreamer.swift */,
 				B1BEADA024238C2F008B2FCF /* Coordinate.swift */,
 				B1618D442435DA1200B75A5D /* SerialData.swift */,
+				74067D642603986E00B54592 /* Sounds.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -750,6 +864,8 @@
 			buildConfigurationList = 9D5BDDAB23191B4200CA51CC /* Build configuration list for PBXNativeTarget "Neurorobot" */;
 			buildPhases = (
 				A1CDC26DF49D3E80BC611F05 /* [CP] Check Pods Manifest.lock */,
+				743031662601063800D5BECF /* Copy Sounds */,
+				74BC0A3F2604B56400DBC434 /* Copy Sounds wav */,
 				9D5BDD9523191B4000CA51CC /* Sources */,
 				9D5BDD9623191B4000CA51CC /* Frameworks */,
 				9D5BDD9723191B4000CA51CC /* Resources */,
@@ -850,18 +966,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74BC0A322604B54B00DBC434 /* wolf.wav in Resources */,
+				74BC0A342604B54B00DBC434 /* kitten.wav in Resources */,
 				B18004D2238ADDD900D9AAA1 /* test_results.csv in Resources */,
+				74BC0A312604B54B00DBC434 /* mex.wav in Resources */,
+				74BC0A372604B54B00DBC434 /* pounder.wav in Resources */,
 				B149BACD24322B5600974872 /* SplashViewController.xib in Resources */,
+				74BC0A332604B54B00DBC434 /* bark.wav in Resources */,
 				9D5BDDA723191B4200CA51CC /* LaunchScreen.storyboard in Resources */,
 				9D5BDDA423191B4200CA51CC /* Assets.xcassets in Resources */,
 				B18004D1238ADDD900D9AAA1 /* test.csv in Resources */,
 				B1D6E5392440BA9200046773 /* VideoStreamViewController.xib in Resources */,
 				9D5BDDA223191B4000CA51CC /* Main.storyboard in Resources */,
 				9D5BDDFA23191BFB00CA51CC /* LedViewController.xib in Resources */,
+				74BC0A362604B54B00DBC434 /* panther.wav in Resources */,
 				9D5BDE0A23191C3300CA51CC /* VideoStreamDebugViewController.xib in Resources */,
 				9D5BDDF623191BF000CA51CC /* ConnectViewController.xib in Resources */,
 				B1CE7D4C23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.xib in Resources */,
 				9F2D2E042370624000C0FFF4 /* GoogleService-Info.plist in Resources */,
+				74BC0A352604B54B00DBC434 /* monkey_1.wav in Resources */,
+				74BC0A382604B54B00DBC434 /* alarm.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -981,6 +1105,7 @@
 				741D561025F7A85100B05A14 /* FilesHandler.swift in Sources */,
 				B1BEADA82423DB30008B2FCF /* LineView.swift in Sources */,
 				B1BEAD9E242385ED008B2FCF /* NeuronView.swift in Sources */,
+				74067D652603986E00B54592 /* Sounds.swift in Sources */,
 				9D5BDDBF23191B8200CA51CC /* Brain_Wrapper.swift in Sources */,
 				741D561825F7AB4B00B05A14 /* General.swift in Sources */,
 				9D5BDDFB23191BFB00CA51CC /* LedViewController.swift in Sources */,
@@ -991,6 +1116,7 @@
 				B1BEADB2242A5790008B2FCF /* NeuronContactView.swift in Sources */,
 				B18C150C2421344C0095E6C8 /* UIDeviceOrientation+Additions.swift in Sources */,
 				74A89AC72454937000F8735F /* CoreGraphics+Additions.swift in Sources */,
+				747F1B4426010E1200A53292 /* Int+Additions.swift in Sources */,
 				74A3533225FA917900527CC0 /* UIView+Constraints.swift in Sources */,
 				B1CE7D4D23E1A3C0007E45A9 /* VideoStreamWithoutRobotViewController.swift in Sources */,
 				74DC212A25F642FB0055C6F5 /* APIError.swift in Sources */,
@@ -1194,7 +1320,7 @@
 				CODE_SIGN_ENTITLEMENTS = Neurorobot/Neurorobot.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = MLGRKD657P;
 				ENABLE_BITCODE = YES;
@@ -1241,7 +1367,7 @@
 				CODE_SIGN_ENTITLEMENTS = Neurorobot/Neurorobot.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = MLGRKD657P;
 				ENABLE_BITCODE = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (

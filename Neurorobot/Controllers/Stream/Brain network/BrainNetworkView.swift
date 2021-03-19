@@ -196,7 +196,7 @@ class BrainNetworkView: UIView {
                     var startPoint = neuronViews[i].center
                     var endPoint = contactViews[j].center
                     if [1, 2, 3, 5].contains(j + 1) {
-                        /// Sensors, switch the places of start and end points.
+                        // Sensors, switch the places of start and end points.
                         startPoint = contactViews[j].center
                         endPoint = neuronViews[i].center
                     }
@@ -204,17 +204,22 @@ class BrainNetworkView: UIView {
                     var isDiamond = false
                     var color: UIColor = .white
                     
+                    // Indicate synapse filter (add rich neuron symbols here)
                     if [0, 1].contains(j), let visPrefs = visPrefs {
-                        if visPrefs[i][0][j] || visPrefs[i][1][j] {
-                            // ret diamond
-                            color = .red
-                        } else if visPrefs[i][2][j] || visPrefs[i][3][j] {
-                            // green diamond
-                            color = .green
-                        } else if visPrefs[i][4][j] || visPrefs[i][5][j] {
-                            // blue diamond
-                            color = .blue
+                        
+                        for z in 0..<visPrefs.first!.count where visPrefs[i][z][j] {
+                            if [0, 1].contains(z) {
+                                // ret diamond
+                                color = .red
+                            } else if [2, 3].contains(z) {
+                                // green diamond
+                                color = UIColor(red: 0, green: 0.8, blue: 0, alpha: 1)
+                            } else if [4, 5].contains(z) {
+                                // blue diamond
+                                color = .blue
+                            }
                         }
+                        
                         isDiamond = true
                     }
                     

@@ -71,13 +71,10 @@ final class Brain
         guard let brainObject = brainObject else { return }
         guard isVideoSizeSet else { throw BrainError.videoSizeNotSet }
         
-//        let errorPtr = UnsafeMutablePointer<Int32>.allocate(capacity: 1)
         let pathToMatFilePointer = UnsafeMutablePointer<Int8>(mutating: (pathToMatFile as NSString).utf8String)
         
         let error = brain_load(brainObject, pathToMatFilePointer)
         
-//        let error = Int(errorPtr.pointee)
-//        errorPtr.deallocate()
         if error != 0 {
             throw BrainError.cannotLoadBrain
         }
@@ -136,6 +133,10 @@ final class Brain
         return Int(brain_getRightTorque(brainObject));
     }
     
+    /// Obtains tone frequency.
+    /// Sometimes is used first digit (of frequency) as index of audio samples stored in Sounds folder. It depends on AppSettings.shared.isVocalEnabled.
+    ///
+    /// - Returns: Audio frequency
     func getSpeakerTone() -> Int {
         guard let brainObject = brainObject else { return 0 }
         

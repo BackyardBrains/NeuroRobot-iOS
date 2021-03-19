@@ -19,6 +19,7 @@
                 <outlet property="portTextField" destination="2XX-yk-dDe" id="TYL-r7-riR"/>
                 <outlet property="segmentedControl" destination="Uy1-sE-IYX" id="F4V-s3-4Fb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="vocalSwitch" destination="q5C-Wq-O94" id="FAk-rv-6WL"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -135,6 +136,12 @@
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="lUd-qw-buY">
                     <rect key="frame" x="197" y="738.5" width="20" height="20"/>
                 </activityIndicatorView>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q5C-Wq-O94">
+                    <rect key="frame" x="182.5" y="628" width="51" height="31"/>
+                    <connections>
+                        <action selector="vocalSwitchChangedValue:" destination="-1" eventType="valueChanged" id="Cfa-LU-OYB"/>
+                    </connections>
+                </switch>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -144,6 +151,8 @@
                 <constraint firstItem="zIO-SF-5lo" firstAttribute="top" secondItem="ar3-t7-O8Z" secondAttribute="bottom" constant="15" id="6PX-Gc-DEL"/>
                 <constraint firstItem="zIO-SF-5lo" firstAttribute="centerX" secondItem="ar3-t7-O8Z" secondAttribute="centerX" id="7gn-dS-LH6"/>
                 <constraint firstItem="ar3-t7-O8Z" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="FbL-bB-hPc"/>
+                <constraint firstItem="q5C-Wq-O94" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="GI8-1B-sRy"/>
+                <constraint firstItem="q5C-Wq-O94" firstAttribute="top" secondItem="O03-ub-TEA" secondAttribute="bottom" constant="30" id="LLt-YH-P3d"/>
                 <constraint firstItem="5fH-kc-bvk" firstAttribute="top" secondItem="zIO-SF-5lo" secondAttribute="bottom" constant="50" id="U6h-M9-dqt"/>
                 <constraint firstItem="Bnk-xP-g6t" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="ZXr-x1-D6y"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Bnk-xP-g6t" secondAttribute="bottom" constant="100" id="bi3-Js-INh"/>

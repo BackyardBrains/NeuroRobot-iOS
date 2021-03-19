@@ -146,20 +146,19 @@ final class BrainActivityRasterView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        if canSetup {
-            canSetup = false
-            if !didSetup {
-                didSetup = true
-
-                relativeTimelimeOriginX = scrollView.frame.width - 50
-                scrollView.contentSize = CGSize(width: self.scrollView.frame.width, height: self.scrollView.frame.height)
-                offsetForOneInterval = scrollView.frame.width / 1000
-                offsetForOneSecond = scrollView.frame.width / 10
-                spreadGraph()
-
-                didConfigured = true
-            }
-        }
+        guard canSetup else { return }
+        canSetup = false
+        
+        guard !didSetup else { return }
+        didSetup = true
+        
+        relativeTimelimeOriginX = scrollView.frame.width - 50
+        scrollView.contentSize = CGSize(width: self.scrollView.frame.width, height: self.scrollView.frame.height)
+        offsetForOneInterval = scrollView.frame.width / 1000
+        offsetForOneSecond = scrollView.frame.width / 10
+        spreadGraph()
+        
+        didConfigured = true
     }
 
     private func spreadGraph() {

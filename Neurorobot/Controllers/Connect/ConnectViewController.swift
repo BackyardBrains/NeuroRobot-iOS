@@ -11,14 +11,15 @@ import UIKit
 final class ConnectViewController: BaseViewController {
 
     // UI
-    @IBOutlet weak var ipAddressTextField   : UITextField!
-    @IBOutlet weak var portTextField        : UITextField!
-    @IBOutlet weak var activityIndicator    : UIActivityIndicatorView!
-    @IBOutlet weak var segmentedControl     : UISegmentedControl!
-    @IBOutlet weak var downloadButton       : UIButton!
-    @IBOutlet weak var downloadActivityIndicator : UIActivityIndicatorView!
-    
+    @IBOutlet weak var ipAddressTextField: UITextField!
+    @IBOutlet weak var portTextField: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var downloadButton: UIButton!
+    @IBOutlet weak var downloadActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var connectButton: UIButton!
+    @IBOutlet weak var vocalSwitch: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,13 +32,19 @@ final class ConnectViewController: BaseViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    func sutupUI() {
+    private func sutupUI() {
+        vocalSwitch.isOn = AppSettings.shared.isVocalEnabled
         ipAddressTextField.text = "192.168.100.1"
         portTextField.text = "80"
     }
 }
 
+// MARK: - Actions
 private extension ConnectViewController {
+    
+    @IBAction func vocalSwitchChangedValue(_ sender: UISwitch) {
+        AppSettings.shared.isVocalEnabled = sender.isOn
+    }
     
     @IBAction func connectButtonTapped(_ sender: Any) {
         

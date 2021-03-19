@@ -17,4 +17,11 @@ final class AppSettings {
         get { return UserDefaults.get(key: "didLogin") as Bool? ?? false }
         set { UserDefaults.set(key: "didLogin", value: newValue) }
     }
+    
+    var isVocalEnabled: Bool {
+        get { return UserDefaults.get(key: "isVocalEnabled") as Bool? ?? false }
+        set { UserDefaults.set(key: "isVocalEnabled", value: newValue) }
+    }
+    
+    var isBrainAutoDownloadEnabled = false
 }

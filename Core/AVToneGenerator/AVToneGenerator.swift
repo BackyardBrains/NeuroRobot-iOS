@@ -14,6 +14,7 @@ final class AVToneGenerator {
     private let engine = AVAudioEngine()
     private let toneNode = AVTonePlayerNode()
     private lazy var format = AVAudioFormat(standardFormatWithSampleRate: toneNode.sampleRate, channels: 1)
+    private var player: AVAudioPlayer?
     
     init() {
         setupAudioToneGenerator()
@@ -36,6 +37,18 @@ final class AVToneGenerator {
         }
         
         toneNode.frequency = Double(frequency)
+    }
+    
+    func playAudio(url: URL) {
+        // if something is playing, block the request
+        guard player == nil || (player != nil && !player!.isPlaying) else { return }
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+        } catch {
+            print(error.localizedDescription)
+        }
+        player!.play()
     }
     
     func stop() {

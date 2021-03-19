@@ -23,7 +23,7 @@ final class BrainActivityView: UIView {
         setupUI()
     }
     
-    func setupUI() {
+    private func setupUI() {
         
         addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -62,9 +62,7 @@ final class BrainActivityView: UIView {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             
-            
             self.removeGraphInternal()
-            
             
             let brainValues = brain.getFiringNeurons()
             
@@ -109,9 +107,7 @@ final class BrainActivityView: UIView {
     
     func removeGraph() {
         DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            
-            self.removeGraphInternal()
+            self?.removeGraphInternal()
         }
     }
     

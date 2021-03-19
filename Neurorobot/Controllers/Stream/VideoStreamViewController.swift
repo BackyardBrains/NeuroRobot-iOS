@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 final class VideoStreamViewController: BaseStreamViewController {
     
@@ -14,7 +15,9 @@ final class VideoStreamViewController: BaseStreamViewController {
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var pageIndicator: UIPageControl!
     @IBOutlet weak var scrollView: UIScrollView!
-
+    
+    private var sent = false
+    
     // Data
     private var ipAddress       : String!
     private var port            : String!
@@ -170,17 +173,42 @@ final class VideoStreamViewController: BaseStreamViewController {
             let rightTorque = brain.getRightTorque()
             let leftTorque = brain.getLeftTorque()
             let speakerTone = brain.getSpeakerTone()
+            var toneFrequency: Int?
             
-            send(leftPWM: leftTorque, rightPWM: rightTorque, toneFrequency: speakerTone)
+            if AppSettings.shared.isVocalEnabled {
+                //TODO: - Add blocker for audio if the previous is running
+                guard speakerTone > 0, !sent else { return }
+                sent = true
+                toneFrequency = nil
+                
+//                File Size: 10.3MB (87013064 bits)
+//                Length: 5:16 (316 Seconds)
+//                Which gives: 87013064 bits / 316 seconds = 273426.147 bits/sec or ~273kbps
+//                Actual Bitrate: 259kbps
+
+                
+                let index = speakerTone.firstDigit()
+                let url = Sounds.shared.getURLWav(index: index)
+                
+                NeuroRobot.shared.sendAudio(url: url)
+            } else {
+                toneFrequency = speakerTone
+            }
+            
+            send(leftPWM: leftTorque, rightPWM: rightTorque, toneFrequency: toneFrequency)
             brainActivityView?.updateActivityValues(brain: brain)
             brainRasterView.updateActivityValues(brain: brain)
             brainNetworkView.update(brain: brain)
         }
     }
     
-    private func send(leftPWM: Int, rightPWM: Int, toneFrequency: Int) {
+    private func send(leftPWM: Int, rightPWM: Int, toneFrequency: Int?) {
         
-        let message = String(format: "l:%i;r:%i;s:%i;", leftPWM, rightPWM, toneFrequency)
+        var message = String(format: "l:%i;r:%i;", leftPWM, rightPWM)
+        if let toneFrequency = toneFrequency {
+            message += String(format: "s:%i;", toneFrequency)
+        }
+        
         print(message)
         NeuroRobot.shared.writeSerial(message: message)
     }

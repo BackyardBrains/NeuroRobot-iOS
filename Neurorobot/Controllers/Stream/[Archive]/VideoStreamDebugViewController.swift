@@ -343,30 +343,8 @@ extension VideoStreamDebugViewController: AVAudioRecorderDelegate {
         recordButton.isEnabled = true
         recordButton.setTitle("Hold to record", for: .normal)
         
-        guard let data = try? Data(contentsOf: URL.documentsDirectory().appendingPathComponent("recording2.wav")) else { return }
-        let size = data.count - 4096
-        guard size > 0 else { return }
-        
-        let pointer = UnsafeMutablePointer<UInt8>.allocate(capacity: size)
-        data.advanced(by: 4096).copyBytes(to: pointer, count: size)
-        
-        let audioData = UnsafeMutablePointer<Int16>.allocate(capacity: size / 2)
-        
-        audioData.assign(from: pointer.withMemoryRebound(to: Int16.self, capacity: size / 2, { (pointer) -> UnsafeMutablePointer<Int16> in
-            return pointer
-        }), count: size / 2)
-        
-        let audioData2 = UnsafeMutablePointer<Int16>.allocate(capacity: Int(size / 2))
-        
-        for i in 0..<size / 2 {
-            let value = Int16(audioData.advanced(by: i).pointee)
-            audioData2.advanced(by: i).pointee = Int16(Double(value) / Double(INT16_MAX) * 8158)
-        }
-        NeuroRobot.shared.sendAudio(audioData: audioData2, numberOfBytes: size)
-        
-        pointer.deallocate()
-        audioData.deallocate()
-        audioData2.deallocate()
+        let url = URL.documentsDirectory().appendingPathComponent("recording2.wav")
+        NeuroRobot.shared.sendAudio(url: url)
     }
     
     func playBeep() {

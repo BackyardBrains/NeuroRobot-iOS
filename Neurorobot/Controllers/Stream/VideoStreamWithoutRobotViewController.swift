@@ -94,7 +94,15 @@ final class VideoStreamWithoutRobotViewController: BaseStreamViewController {
         guard brain.isRunning else { return }
         
         let speakerTone = brain.getSpeakerTone()
-        toneGenerator.playTone(frequency: speakerTone)
+        if AppSettings.shared.isVocalEnabled {
+            guard speakerTone > 0 else { return }
+            
+            let index = speakerTone.firstDigit()
+            let url = Sounds.shared.getURL(index: index)
+            toneGenerator.playAudio(url: url)
+        } else {
+            toneGenerator.playTone(frequency: speakerTone)
+        }
     }
     
     private func updateVideo(_ videoFrame: UIImage) {
