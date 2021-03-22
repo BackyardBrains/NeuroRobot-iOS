@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SideMenu
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -61,9 +62,13 @@ extension AppDelegate {
     }
     
     func goToConnect() {
+        
         let vc = ConnectViewController.loadFromNib()
-        let nc = BaseNavigationViewController(rootViewController: vc)
-        moveTo(vc: nc)
+        let nc = SideMenuNavigationController(rootViewController: vc)
+        window?.rootViewController = nc
+        
+        SideMenuManager.default.rightMenuNavigationController = SideMenuNavigationController(rootViewController: SettingsController())
+        SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: vc.view)
     }
     
     func goToTest() {
@@ -89,7 +94,7 @@ private extension AppDelegate {
         srcVC.view.addSubview(mock)
         mock.alpha = 0
         
-        UIView.animate(withDuration: 0.3, delay: 0, options: UIView.AnimationOptions.transitionCrossDissolve, animations: { () -> Void in
+        UIView.animate(withDuration: 0.35, delay: 0, options: UIView.AnimationOptions.transitionCrossDissolve, animations: { () -> Void in
             mock.alpha = 1
         }, completion: { (finished) -> Void in
             srcVC.modalPresentationStyle = .fullScreen

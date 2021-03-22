@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 final class ConnectViewController: BaseViewController {
 
@@ -18,7 +19,6 @@ final class ConnectViewController: BaseViewController {
     @IBOutlet weak var downloadButton: UIButton!
     @IBOutlet weak var downloadActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var connectButton: UIButton!
-    @IBOutlet weak var vocalSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,6 @@ final class ConnectViewController: BaseViewController {
     }
     
     private func sutupUI() {
-        vocalSwitch.isOn = AppSettings.shared.isVocalEnabled
         ipAddressTextField.text = "192.168.100.1"
         portTextField.text = "80"
     }
@@ -42,8 +41,9 @@ final class ConnectViewController: BaseViewController {
 // MARK: - Actions
 private extension ConnectViewController {
     
-    @IBAction func vocalSwitchChangedValue(_ sender: UISwitch) {
-        AppSettings.shared.isVocalEnabled = sender.isOn
+    @IBAction func gearButtonTapped(_ sender: Any) {
+        guard let vc = SideMenuManager.default.rightMenuNavigationController else { return }
+        present(vc, animated: true)
     }
     
     @IBAction func connectButtonTapped(_ sender: Any) {

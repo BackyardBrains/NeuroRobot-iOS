@@ -16,13 +16,18 @@ final class VideoStreamViewController: BaseStreamViewController {
     @IBOutlet weak var pageIndicator: UIPageControl!
     @IBOutlet weak var scrollView: UIScrollView!
     
-    private var sent = false
-    
     // Data
     private var ipAddress       : String!
     private var port            : String!
     private var timer           : Timer!
     private var robotConnected  = false
+    private var isAudioStartedSending = false {
+        didSet {
+            DispatchQueue.global().asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                self?.isAudioStartedSending = false
+            }
+        }
+    }
     private var initialCompletionBlock: ((_ : String?) -> ())?
     
     override func viewDidLoad() {
@@ -173,24 +178,10 @@ final class VideoStreamViewController: BaseStreamViewController {
             let rightTorque = brain.getRightTorque()
             let leftTorque = brain.getLeftTorque()
             let speakerTone = brain.getSpeakerTone()
-            var toneFrequency: Int?
+            var toneFrequency: Int? = nil
             
             if AppSettings.shared.isVocalEnabled {
-                //TODO: - Add blocker for audio if the previous is running
-                guard speakerTone > 0, !sent else { return }
-                sent = true
-                toneFrequency = nil
-                
-//                File Size: 10.3MB (87013064 bits)
-//                Length: 5:16 (316 Seconds)
-//                Which gives: 87013064 bits / 316 seconds = 273426.147 bits/sec or ~273kbps
-//                Actual Bitrate: 259kbps
-
-                
-                let index = speakerTone.firstDigit()
-                let url = Sounds.shared.getURLWav(index: index)
-                
-                NeuroRobot.shared.sendAudio(url: url)
+                sendVocalAudio(speakerFrequencyTone: speakerTone)
             } else {
                 toneFrequency = speakerTone
             }
@@ -211,6 +202,21 @@ final class VideoStreamViewController: BaseStreamViewController {
         
         print(message)
         NeuroRobot.shared.writeSerial(message: message)
+    }
+    
+    private func sendVocalAudio(speakerFrequencyTone: Int) {
+        
+        // Drop audio data if the process of sending audio data is active
+        guard !NeuroRobot.shared.isAudioCurrentlyBeingSent() else { return }
+        
+        // If the frequency is 0, don't play anything
+        guard speakerFrequencyTone > 0, !isAudioStartedSending else { return }
+        isAudioStartedSending = true
+        
+        let index = speakerFrequencyTone.firstDigit() - 1
+        let url = Sounds.shared.getURLWav(index: index)
+        
+        NeuroRobot.shared.sendAudio(url: url)
     }
 }
 

@@ -15,6 +15,7 @@ extern "C" {
 
 #include <stdint.h>
 #include "TypeDefs.h"
+#include <stdbool.h>
 
     const long long swiftBridge_sizeOfVideoFrame(const void *object);
     const int swiftBridge_videoWidth(const void *object);
@@ -30,6 +31,7 @@ extern "C" {
     
     const void swiftBridge_writeSerial(const void *object, char *message);
     const void swiftBridge_sendAudio(const void *object, int16_t *audioData, size_t numberOfBytes);
+    const bool swiftBridge_isAudioCurrentlyBeingSent(const void *object);
 
     const StreamStateType swiftBridge_readStreamState(const void *object);
     const SocketStateType swiftBridge_readSocketState(const void *object);

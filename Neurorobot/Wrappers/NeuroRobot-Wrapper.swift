@@ -106,6 +106,11 @@ final class NeuroRobot {
         swift_sendAudio(audioData: audioData, numberOfBytes: numberOfBytes)
     }
     
+    func isAudioCurrentlyBeingSent() -> Bool {
+        guard let _ = robotObject else { fatalError("There is no robot object") }
+        return swift_isAudioCurrentlyBeingSent()
+    }
+    
     /// Send audio to robot's speaker
     /// - Parameter url: url to wav file, 8kHz
     func sendAudio(url: URL) {
@@ -250,6 +255,10 @@ private extension NeuroRobot
     
     func swift_sendAudio(audioData: UnsafeMutablePointer<Int16>, numberOfBytes: Int) {
         swiftBridge_sendAudio(robotObject, audioData, numberOfBytes)
+    }
+    
+    func swift_isAudioCurrentlyBeingSent() -> Bool {
+        return swiftBridge_isAudioCurrentlyBeingSent(robotObject)
     }
     
     func swift_readAudio() -> Data? {

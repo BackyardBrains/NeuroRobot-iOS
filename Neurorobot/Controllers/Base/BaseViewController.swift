@@ -13,13 +13,14 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        baseSetupUI()
+        setupUI()
     }
     
-    private func baseSetupUI() {
+    private func setupUI() {
         view.backgroundColor = .white
+        navigationController?.navigationBar.isTranslucent = false
         if #available(iOS 13.0, *) {
-            overrideUserInterfaceStyle = .light
+            navigationController?.overrideUserInterfaceStyle = .light
         } else {}
     }
     

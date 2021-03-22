@@ -78,9 +78,10 @@ PODS:
   - nanopb/decode (2.30907.0)
   - nanopb/encode (2.30907.0)
   - PromisesObjC (1.2.12)
-  - SwiftMessages (9.0.0):
-    - SwiftMessages/App (= 9.0.0)
-  - SwiftMessages/App (9.0.0)
+  - SideMenu (6.5.0)
+  - SwiftMessages (9.0.1):
+    - SwiftMessages/App (= 9.0.1)
+  - SwiftMessages/App (9.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.4)
@@ -88,6 +89,7 @@ DEPENDENCIES:
   - Charts (~> 3.6)
   - Firebase/Analytics (~> 7.1)
   - Firebase/Crashlytics (~> 7.1)
+  - SideMenu (~> 6.5)
   - SwiftMessages (~> 9.0)
 
 SPEC REPOS:
@@ -106,6 +108,7 @@ SPEC REPOS:
     - GoogleUtilities
     - nanopb
     - PromisesObjC
+    - SideMenu
     - SwiftMessages
 
 SPEC CHECKSUMS:
@@ -123,8 +126,9 @@ SPEC CHECKSUMS:
   GoogleUtilities: e1d9ed4e544fc32a93e00e721400cbc3f377200d
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
-  SwiftMessages: 55274ca3a239062398603008ed81924cfd1fe798
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  SwiftMessages: b71f53eb919887c0273bf43cbc002bd4f0cfb3d6
 
-PODFILE CHECKSUM: c49b8c63060c988778d43a874aabf9eaa28cf311
+PODFILE CHECKSUM: 9f29e8d42f02676d9fe15fb178dec9fb768479dd
 
 COCOAPODS: 1.10.1

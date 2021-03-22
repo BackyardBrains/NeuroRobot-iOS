@@ -23,5 +23,8 @@ final class AppSettings {
         set { UserDefaults.set(key: "isVocalEnabled", value: newValue) }
     }
     
-    var isBrainAutoDownloadEnabled = false
+    var isBrainAutoDownloadEnabled: Bool {
+        get { return UserDefaults.get(key: "isBrainAutoDownloadEnabled") as Bool? ?? false }
+        set { UserDefaults.set(key: "isBrainAutoDownloadEnabled", value: newValue) }
+    }
 }

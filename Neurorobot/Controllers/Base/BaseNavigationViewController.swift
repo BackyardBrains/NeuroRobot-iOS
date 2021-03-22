@@ -12,10 +12,10 @@ class BaseNavigationViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        baseNavSetupUI()
+        setupUI()
     }
     
-    func baseNavSetupUI() {
+    private func setupUI() {
         view.backgroundColor = .white
         navigationBar.isTranslucent = false
         

@@ -97,7 +97,7 @@ final class VideoStreamWithoutRobotViewController: BaseStreamViewController {
         if AppSettings.shared.isVocalEnabled {
             guard speakerTone > 0 else { return }
             
-            let index = speakerTone.firstDigit()
+            let index = speakerTone.firstDigit() - 1
             let url = Sounds.shared.getURL(index: index)
             toneGenerator.playAudio(url: url)
         } else {

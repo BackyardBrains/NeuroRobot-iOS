@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2E1FC06A2C8BBD2E53E97172 /* Pods_Neurorobot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288E6DBFE20A9BBF8982EF09 /* Pods_Neurorobot.framework */; };
 		74067D652603986E00B54592 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74067D642603986E00B54592 /* Sounds.swift */; };
+		7414002A2605039100817121 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741400292605039100817121 /* SettingsController.swift */; };
+		741400402605418900817121 /* UIEdgeInsets+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7414003F2605418900817121 /* UIEdgeInsets+Additions.swift */; };
 		741D560A25F79DF800B05A14 /* APIManager+Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741D560925F79DF800B05A14 /* APIManager+Brain.swift */; };
 		741D561025F7A85100B05A14 /* FilesHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741D560F25F7A85100B05A14 /* FilesHandler.swift */; };
 		741D561825F7AB4B00B05A14 /* General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741D561725F7AB4B00B05A14 /* General.swift */; };
@@ -202,6 +204,8 @@
 		6433B82D04BFDFDA2EA881E9 /* Pods-NeurorobotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeurorobotTests.release.xcconfig"; path = "Target Support Files/Pods-NeurorobotTests/Pods-NeurorobotTests.release.xcconfig"; sourceTree = "<group>"; };
 		6D10BE879AE523240DA4364E /* Pods-NeurorobotTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeurorobotTests.debug.xcconfig"; path = "Target Support Files/Pods-NeurorobotTests/Pods-NeurorobotTests.debug.xcconfig"; sourceTree = "<group>"; };
 		74067D642603986E00B54592 /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
+		741400292605039100817121 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		7414003F2605418900817121 /* UIEdgeInsets+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Additions.swift"; sourceTree = "<group>"; };
 		741D560925F79DF800B05A14 /* APIManager+Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager+Brain.swift"; sourceTree = "<group>"; };
 		741D560F25F7A85100B05A14 /* FilesHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilesHandler.swift; sourceTree = "<group>"; };
 		741D561725F7AB4B00B05A14 /* General.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = General.swift; sourceTree = "<group>"; };
@@ -381,6 +385,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		741400282605037400817121 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				741400292605039100817121 /* SettingsController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		741D560E25F7A84400B05A14 /* Files handler */ = {
 			isa = PBXGroup;
 			children = (
@@ -553,6 +565,7 @@
 				9D5BDDF223191BE200CA51CC /* Connect */,
 				9D5BDDF723191BF300CA51CC /* Leds */,
 				9D5BDDFC23191BFE00CA51CC /* MainTab */,
+				741400282605037400817121 /* Settings */,
 				9D5BDE0023191C1100CA51CC /* Stream */,
 			);
 			path = Controllers;
@@ -745,6 +758,7 @@
 				B1C48C1D241CF6A60049A3F1 /* UIApplication+Additions.swift */,
 				B1BEADA52423D242008B2FCF /* UIColor+Additions.swift */,
 				B18C150B2421344C0095E6C8 /* UIDeviceOrientation+Additions.swift */,
+				7414003F2605418900817121 /* UIEdgeInsets+Additions.swift */,
 				B1C48C19241CDA0F0049A3F1 /* UIImage+Additions.swift */,
 				74A3533125FA917900527CC0 /* UIView+Constraints.swift */,
 				9D5BDDB623191B7900CA51CC /* UIViewController+XIB.swift */,
@@ -1073,6 +1087,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1BEADA42423D1EA008B2FCF /* UIColor+App.swift in Sources */,
+				741400402605418900817121 /* UIEdgeInsets+Additions.swift in Sources */,
 				B12CA6032433467D006C7606 /* APIConstants.swift in Sources */,
 				9D5BDDBA23191B7900CA51CC /* UIViewController+XIB.swift in Sources */,
 				B1C19886240E965500FDF0BE /* Data+Additions.swift in Sources */,
@@ -1138,6 +1153,7 @@
 				741D567925F7B1BA00B05A14 /* AppSettings.swift in Sources */,
 				9D834DEF2345289E00BBBD62 /* BrainActivityView.swift in Sources */,
 				9D0B5B3E234109A30017BD74 /* NeurorobotImage.swift in Sources */,
+				7414002A2605039100817121 /* SettingsController.swift in Sources */,
 				9D5BDDBE23191B8200CA51CC /* NeuroRobot-Wrapper.swift in Sources */,
 				B12CA6112433585A006C7606 /* RobotAPIManager.swift in Sources */,
 				9D3EAE61233B4EDA00C29A70 /* BrainPickerView.swift in Sources */,
@@ -1320,7 +1336,7 @@
 				CODE_SIGN_ENTITLEMENTS = Neurorobot/Neurorobot.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = MLGRKD657P;
 				ENABLE_BITCODE = YES;
@@ -1341,10 +1357,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/3rd-Party-Libraries/library/lib",
-					"$(PROJECT_DIR)/3rd-Party-Libraries/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/3rd-Party-Libraries/lib";
 				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = (
 					"-lc++",
@@ -1367,7 +1380,7 @@
 				CODE_SIGN_ENTITLEMENTS = Neurorobot/Neurorobot.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = MLGRKD657P;
 				ENABLE_BITCODE = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1387,10 +1400,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/3rd-Party-Libraries/library/lib",
-					"$(PROJECT_DIR)/3rd-Party-Libraries/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/3rd-Party-Libraries/lib";
 				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = (
 					"-lc++",
@@ -1412,8 +1422,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = E8C46L5TFQ;
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/NeuroRobot-Framework/library/include",
-					"$(PROJECT_DIR)/Brain-Framework/library/include",
+					"$(PROJECT_DIR)/3rd-Party-Libraries/library/include",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = NeurorobotTests/Info.plist;
@@ -1424,7 +1433,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Brain-Framework/library/lib",
+					"$(PROJECT_DIR)/3rd-Party-Libraries/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_LDFLAGS = (
@@ -1449,8 +1458,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = E8C46L5TFQ;
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/NeuroRobot-Framework/library/include",
-					"$(PROJECT_DIR)/Brain-Framework/library/include",
+					"$(PROJECT_DIR)/3rd-Party-Libraries/library/include",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = NeurorobotTests/Info.plist;
@@ -1461,7 +1469,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Brain-Framework/library/lib",
+					"$(PROJECT_DIR)/3rd-Party-Libraries/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_LDFLAGS = (
@@ -1504,9 +1512,8 @@
 					"\"${PODS_ROOT}/Headers/Public/FirebaseCoreDiagnosticsInterop\"",
 					"$(inherited)",
 					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
+					"$(PROJECT_DIR)/3rd-Party-Libraries/include",
 					"\"${PODS_TARGET_SRCROOT}/Sources/FBLPromises/include\"",
-					"$(PROJECT_DIR)/Brain-Framework/library/include",
-					"$(PROJECT_DIR)/NeuroRobot-Framework/library/include",
 				);
 				INFOPLIST_FILE = "Neuro RobotUITests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
@@ -1517,7 +1524,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Brain-Framework/library/lib",
+					"$(PROJECT_DIR)/3rd-Party-Libraries/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "byb.Neuro-RobotUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1553,9 +1560,8 @@
 					"\"${PODS_ROOT}/Headers/Public/FirebaseCoreDiagnosticsInterop\"",
 					"$(inherited)",
 					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
+					"$(PROJECT_DIR)/3rd-Party-Libraries/include",
 					"\"${PODS_TARGET_SRCROOT}/Sources/FBLPromises/include\"",
-					"$(PROJECT_DIR)/Brain-Framework/library/include",
-					"$(PROJECT_DIR)/NeuroRobot-Framework/library/include",
 				);
 				INFOPLIST_FILE = "Neuro RobotUITests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
@@ -1566,7 +1572,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Brain-Framework/library/lib",
+					"$(PROJECT_DIR)/3rd-Party-Libraries/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "byb.Neuro-RobotUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
