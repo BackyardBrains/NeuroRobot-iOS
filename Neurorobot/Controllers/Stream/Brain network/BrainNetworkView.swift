@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BrainNetworkView: UIView {
+final class BrainNetworkView: UIView {
     
     // UI
     private let backgroundImageView = UIImageView()
@@ -16,14 +16,13 @@ class BrainNetworkView: UIView {
     private var lineLayers = [CALayer]()
     private var contactViews = [ContactView]()
     
+    // Layers
     private var linesLayer = CALayer()
     private var contactsLayer = CALayer()
     
-    //
+    // Data
     private weak var brain: Brain?
     private var didSetup = false
-    
-    // Data
     private let contactCoordinates = [
         Coordinate(x: -1.2, y: 2.05),
         Coordinate(x: 1.2, y: 2.1),
@@ -52,7 +51,7 @@ class BrainNetworkView: UIView {
     
     private func setupUI() {
         backgroundColor = .clear
-        translatesAutoresizingMaskIntoConstraints = false
+        square()
         
         addSubview(backgroundImageView)
         backgroundImageView.fillSuperView()
@@ -91,7 +90,7 @@ class BrainNetworkView: UIView {
         layer.addSublayer(contactsLayer)
     }
     
-    func drawLine(from: CGPoint, to: CGPoint, lineWidth: CGFloat = 0.5, color: UIColor = .white, isDiamond: Bool = false, toPresentNum: Bool = false) {
+    private func drawLine(from: CGPoint, to: CGPoint, lineWidth: CGFloat = 0.5, color: UIColor = .white, isDiamond: Bool = false, toPresentNum: Bool = false) {
         print("lineWidth: \(lineWidth)")
         var to = to
         var padding: CGFloat = 20

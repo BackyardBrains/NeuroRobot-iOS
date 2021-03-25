@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VideoStreamViewController" customModule="Neuro_Robot" customModuleProvider="target">
             <connections>
                 <outlet property="brainNetworkView" destination="pAv-Hq-zeU" id="bBn-16-olF"/>
+                <outlet property="brainNetworkViewHeightConstraint" destination="c01-M3-4fb" id="QSs-gR-aDa"/>
                 <outlet property="brainRasterView" destination="fJa-cf-Z3v" id="qap-3f-0c3"/>
                 <outlet property="chartView" destination="shs-IF-FQz" id="gmp-0I-HLn"/>
                 <outlet property="pageIndicator" destination="tvd-24-Ohf" id="2pZ-II-iDf"/>
@@ -30,7 +31,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="768" height="974"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ADg-pd-veK">
-                            <rect key="frame" x="0.0" y="0.0" width="768" height="1732"/>
+                            <rect key="frame" x="0.0" y="0.0" width="768" height="946"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6xR-Ui-fZR" customClass="VideoStreamView" customModule="Neuro_Robot" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="768" height="432"/>
@@ -57,23 +58,26 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FaR-0m-U9b">
-                                    <rect key="frame" x="0.0" y="532" width="768" height="768"/>
+                                    <rect key="frame" x="0.0" y="532" width="768" height="414"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAv-Hq-zeU" customClass="BrainNetworkView" customModule="Neuro_Robot" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="768" height="768"/>
+                                            <rect key="frame" x="177" y="0.0" width="414" height="414"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="pAv-Hq-zeU" secondAttribute="height" multiplier="1:1" id="n4q-vO-7Xe"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="pAv-Hq-zeU" secondAttribute="bottom" id="0mm-4Q-cqb"/>
-                                        <constraint firstAttribute="width" secondItem="FaR-0m-U9b" secondAttribute="height" multiplier="1:1" id="BAT-WC-KoS"/>
                                         <constraint firstItem="pAv-Hq-zeU" firstAttribute="top" secondItem="FaR-0m-U9b" secondAttribute="top" id="Cqk-tm-5IL"/>
-                                        <constraint firstAttribute="trailing" secondItem="pAv-Hq-zeU" secondAttribute="trailing" id="WKP-yr-idZ"/>
-                                        <constraint firstItem="pAv-Hq-zeU" firstAttribute="leading" secondItem="FaR-0m-U9b" secondAttribute="leading" id="gCw-EM-ba8"/>
+                                        <constraint firstItem="pAv-Hq-zeU" firstAttribute="centerY" secondItem="FaR-0m-U9b" secondAttribute="centerY" id="K5Q-bJ-NQG"/>
+                                        <constraint firstAttribute="height" constant="414" id="c01-M3-4fb"/>
+                                        <constraint firstItem="pAv-Hq-zeU" firstAttribute="centerX" secondItem="FaR-0m-U9b" secondAttribute="centerX" id="f5G-Ck-OTa"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJa-cf-Z3v" customClass="BrainActivityRasterView" customModule="Neuro_Robot" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="1300" width="768" height="432"/>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJa-cf-Z3v" customClass="BrainActivityRasterView" customModule="Neuro_Robot" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="946" width="768" height="432"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="fJa-cf-Z3v" secondAttribute="height" multiplier="16:9" id="vZl-xR-2VY"/>

@@ -18,6 +18,9 @@ class BaseStreamViewController: BaseViewController {
     @IBOutlet weak var brainNetworkView         : BrainNetworkView!
     @IBOutlet weak var chartView                : FFTBarView!
     
+    // Constraints
+    @IBOutlet weak var brainNetworkViewHeightConstraint: NSLayoutConstraint!
+    
     // Data
     internal var brain: Brain!
     internal var width: Int = 0
@@ -38,6 +41,16 @@ class BaseStreamViewController: BaseViewController {
         super.viewWillDisappear(animated)
         
         brain.stop()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        guard videoStreamView.bounds.height > 0, chartView.bounds.height > 0 else { return }
+        let usedHeight = videoStreamView.bounds.height + chartView.bounds.height
+        let remainingHeight = view.bounds.height - usedHeight
+        
+        brainNetworkViewHeightConstraint.constant = remainingHeight
     }
     
     private func setupUI() {
