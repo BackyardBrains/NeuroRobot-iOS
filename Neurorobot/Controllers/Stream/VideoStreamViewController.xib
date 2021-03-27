@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -24,17 +24,17 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="768" height="974"/>
+            <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snt-eD-Ijf">
-                    <rect key="frame" x="0.0" y="0.0" width="768" height="974"/>
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ADg-pd-veK">
-                            <rect key="frame" x="0.0" y="0.0" width="768" height="946"/>
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="733.33333333333337"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6xR-Ui-fZR" customClass="VideoStreamView" customModule="Neuro_Robot" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="432"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="219.33333333333334"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="6xR-Ui-fZR" secondAttribute="height" multiplier="16:9" id="a0c-y0-udJ"/>
@@ -51,17 +51,17 @@
                                     </variation>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shs-IF-FQz" customClass="FFTBarView" customModule="Neuro_Robot" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="432" width="768" height="100"/>
+                                    <rect key="frame" x="0.0" y="219.33333333333331" width="390" height="100"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="100" id="Ht8-kS-eMM"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FaR-0m-U9b">
-                                    <rect key="frame" x="0.0" y="532" width="768" height="414"/>
+                                    <rect key="frame" x="0.0" y="319.33333333333326" width="390" height="414"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAv-Hq-zeU" customClass="BrainNetworkView" customModule="Neuro_Robot" customModuleProvider="target">
-                                            <rect key="frame" x="177" y="0.0" width="414" height="414"/>
+                                            <rect key="frame" x="0.0" y="12" width="390" height="390"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="pAv-Hq-zeU" secondAttribute="height" multiplier="1:1" id="n4q-vO-7Xe"/>
@@ -69,15 +69,17 @@
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="pAv-Hq-zeU" secondAttribute="bottom" id="0mm-4Q-cqb"/>
-                                        <constraint firstItem="pAv-Hq-zeU" firstAttribute="top" secondItem="FaR-0m-U9b" secondAttribute="top" id="Cqk-tm-5IL"/>
+                                        <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="pAv-Hq-zeU" secondAttribute="bottom" priority="999" id="0mm-4Q-cqb"/>
+                                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="pAv-Hq-zeU" secondAttribute="trailing" priority="999" id="2V4-Jb-EQD"/>
+                                        <constraint firstItem="pAv-Hq-zeU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="FaR-0m-U9b" secondAttribute="top" id="Cqk-tm-5IL"/>
                                         <constraint firstItem="pAv-Hq-zeU" firstAttribute="centerY" secondItem="FaR-0m-U9b" secondAttribute="centerY" id="K5Q-bJ-NQG"/>
                                         <constraint firstAttribute="height" constant="414" id="c01-M3-4fb"/>
                                         <constraint firstItem="pAv-Hq-zeU" firstAttribute="centerX" secondItem="FaR-0m-U9b" secondAttribute="centerX" id="f5G-Ck-OTa"/>
+                                        <constraint firstItem="pAv-Hq-zeU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FaR-0m-U9b" secondAttribute="leading" id="fDa-kX-o1W"/>
                                     </constraints>
                                 </view>
                                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJa-cf-Z3v" customClass="BrainActivityRasterView" customModule="Neuro_Robot" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="946" width="768" height="432"/>
+                                    <rect key="frame" x="0.0" y="733.33333333333337" width="390" height="219.33333333333337"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="fJa-cf-Z3v" secondAttribute="height" multiplier="16:9" id="vZl-xR-2VY"/>
@@ -125,7 +127,7 @@
                     </connections>
                 </scrollView>
                 <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="tvd-24-Ohf">
-                    <rect key="frame" x="323" y="946.5" width="122.5" height="27.5"/>
+                    <rect key="frame" x="134.33333333333334" y="694.66666666666663" width="121.33333333333334" height="27.333333333333371"/>
                     <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="currentPageIndicatorTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <variation key="heightClass=regular" hidden="YES"/>

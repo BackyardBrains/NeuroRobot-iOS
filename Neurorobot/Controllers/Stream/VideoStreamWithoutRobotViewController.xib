@@ -61,19 +61,21 @@
                                     <rect key="frame" x="0.0" y="319.33333333333326" width="390" height="414"/>
                                     <subviews>
                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAv-Hq-zeU" customClass="BrainNetworkView" customModule="Neuro_Robot" customModuleProvider="target">
-                                            <rect key="frame" x="-12" y="0.0" width="414" height="414"/>
+                                            <rect key="frame" x="0.0" y="12" width="390" height="390"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="pAv-Hq-zeU" secondAttribute="height" multiplier="1:1" id="DLI-H3-neU"/>
+                                                <constraint firstAttribute="width" secondItem="pAv-Hq-zeU" secondAttribute="height" multiplier="1:1" id="Yd1-4r-Gjf"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="pAv-Hq-zeU" firstAttribute="centerX" secondItem="FaR-0m-U9b" secondAttribute="centerX" id="1su-V0-Rfd"/>
                                         <constraint firstAttribute="height" constant="414" id="HwB-2h-FrH"/>
-                                        <constraint firstAttribute="bottom" secondItem="pAv-Hq-zeU" secondAttribute="bottom" id="NnE-ko-x0Z"/>
+                                        <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="pAv-Hq-zeU" secondAttribute="bottom" priority="999" id="NnE-ko-x0Z"/>
                                         <constraint firstItem="pAv-Hq-zeU" firstAttribute="centerY" secondItem="FaR-0m-U9b" secondAttribute="centerY" id="TeQ-tj-Bkt"/>
-                                        <constraint firstItem="pAv-Hq-zeU" firstAttribute="centerX" secondItem="FaR-0m-U9b" secondAttribute="centerX" id="UZU-Mf-Cq6"/>
-                                        <constraint firstItem="pAv-Hq-zeU" firstAttribute="top" secondItem="FaR-0m-U9b" secondAttribute="top" id="gOc-ID-aQ4"/>
+                                        <constraint firstItem="pAv-Hq-zeU" firstAttribute="top" relation="greaterThanOrEqual" secondItem="FaR-0m-U9b" secondAttribute="top" id="gOc-ID-aQ4"/>
+                                        <constraint firstItem="pAv-Hq-zeU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FaR-0m-U9b" secondAttribute="leading" id="jWz-7u-Uso"/>
+                                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="pAv-Hq-zeU" secondAttribute="trailing" priority="999" id="z66-sB-sLU"/>
                                     </constraints>
                                 </view>
                                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJa-cf-Z3v" customClass="BrainActivityRasterView" customModule="Neuro_Robot" customModuleProvider="target">
