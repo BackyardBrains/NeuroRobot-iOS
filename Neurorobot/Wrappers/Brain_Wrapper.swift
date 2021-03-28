@@ -150,8 +150,10 @@ final class Brain
         let neuronValuesPointer = brain_getNeuronValues(brainObject, numberOfNeuronsPointer)
         let neuronValuesBufferPointer = UnsafeBufferPointer(start: neuronValuesPointer, count: Int(numberOfNeuronsPointer.pointee))
         
-        numberOfNeuronsPointer.deallocate()
-        neuronValuesPointer?.deallocate()
+        defer {
+            numberOfNeuronsPointer.deallocate()
+            neuronValuesPointer?.deallocate()
+        }
         
         let neuronValues = Array(neuronValuesBufferPointer)
         return neuronValues
@@ -164,7 +166,9 @@ final class Brain
         let neuronValuesPointer = brain_getFiringNeurons(brainObject, numberOfNeuronsPointer)
         let neuronValuesBufferPointer = UnsafeBufferPointer(start: neuronValuesPointer, count: Int(numberOfNeuronsPointer.pointee))
         
-        numberOfNeuronsPointer.deallocate()
+        defer {
+            numberOfNeuronsPointer.deallocate()
+        }
         
         let neuronValues = Array(neuronValuesBufferPointer)
         return neuronValues
@@ -179,7 +183,7 @@ final class Brain
         let yValuesPointer = brain_getY(brainObject, numberOfNeuronsPointer)
         
         let numberOfNeurons = Int(numberOfNeuronsPointer.pointee)
-        numberOfNeuronsPointer.deallocate()
+        
         
         let xBufferPointer = UnsafeBufferPointer(start: xValuesPointer, count: numberOfNeurons)
         let yBufferPointer = UnsafeBufferPointer(start: yValuesPointer, count: numberOfNeurons)
@@ -187,8 +191,11 @@ final class Brain
         let xValues = Array(xBufferPointer)
         let yValues = Array(yBufferPointer)
         
-        xValuesPointer?.deallocate()
-        yValuesPointer?.deallocate()
+        defer {
+            numberOfNeuronsPointer.deallocate()
+            xValuesPointer?.deallocate()
+            yValuesPointer?.deallocate()
+        }
         
         var coordinates = [Coordinate]()
         for i in 0..<numberOfNeurons {
@@ -209,11 +216,14 @@ final class Brain
         guard let brainObject = brainObject else { return nil }
         
         let numberOfNeuronsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
-        
         let connectionsPointer = brain_getConnectToMe(brainObject, numberOfNeuronsPointer)
         
+        defer {
+            numberOfNeuronsPointer.deallocate()
+            connectionsPointer?.deallocate()
+        }
+        
         let numberOfNeurons = Int(numberOfNeuronsPointer.pointee)
-        numberOfNeuronsPointer.deallocate()
         
         let xBufferPointer = UnsafeBufferPointer(start: connectionsPointer, count: numberOfNeurons)
         let xValues = Array(xBufferPointer)
@@ -225,7 +235,6 @@ final class Brain
             
             connections.append(yValues)
         }
-        connectionsPointer?.deallocate()
         
         return connections
     }
@@ -239,12 +248,16 @@ final class Brain
         
         let valuesPointer = brain_getDaConnectToMe(brainObject, numberOfNeuronsPointer, numberOfParams1Pointer, numberOfParams2Pointer)
         
+        defer {
+            numberOfNeuronsPointer.deallocate()
+            numberOfParams1Pointer.deallocate()
+            numberOfParams2Pointer.deallocate()
+            valuesPointer?.deallocate()
+        }
+        
         let numberOfNeurons = Int(numberOfNeuronsPointer.pointee)
-        numberOfNeuronsPointer.deallocate()
         let numberOfParams1 = Int(numberOfParams1Pointer.pointee)
-        numberOfParams1Pointer.deallocate()
         let numberOfParams2 = Int(numberOfParams2Pointer.pointee)
-        numberOfParams2Pointer.deallocate()
         
         let arrayPointer1 = UnsafeBufferPointer(start: valuesPointer, count: numberOfNeurons)
         let colorValues = Array(arrayPointer1)
@@ -265,7 +278,6 @@ final class Brain
             
             values.append(paramValues)
         }
-        valuesPointer?.deallocate()
         
         return values
     }
@@ -275,13 +287,16 @@ final class Brain
         
         let numberOfNeuronsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
         let numberOfConnectionsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
-        
         let connectionsPointer = brain_getContacts(brainObject, numberOfNeuronsPointer, numberOfConnectionsPointer)
         
+        defer {
+            numberOfNeuronsPointer.deallocate()
+            numberOfConnectionsPointer.deallocate()
+            connectionsPointer?.deallocate()
+        }
+        
         let numberOfNeurons = Int(numberOfNeuronsPointer.pointee)
-        numberOfNeuronsPointer.deallocate()
         let numberOfConnections = Int(numberOfConnectionsPointer.pointee)
-        numberOfConnectionsPointer.deallocate()
         
         let xBufferPointer = UnsafeBufferPointer(start: connectionsPointer, count: numberOfNeurons)
         let xValues = Array(xBufferPointer)
@@ -293,7 +308,6 @@ final class Brain
             
             connections.append(yValues)
         }
-        connectionsPointer?.deallocate()
         
         return connections
     }
@@ -303,13 +317,16 @@ final class Brain
         
         let numberOfNeuronsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
         let numberOfColorsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
-        
         let colorsPointer = brain_getColors(brainObject, numberOfNeuronsPointer, numberOfColorsPointer)
         
+        defer {
+            numberOfNeuronsPointer.deallocate()
+            numberOfColorsPointer.deallocate()
+            colorsPointer?.deallocate()
+        }
+        
         let numberOfNeurons = Int(numberOfNeuronsPointer.pointee)
-        numberOfNeuronsPointer.deallocate()
         let numberOfColors = Int(numberOfColorsPointer.pointee)
-        numberOfColorsPointer.deallocate()
         
         let arrayPointer1 = UnsafeBufferPointer(start: colorsPointer, count: numberOfNeurons)
         let colorValues = Array(arrayPointer1)
@@ -323,7 +340,6 @@ final class Brain
             
             colors.append(color)
         }
-        colorsPointer?.deallocate()
         
         return colors
     }
@@ -334,15 +350,18 @@ final class Brain
         let numberOfNeuronsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
         let numberOfParamsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
         let numberOfCamsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
-        
         let visPrefsPointer = brain_getVisPrefs(brainObject, numberOfNeuronsPointer, numberOfParamsPointer, numberOfCamsPointer)
         
+        defer {
+            numberOfNeuronsPointer.deallocate()
+            numberOfParamsPointer.deallocate()
+            numberOfCamsPointer.deallocate()
+            visPrefsPointer?.deallocate()
+        }
+        
         let numberOfNeurons = Int(numberOfNeuronsPointer.pointee)
-        numberOfNeuronsPointer.deallocate()
         let numberOfParams = Int(numberOfParamsPointer.pointee)
-        numberOfParamsPointer.deallocate()
         let numberOfCams = Int(numberOfCamsPointer.pointee)
-        numberOfCamsPointer.deallocate()
         
         let arrayPointer1 = UnsafeBufferPointer(start: visPrefsPointer, count: numberOfNeurons)
         let colorValues = Array(arrayPointer1)
@@ -363,9 +382,44 @@ final class Brain
             
             visPrefs.append(paramValues)
         }
-        visPrefsPointer?.deallocate()
         
         return visPrefs
+    }
+    
+    func getAudioPrefs() -> [Double] {
+        guard let brainObject = brainObject else { return [Double]() }
+        
+        let numberOfNeuronsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
+        print(brain_getAudioPrefs(brainObject, numberOfNeuronsPointer).pointee)
+        let neuronValuesPointer = brain_getAudioPrefs(brainObject, numberOfNeuronsPointer)
+        let neuronValuesBufferPointer = UnsafeBufferPointer(start: neuronValuesPointer, count: Int(numberOfNeuronsPointer.pointee))
+        
+        defer {
+            numberOfNeuronsPointer.deallocate()
+            neuronValuesPointer?.deallocate()
+        }
+        
+        let neuronValues = Array(neuronValuesBufferPointer)
+        
+        return neuronValues
+    }
+    
+    func getDistPrefs() -> [Double] {
+        guard let brainObject = brainObject else { return [Double]() }
+        
+        let numberOfNeuronsPointer = UnsafeMutablePointer<Int>.allocate(capacity: 1)
+        print(brain_getAudioPrefs(brainObject, numberOfNeuronsPointer).pointee)
+        let neuronValuesPointer = brain_getDistPrefs(brainObject, numberOfNeuronsPointer)
+        let neuronValuesBufferPointer = UnsafeBufferPointer(start: neuronValuesPointer, count: Int(numberOfNeuronsPointer.pointee))
+        
+        defer {
+            numberOfNeuronsPointer.deallocate()
+            neuronValuesPointer?.deallocate()
+        }
+        
+        let neuronValues = Array(neuronValuesBufferPointer)
+        
+        return neuronValues
     }
     
     static func getSpectrum(audioData: Data, sampleRate: Int) -> [Double: Double]? {

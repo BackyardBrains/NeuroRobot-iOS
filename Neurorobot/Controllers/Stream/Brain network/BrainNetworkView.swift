@@ -90,8 +90,8 @@ final class BrainNetworkView: UIView {
         layer.addSublayer(contactsLayer)
     }
     
-    private func drawLine(from: CGPoint, to: CGPoint, lineWidth: CGFloat = 0.5, color: UIColor = .white, isDiamond: Bool = false, toPresentNum: Bool = false) {
-        print("lineWidth: \(lineWidth)")
+    private func drawLine(from: CGPoint, to: CGPoint, lineWidth: CGFloat = 0.5, color: UIColor = .white, isDiamond: Bool = false, numberType: NumberType) {
+        
         var to = to
         var padding: CGFloat = 20
         let distance = from.distance(to: to)
@@ -138,27 +138,22 @@ final class BrainNetworkView: UIView {
         contactSize.limit(lower: 4, upper: 15)
         
         var contactView: NeuronContactView!
-        var numLabel: UILabel?
+        
         if isDiamond {
             contactView = NeuronContactView(frame: CGRect(origin: .zero, size: CGSize(contactSize * 3.5)), type: .diamond, backColor: color)
         } else {
             contactView = NeuronContactView(frame: CGRect(origin: .zero, size: CGSize(contactSize)), type: .square, backColor: color)
-            
-            if toPresentNum {
-                numLabel = UILabel(frame: CGRect(origin: .zero, size: CGSize(20)))
-                numLabel?.text = "\(Int(lineWidth * 12))"
-                numLabel?.font = UIFont.systemFont(ofSize: 8)
-                numLabel?.layer.displayIfNeeded()
-            }
         }
         
         contactView.center = to
-        numLabel?.center = to.applying(CGAffineTransform(translationX: 0, y: -10))
         
         linesLayer.addSublayer(lineLayer)
         contactsLayer.addSublayer(contactView.layer)
-        if numLabel != nil {
-            contactsLayer.addSublayer(numLabel!.layer)
+        
+        // Add label for according number type
+        if let numLabel = numberType.label(center: to, lineWidth: lineWidth) {
+            numLabel.layer.displayIfNeeded()
+            contactsLayer.addSublayer(numLabel.layer)
         }
     }
     
@@ -182,33 +177,38 @@ final class BrainNetworkView: UIView {
                         }
                     }
                     
-                    drawLine(from: neuronViews[i].center, to: neuronViews[j].center, lineWidth: lineWidth, color: color, toPresentNum: true)
+                    drawLine(from: neuronViews[i].center, to: neuronViews[j].center, lineWidth: lineWidth, color: color, numberType: .lineWidth)
                 }
             }
         }
         
         if let contacts = brain.getOuterConnections() {
             let visPrefs = brain.getVisPrefs()
+            let audioPrefs = brain.getAudioPrefs()
+            let distPrefs = brain.getDistPrefs()
             
             for i in 0..<contacts.count {
                 for j in 0..<contacts[i].count where contacts[i][j] > 0 {
-                    var startPoint = neuronViews[i].center
-                    var endPoint = contactViews[j].center
-                    if [1, 2, 3, 5].contains(j + 1) {
-                        // Sensors, switch the places of start and end points.
-                        startPoint = contactViews[j].center
-                        endPoint = neuronViews[i].center
-                    }
                     
                     var isDiamond = false
+                    var startPoint = neuronViews[i].center
+                    var endPoint = contactViews[j].center
                     var color: UIColor = .white
+                    var numberType = NumberType.none
+                    if [1, 2, 3, 5].contains(j + 1) {
+                        // 1, 2, 3, 5 are inputs, switch the places of start and end points.
+                        startPoint = contactViews[j].center
+                        endPoint = neuronViews[i].center
+                        isDiamond = true
+                    }
                     
                     // Indicate synapse filter (add rich neuron symbols here)
-                    if [0, 1].contains(j), let visPrefs = visPrefs {
+                    if [1, 2].contains(j + 1), let visPrefs = visPrefs {
+                        // Eyes
                         
                         for z in 0..<visPrefs.first!.count where visPrefs[i][z][j] {
                             if [0, 1].contains(z) {
-                                // ret diamond
+                                // red diamond
                                 color = .red
                             } else if [2, 3].contains(z) {
                                 // green diamond
@@ -218,11 +218,18 @@ final class BrainNetworkView: UIView {
                                 color = .blue
                             }
                         }
-                        
-                        isDiamond = true
+                        numberType = .lineWidth
+                    } else if j + 1 == 3 {
+                        // Microphone
+                        color = UIColor(220)
+                        numberType = .microphoneInput(audioPrefs[i])
+                    } else if j + 1 == 5 {
+                        // Speaker
+                        color = UIColor(220)
+                        numberType = .distanceInput(distPrefs[i])
                     }
                     
-                    drawLine(from: startPoint, to: endPoint, color: color, isDiamond: isDiamond)
+                    drawLine(from: startPoint, to: endPoint, color: color, isDiamond: isDiamond, numberType: numberType)
                 }
             }
         }
@@ -299,5 +306,43 @@ extension BrainNetworkView {
         DispatchQueue.main.async { [weak self] in
             self?.updateInternal(brain: brain)
         }
+    }
+}
+
+private enum NumberType {
+    case lineWidth
+    case microphoneInput(Double)
+    case distanceInput(Double)
+    case none
+    
+    func label(center: CGPoint, lineWidth: CGFloat) -> UILabel? {
+        
+        let numLabel = UILabel()
+        numLabel.textAlignment = .center
+        
+        switch self {
+        case .lineWidth:
+            numLabel.text = "\(Int(lineWidth * 12))"
+            numLabel.frame = CGRect(origin: .zero, size: CGSize(20))
+            numLabel.center = center.applying(CGAffineTransform(translationX: 0, y: -10))
+            numLabel.font = UIFont.systemFont(ofSize: 8)
+            
+        case .microphoneInput(let numberToPresent):
+            numLabel.text = String(format: "%.0lf Hz", numberToPresent)
+            numLabel.frame = CGRect(origin: .zero, size: CGSize(40))
+            numLabel.center = center.applying(CGAffineTransform(translationX: -10, y: 0))
+            numLabel.font = UIFont.systemFont(ofSize: 8, weight: .bold)
+            
+        case .distanceInput(let numberToPresent):
+            numLabel.text = String(format: "%.0lf", numberToPresent)
+            numLabel.frame = CGRect(origin: .zero, size: CGSize(40))
+            numLabel.center = center
+            numLabel.font = UIFont.systemFont(ofSize: 8, weight: .bold)
+            
+        default:
+            return nil
+        }
+        
+        return numLabel
     }
 }

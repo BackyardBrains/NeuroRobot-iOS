@@ -48,7 +48,11 @@ class BaseStreamViewController: BaseViewController {
         
         guard videoStreamView.bounds.height > 0, chartView.bounds.height > 0 else { return }
         let usedHeight = videoStreamView.bounds.height + chartView.bounds.height
-        let remainingHeight = view.bounds.height - usedHeight
+        var bottomSafeInset: CGFloat = 0
+        if #available(iOS 11.0, *) {
+            bottomSafeInset = view.safeAreaInsets.bottom
+        }
+        let remainingHeight = view.bounds.height - bottomSafeInset - usedHeight
         
         brainNetworkViewHeightConstraint.constant = remainingHeight
     }
